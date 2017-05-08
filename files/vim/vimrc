@@ -32,6 +32,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'kelwin/vim-smali'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'Firef0x/PKGBUILD.vim'
+Plug 'rodjek/vim-puppet'
 " Other
 Plug 'ap/vim-css-color'
 call plug#end()
