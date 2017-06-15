@@ -17,6 +17,7 @@ set_up_android_sdk() {
         export ANDROID_HOME=${sdk_path}
 
         path_push_back "${sdk_path}/tools"
+        path_push_back "${sdk_path}/tools/bin"
         path_push_back "${sdk_path}/platform-tools"
 
         if [[ -d "${sdk_path}/build-tools" ]]; then
