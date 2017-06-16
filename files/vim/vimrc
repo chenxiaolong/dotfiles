@@ -120,3 +120,9 @@ colorscheme base16-tomorrow-night
 
 autocmd BufRead *.vala,*.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
 au BufRead,BufNewFile *.vala,*.vapi setfiletype vala
+
+""""""""""
+" Groovy "
+""""""""""
+
+autocmd BufRead,BufNewFile Jenkinsfile setfiletype groovy
