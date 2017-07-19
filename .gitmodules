@@ -38,3 +38,9 @@
 [submodule "files/vim/vim-plug"]
 	path = files/vim/vim-plug
 	url = https://github.com/junegunn/vim-plug.git
+[submodule "files/tmux/plugins/vim-tmux-navigator"]
+	path = files/tmux/plugins/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "files/tmux/plugins/tmux-yank"]
+	path = files/tmux/plugins/tmux-yank
+	url = https://github.com/tmux-plugins/tmux-yank
