@@ -24,15 +24,4 @@ rpmb_cwd() {
   return ${?}
 }
 
-dlsrc_here() {
-    mkdir -p "$(pwd)/rpmbuild/SOURCES"
-    spectool -C "$(pwd)/rpmbuild/SOURCES" -g "${1}"
-    return ${?}
-}
-
-dlsrc_cwd() {
-    spectool -C "$(pwd)" -g "${1}"
-    return ${?}
-}
-
 fi
