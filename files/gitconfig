@@ -10,8 +10,8 @@
 	default = simple
 [url "git@github.com:"]
 	pushInsteadOf = "git://github.com/"
-[url "git@github.com:"]
 	pushInsteadOf = "https://github.com/"
+	insteadOf = github:
 [url "git://anongit.kde.org/"]
 	insteadOf = kde:
 [url "ssh://git@git.kde.org/"]
