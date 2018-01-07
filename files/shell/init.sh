@@ -37,6 +37,11 @@ done
 for i in "${__config_script_dir}"/shell.d/*.sh; do
     source "${i}"
 done
+if [[ -d "${__config_script_dir}"/shell.local ]]; then
+    for i in "${__config_script_dir}"/shell.local/*.sh; do
+        source "${i}"
+    done
+fi
 unset i
 
 export DOTFILES=${__config_dotfiles_dir}
