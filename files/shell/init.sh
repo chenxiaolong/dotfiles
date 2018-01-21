@@ -34,11 +34,16 @@ fi
 for i in "${__config_script_dir}"/shell.internal/*.sh; do
     source "${i}"
 done
+if [[ -d "${__config_script_dir}"/shell.local.pre ]]; then
+    for i in "${__config_script_dir}"/shell.local.pre/*.sh; do
+        source "${i}"
+    done
+fi
 for i in "${__config_script_dir}"/shell.d/*.sh; do
     source "${i}"
 done
-if [[ -d "${__config_script_dir}"/shell.local ]]; then
-    for i in "${__config_script_dir}"/shell.local/*.sh; do
+if [[ -d "${__config_script_dir}"/shell.local.post ]]; then
+    for i in "${__config_script_dir}"/shell.local.post/*.sh; do
         source "${i}"
     done
 fi

@@ -1,3 +1,4 @@
-/files/shell/shell.local/
+/files/shell/shell.local.post/
+/files/shell/shell.local.pre/
 /files/tmux/resurrect/
 /files/vim/plugged/
