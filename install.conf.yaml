@@ -40,3 +40,7 @@
     # makepkg
     ~/.makepkg.conf:
       path: files/makepkg.conf
+
+    # ripgrep
+    ~/.ripgreprc:
+      path: files/ripgreprc
