@@ -126,3 +126,9 @@ au BufRead,BufNewFile *.vala,*.vapi setfiletype vala
 """"""""""
 
 autocmd BufRead,BufNewFile Jenkinsfile setfiletype groovy
+
+""""""""""""""
+" Ruby sucks "
+""""""""""""""
+
+let g:ale_linters = {'ruby': []}
