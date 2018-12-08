@@ -36,10 +36,12 @@
     # X11
     ~/.Xresources:
       path: files/Xresources
+      if: 'test -d /proc && ! grep -q Microsoft /proc/version'
 
     # makepkg
     ~/.makepkg.conf:
       path: files/makepkg.conf
+      if: 'test -f /etc/arch-release'
 
     # ripgrep
     ~/.ripgreprc:
