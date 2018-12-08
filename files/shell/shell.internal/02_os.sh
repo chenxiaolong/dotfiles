@@ -1,4 +1,12 @@
 if [[ -z "${__os}" ]]; then
+    case "$(uname -r)" in
+    *Microsoft*)
+        __os=WSL
+        ;;
+    esac
+fi
+
+if [[ -z "${__os}" ]]; then
     case "$(uname -s)" in
     Linux)
         __os=Linux
