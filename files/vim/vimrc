@@ -27,7 +27,7 @@ Plug 'w0ng/vim-hybrid'
 Plug 'zeis/vim-kolor'
 Plug 'nanotech/jellybeans.vim'
 Plug 'morhetz/gruvbox'
-Plug 'chriskempson/base16-vim'
+Plug 'danielwe/base16-vim'
 " Syntax highlighting
 Plug 'kelwin/vim-smali'
 Plug 'tmux-plugins/vim-tmux'
