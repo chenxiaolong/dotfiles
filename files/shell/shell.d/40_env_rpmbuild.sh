@@ -1,4 +1,4 @@
-if is_distro Fedora; then
+if command -v rpmbuild >/dev/null; then
 
 rpmb_here() {
     rpmbuild \
