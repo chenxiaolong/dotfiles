@@ -80,6 +80,12 @@ set timeoutlen=1000 ttimeoutlen=0
 " 80 character line limit
 set colorcolumn=81
 
+" Always reparse from beginning
+"autocmd bufnewfile,bufread * syntax sync fromstart
+
+" Keybinding to reparse from beginning
+map <Leader>r :syntax sync fromstart <bar> echo "Reparsed file"<cr>
+
 """""""""""""""
 " vim-airline "
 """""""""""""""
