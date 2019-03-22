@@ -43,7 +43,6 @@ if is_shell zsh; then
         gradle
         python
         gitignore
-        docker
         #vi-mode
         #kubectl
     )
