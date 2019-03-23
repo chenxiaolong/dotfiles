@@ -22,3 +22,5 @@
 	insteadOf = android:
 [gpg]
 	program = gpg2
+[protocol]
+	version = 2
