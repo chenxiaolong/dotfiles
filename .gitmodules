@@ -32,9 +32,6 @@
 [submodule "submodules/oh-my-zsh"]
 	path = submodules/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
-[submodule "submodules/NickTomlin-dotfiles"]
-	path = submodules/NickTomlin-dotfiles
-	url = https://github.com/NickTomlin/dotfiles.git
 [submodule "files/vim/vim-plug"]
 	path = files/vim/vim-plug
 	url = https://github.com/junegunn/vim-plug.git
