@@ -45,6 +45,9 @@ Set-Location (Split-Path $MyInvocation.MyCommand.Path)
 New-DotFileSymlink ~\.gitconfig files\git\gitconfig
 New-DotFileSymlink ~\.gitconfig.platform files\git\gitconfig.windows
 
+# pwsh
+New-DotFileSymlink $PROFILE.CurrentUserAllHosts files\pwsh\profile.ps1
+
 # rg
 New-DotFileSymlink ~\.ripgreprc files\ripgreprc
 
