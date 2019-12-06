@@ -20,8 +20,6 @@
 	pushInsteadOf = kde:
 [url "https://android.googlesource.com/platform/"]
 	insteadOf = android:
-[gpg]
-	program = gpg2
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
@@ -31,3 +29,5 @@
 	version = 2
 [core]
 	autocrlf = false
+[include]
+	path = .gitconfig.platform

@@ -40,7 +40,8 @@ function New-DotFileSymlink {
 Set-Location (Split-Path $MyInvocation.MyCommand.Path)
 
 # git
-New-DotFileSymlink ~\.gitconfig files\gitconfig
+New-DotFileSymlink ~\.gitconfig files\git\gitconfig
+New-DotFileSymlink ~\.gitconfig.platform files\git\gitconfig.windows
 
 # rg
 New-DotFileSymlink ~\.ripgreprc files\ripgreprc

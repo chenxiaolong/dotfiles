@@ -10,7 +10,7 @@
 - link:
     # SCMs
     ~/.gitconfig:
-      path: files/gitconfig
+      path: files/git/gitconfig
     ~/.hgrc:
       path: files/hgrc
 
