@@ -1,0 +1,25 @@
+{
+    // Show whitespace
+    "editor.renderWhitespace": "boundary",
+
+    // Disable preview feature
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+
+    // Disable telemetry
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+
+    // Preserve open windows on exit
+    "window.restoreWindows": "all",
+    "files.hotExit": "onExitAndWindowClose",
+
+    // Icon theme
+    "workbench.iconTheme": "vscode-icons",
+
+    // Use pwsh on Windows
+    "powershell.powerShellExePath": "C:\\Program Files\\PowerShell\\6\\pwsh.exe",
+
+    // Trim whitespace on save
+    "files.trimTrailingWhitespace": true,
+}

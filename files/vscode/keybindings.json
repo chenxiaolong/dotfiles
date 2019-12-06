@@ -1,0 +1,6 @@
+[
+    {
+        "key": "ctrl+shift+q",
+        "command": "workbench.action.quit"
+    }
+]

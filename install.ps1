@@ -39,7 +39,16 @@ function New-DotFileSymlink {
 
 Set-Location (Split-Path $MyInvocation.MyCommand.Path)
 
+# git
 New-DotFileSymlink ~\.gitconfig files\gitconfig
+
+# rg
 New-DotFileSymlink ~\.ripgreprc files\ripgreprc
+
+# vim
 New-DotFileSymlink ~\.vim files\vim
 New-DotFileSymlink ~\.vimrc files\vim\vimrc
+
+# vscode
+New-DotFileSymlink $env:APPDATA\Code\User\keybindings.json files\vscode\keybindings.json
+New-DotFileSymlink $env:APPDATA\Code\User\settings.json files\vscode\settings.json
