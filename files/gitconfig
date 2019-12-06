@@ -29,3 +29,5 @@
 	process = git-lfs filter-process
 [protocol]
 	version = 2
+[core]
+	autocrlf = false
