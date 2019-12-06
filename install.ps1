@@ -52,3 +52,9 @@ New-DotFileSymlink ~\.vimrc files\vim\vimrc
 # vscode
 New-DotFileSymlink $env:APPDATA\Code\User\keybindings.json files\vscode\keybindings.json
 New-DotFileSymlink $env:APPDATA\Code\User\settings.json files\vscode\settings.json
+
+# Windows Terminal
+if ($appx = Get-AppxPackage Microsoft.WindowsTerminal) {
+    $localStatePath = "$env:LOCALAPPDATA\Packages\$($appx.Name)_$($appx.PublisherId)\LocalState"
+    New-DotFileSymlink $localStatePath\profiles.json files\windows_terminal\profiles.json
+}
