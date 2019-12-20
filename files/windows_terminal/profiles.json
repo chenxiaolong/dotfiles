@@ -14,6 +14,7 @@
             "hidden": false,
             "name": "PowerShell Core",
             "source": "Windows.Terminal.PowershellCore",
+            "cursorShape": "emptyBox",
             "fontFace": "Fira Code",
             "fontSize": 9
         },
@@ -23,6 +24,7 @@
             "name": "Windows PowerShell",
             "commandline": "powershell.exe",
             "hidden": false,
+            "cursorShape": "emptyBox",
             "fontFace": "Fira Code",
             "fontSize": 9
         },
@@ -32,6 +34,7 @@
             "name": "cmd",
             "commandline": "cmd.exe",
             "hidden": false,
+            "cursorShape": "emptyBox",
             "fontFace": "Fira Code",
             "fontSize": 9
         },
@@ -40,6 +43,7 @@
             "hidden": false,
             "name": "Ubuntu-18.04",
             "source": "Windows.Terminal.Wsl",
+            "cursorShape": "emptyBox",
             "fontFace": "Fira Code",
             "fontSize": 9
         },
@@ -48,6 +52,7 @@
             "hidden": false,
             "name": "Azure Cloud Shell",
             "source": "Windows.Terminal.Azure",
+            "cursorShape": "emptyBox",
             "fontFace": "Fira Code",
             "fontSize": 9
         },
@@ -55,7 +60,10 @@
             "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
             "hidden": false,
             "name": "Ubuntu",
-            "source": "Windows.Terminal.Wsl"
+            "source": "Windows.Terminal.Wsl",
+            "cursorShape": "emptyBox",
+            "fontFace": "Fira Code",
+            "fontSize": 9
         }
     ],
 
