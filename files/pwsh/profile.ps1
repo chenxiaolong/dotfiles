@@ -7,8 +7,9 @@ Set-PSReadlineOption -EditMode Emacs
 # Disable the bell
 Set-PSReadlineOption -BellStyle None
 
-# Make psreadline command highlighting use theme colors
-try { $null = Get-Command concfg -ea stop; concfg tokencolor -n enable } catch { }
+# NOTE: Only needed to get PSReadline to follow base16 conventions
+# https://github.com/lukesampson/concfg/blob/master/README.md
+#try { $null = Get-Command concfg -ea stop; concfg tokencolor -n enable } catch { }
 
 # FZF
 Remove-Item env:TERM -ErrorAction Ignore
