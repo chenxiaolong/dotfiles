@@ -1,4 +1,5 @@
 [core]
+	editor = C:\\\\Windows\\\\vim.bat
 	sshCommand = C:\\\\Windows\\\\System32\\\\OpenSSH\\\\ssh.exe
 [gpg]
 	program = C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe
