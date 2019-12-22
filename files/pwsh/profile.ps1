@@ -19,6 +19,23 @@ Import-Module PSFzf -ArgumentList 'Ctrl+t','Ctrl+r'
 # Git integration
 Import-Module posh-git
 
+# oh-my-posh themes
+Import-Module oh-my-posh
+Set-Theme wedisagree
+
+# https://github.com/JanDeDobbeleer/oh-my-posh/issues/52
+Copy-Item Function:prompt Function:promptorig
+Remove-Item Function:prompt
+function prompt {
+    if (-not $? -and $error.Count -eq $ThemeSettings.ErrorCount) {
+        try { throw } catch {}
+    }
+
+    # Also preserve $LASTEXITCODE
+    $exitCodeOrig = $global:LASTEXITCODE
+    promptorig
+    $global:LASTEXITCODE = $exitCodeOrig
+}
 
 # Enable colors with ls
 Import-Module DirColors

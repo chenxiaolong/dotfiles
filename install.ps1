@@ -47,6 +47,7 @@ New-DotFileSymlink ~\.gitconfig.platform files\git\gitconfig.windows
 
 # pwsh
 New-DotFileSymlink $PROFILE.CurrentUserAllHosts files\pwsh\profile.ps1
+New-DotFileSymlink (Join-Path (Split-Path -Parent $PROFILE) 'PoshThemes') files\pwsh\PoshThemes
 
 # rg
 New-DotFileSymlink ~\.ripgreprc files\ripgreprc
