@@ -19,11 +19,9 @@ Import-Module PSFzf -ArgumentList 'Ctrl+t','Ctrl+r'
 # Git integration
 Import-Module posh-git
 
-# Enable colors with ls
-Import-Module Get-ChildItemColor
 
-Set-Alias l Get-ChildItemColor -option AllScope
-Set-Alias ls Get-ChildItemColorFormatWide -option AllScope
+# Enable colors with ls
+Import-Module DirColors
 
 # Set default file encoding to UTF-8 without BOM
 $PSDefaultParameterValues['Out-File:Encoding'] = 'utf8NoBOM'
