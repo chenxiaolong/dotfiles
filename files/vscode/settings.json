@@ -22,4 +22,7 @@
 
     // Trim whitespace on save
     "files.trimTrailingWhitespace": true,
+
+    // Guess file encoding
+    "files.autoGuessEncoding": true,
 }
