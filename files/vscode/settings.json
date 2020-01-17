@@ -18,7 +18,7 @@
     "workbench.iconTheme": "vscode-icons",
 
     // Use pwsh on Windows
-    "powershell.powerShellExePath": "C:\\Program Files\\PowerShell\\6\\pwsh.exe",
+    "powershell.powerShellDefaultVersion": "PowerShell 7.0 (X64) Core Edition",
 
     // Trim whitespace on save
     "files.trimTrailingWhitespace": true,
