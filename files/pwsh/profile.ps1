@@ -34,3 +34,24 @@ $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
     Import-Module "$ChocolateyProfile"
 }
+
+# Wrapper to run commands shipped with git
+$gbin = "$env:ProgramFiles\git\usr\bin"
+function gexec {
+    [CmdletBinding()]
+    param (
+        [Parameter(Mandatory=$true, Position=0)]
+        [string]$exe,
+        [Parameter(Position=1, ValueFromRemainingArguments)]
+        [string[]]$args
+    )
+
+    $oldPath = $env:PATH
+
+    try {
+        $env:PATH = $env:PATH.Insert(0, "$gbin;")
+        & $exe $args
+    } finally {
+        $env:PATH = $oldPath
+    }
+}
