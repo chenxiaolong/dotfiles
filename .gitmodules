@@ -1,6 +1,3 @@
-[submodule "dotbot"]
-	path = dotbot
-	url = https://github.com/anishathalye/dotbot
 [submodule "files/tmux/plugins/tmux-continuum"]
 	path = files/tmux/plugins/tmux-continuum
 	url = https://github.com/tmux-plugins/tmux-continuum
