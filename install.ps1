@@ -24,7 +24,7 @@ function New-DotFileSymlink {
         if ($path.LinkType -ne "SymbolicLink") {
             throw "$($path.FullName): path exists and is not a symlink"
         } elseif ($path.Target -ne $absTarget) {
-            throw "$($path.FullName): path exists and is not a symlink"
+            throw "$($path.FullName): path exists and is symlinked to $($path.Target)"
         } else {
             Write-Verbose "$($path.FullName): path already correctly linked"
             return
