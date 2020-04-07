@@ -33,4 +33,7 @@
         80,
         100
     ],
+
+    // Theme
+    "workbench.colorTheme": "Dracula",
 }
