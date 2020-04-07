@@ -5,7 +5,7 @@ if is_shell zsh; then
         if is_os WSL; then
             hostname_text+='(WSL)'
         fi
-        PROMPT="%{\${fg[yellow]}%}[${hostname_text}]%{\${reset_color}%}${PROMPT}"
+        PROMPT="%{\${fg[blue]}%}[${hostname_text}]%{\${reset_color}%}${PROMPT}"
     }
 
     prepend_hostname
