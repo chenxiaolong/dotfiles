@@ -8,7 +8,8 @@ new_dotfile_symlink() {
     local abs_target
     local link_target
 
-    abs_target=$(readlink -f "${target}")
+    # macOS doesn't have readlink -f
+    abs_target=$(pwd)/"${target}"
 
     mkdir -p "$(dirname "${source}")"
 
