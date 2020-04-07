@@ -52,6 +52,12 @@
                 "hidden": false,
                 "name": "Ubuntu",
                 "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "guid": "{252e6d35-c9a9-5e5b-b255-5fa35a6f3077}",
+                "hidden": false,
+                "name": "ubuntu2004",
+                "source": "Windows.Terminal.Wsl"
             }
         ]
     },
