@@ -27,6 +27,12 @@ function Write-Theme {
         }) | Out-Null
     }
 
+    $computerName = Get-ComputerName
+    $leftComponents.Add(@{
+        Text = "[$computerName]";
+        Color = $sl.Colors.PromptForegroundColor
+    }) | Out-Null
+
     $path = $sl.PromptSymbols.HomeSymbol
     if ($pwd.Path -ne $HOME) {
         $path = Split-Path -Leaf -Path $pwd
@@ -75,6 +81,7 @@ function Write-Theme {
 $sl = $global:ThemeSettings
 $sl.Colors.CommandFailedIconForegroundColor = [ConsoleColor]::Red
 $sl.Colors.DriveForegroundColor = [ConsoleColor]::Magenta
+$sl.Colors.PromptForegroundColor = [ConsoleColor]::Blue
 $sl.Colors.TimestampForegroundColor = [ConsoleColor]::Green
 $sl.Colors.VirtualEnvForegroundColor = [System.ConsoleColor]::Magenta
 $sl.Colors.WithForegroundColor = [ConsoleColor]::DarkRed
