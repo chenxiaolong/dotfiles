@@ -9,6 +9,8 @@
     // Disable telemetry
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
+    "partialDiff.enableTelemetry": false,
+    "gitlens.advanced.telemetry.enabled": false,
 
     // Preserve open windows on exit
     "window.restoreWindows": "all",
