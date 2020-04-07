@@ -27,4 +27,10 @@
 
     // Guess file encoding
     "files.autoGuessEncoding": true,
+
+    // Rulers
+    "editor.rulers": [
+        80,
+        100
+    ],
 }
