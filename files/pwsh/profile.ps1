@@ -7,6 +7,13 @@ Set-PSReadlineOption -EditMode Emacs
 # Disable the bell
 Set-PSReadlineOption -BellStyle None
 
+# Increase PSReadLine history
+# See: https://github.com/PowerShell/PSReadLine/issues/1309
+$MaximumHistoryCount = Get-Variable -Name MaximumHistoryCount `
+    | Select-Object -ExpandProperty Attributes `
+    | Select-Object -ExpandProperty MaxRange
+Set-PSReadLineOption -MaximumHistoryCount $MaximumHistoryCount
+
 # NOTE: Only needed to get PSReadline to follow base16 conventions
 # https://github.com/lukesampson/concfg/blob/master/README.md
 #try { $null = Get-Command concfg -ea stop; concfg tokencolor -n enable } catch { }
