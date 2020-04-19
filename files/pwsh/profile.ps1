@@ -14,6 +14,13 @@ $MaximumHistoryCount = Get-Variable -Name MaximumHistoryCount `
     | Select-Object -ExpandProperty MaxRange
 Set-PSReadLineOption -MaximumHistoryCount $MaximumHistoryCount
 
+# Function to get PSReadLine history because Get-History only shows the commands
+# from the current session
+function Get-PSReadLineHistory
+{
+    Get-Content (Get-PSReadlineOption).HistorySavePath
+}
+
 # NOTE: Only needed to get PSReadline to follow base16 conventions
 # https://github.com/lukesampson/concfg/blob/master/README.md
 #try { $null = Get-Command concfg -ea stop; concfg tokencolor -n enable } catch { }
