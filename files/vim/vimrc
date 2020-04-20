@@ -87,6 +87,11 @@ set colorcolumn=81
 " Keybinding to reparse from beginning
 map <Leader>r :syntax sync fromstart <bar> echo "Reparsed file"<cr>
 
+" Use UTF-8 console encoding with Windows Terminal
+if !empty($WT_SESSION)
+    set encoding=UTF-8
+endif
+
 """""""""""""""
 " vim-airline "
 """""""""""""""
