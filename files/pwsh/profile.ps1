@@ -49,6 +49,9 @@ if (Test-Path($ChocolateyProfile)) {
     Import-Module "$ChocolateyProfile"
 }
 
+# Set less' encoding to UTF-8 (primarily for git pager)
+$env:LESSCHARSET = 'utf-8'
+
 # Wrapper to run commands shipped with git
 $gbin = "$env:ProgramFiles\git\usr\bin"
 function gexec {
