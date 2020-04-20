@@ -1,8 +1,8 @@
-# zsh-like autocomplete
-Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
-
 # Use emacs edit mode to make ^D, ^A, ^E, etc. work
 Set-PSReadlineOption -EditMode Emacs
+
+# zsh-like autocomplete
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 
 # Disable the bell
 Set-PSReadlineOption -BellStyle None
