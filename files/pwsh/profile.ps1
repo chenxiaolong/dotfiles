@@ -49,6 +49,11 @@ if (Test-Path($ChocolateyProfile)) {
     Import-Module "$ChocolateyProfile"
 }
 
+# Use less as the pager if it's installed
+if (Get-Command less -ErrorAction SilentlyContinue) {
+    $env:PAGER = 'less'
+}
+
 # Set less' encoding to UTF-8 (primarily for git pager)
 $env:LESSCHARSET = 'utf-8'
 
