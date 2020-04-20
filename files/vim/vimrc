@@ -92,6 +92,11 @@ if !empty($WT_SESSION)
     set encoding=UTF-8
 endif
 
+" Prefer Unix line endings on Windows
+if has('win32')
+    set fileformats=unix,dos
+endif
+
 """""""""""""""
 " vim-airline "
 """""""""""""""
