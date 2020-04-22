@@ -70,5 +70,5 @@ New-DotFileSymlink $env:APPDATA\Code\User\settings.json files\vscode\settings.js
 # Windows Terminal
 if ($appx = Get-AppxPackage Microsoft.WindowsTerminal) {
     $localStatePath = "$env:LOCALAPPDATA\Packages\$($appx.Name)_$($appx.PublisherId)\LocalState"
-    New-DotFileSymlink $localStatePath\profiles.json files\windows_terminal\profiles.json
+    New-DotFileSymlink $localStatePath\settings.json files\windows_terminal\settings.json
 }
