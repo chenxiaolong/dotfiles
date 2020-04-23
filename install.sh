@@ -13,12 +13,7 @@ new_dotfile_symlink() {
 
     mkdir -p "$(dirname "${source}")"
 
-    if [[ -e "${source}" ]]; then
-        if [[ ! -L "${source}" ]]; then
-            echo >&2 "${source}: path exists and is not a symlink"
-            return 1
-        fi
-
+    if [[ -L "${source}" ]]; then
         link_target=$(readlink "${source}")
         if [[ "${link_target}" != "${abs_target}" ]]; then
             echo >&2 "${source}: path exists and is symlinked to ${link_target}"
@@ -27,6 +22,9 @@ new_dotfile_symlink() {
 
         echo "${source}: path already correctly linked"
         return
+    elif [[ -e "${source}" ]]; then
+        echo >&2 "${source}: path exists and is not a symlink"
+        return 1
     fi
 
     echo "Symlinking ${source} to ${abs_target}"
