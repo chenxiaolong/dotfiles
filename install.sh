@@ -55,8 +55,13 @@ new_dotfile_symlink ~/.vimrc files/vim/vimrc
 new_dotfile_symlink ~/.config/nvim files/vim
 
 # vscode
-new_dotfile_symlink ~/.config/Code/User/keybindings.json files/vscode/keybindings.json
-new_dotfile_symlink ~/.config/Code/User/settings.json files/vscode/settings.json
+if [[ "$(uname -s)" == Darwin ]]; then
+    vscode_dir=~/Library/Application\ Support/Code/User
+else
+    vscode_dir=~/.config/Code/User
+fi
+new_dotfile_symlink "${vscode_dir}"/keybindings.json files/vscode/keybindings.json
+new_dotfile_symlink "${vscode_dir}"/settings.json files/vscode/settings.json
 
 # tmux
 new_dotfile_symlink ~/.tmux files/tmux
