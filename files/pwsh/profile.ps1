@@ -44,36 +44,44 @@ Import-Module DirColors
 $PSDefaultParameterValues['Out-File:Encoding'] = 'utf8NoBOM'
 
 # Chocolatey profile
-$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
-if (Test-Path($ChocolateyProfile)) {
-    Import-Module "$ChocolateyProfile"
+if ($IsWindows) {
+    $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+    if (Test-Path($ChocolateyProfile)) {
+        Import-Module "$ChocolateyProfile"
+    }
 }
 
 # Use less as the pager if it's installed
-if (Get-Command less -ErrorAction SilentlyContinue) {
-    $env:PAGER = 'less'
+if ($IsWindows -and !$env:PAGER) {
+    if (Get-Command less -ErrorAction SilentlyContinue) {
+        $env:PAGER = 'less'
+    }
 }
 
 # Set less' encoding to UTF-8 (primarily for git pager)
-$env:LESSCHARSET = 'utf-8'
+if ($IsWindows) {
+    $env:LESSCHARSET = 'utf-8'
+}
 
 # Wrapper to run commands shipped with git
-$gbin = "$env:ProgramFiles\git\usr\bin"
-function gexec {
-    [CmdletBinding()]
-    param (
-        [Parameter(Mandatory=$true, Position=0)]
-        [string]$exe,
-        [Parameter(Position=1, ValueFromRemainingArguments)]
-        [string[]]$args
-    )
+if ($IsWindows) {
+    $gbin = "$env:ProgramFiles\git\usr\bin"
+    function gexec {
+        [CmdletBinding()]
+        param (
+            [Parameter(Mandatory=$true, Position=0)]
+            [string]$exe,
+            [Parameter(Position=1, ValueFromRemainingArguments)]
+            [string[]]$args
+        )
 
-    $oldPath = $env:PATH
+        $oldPath = $env:PATH
 
-    try {
-        $env:PATH = $env:PATH.Insert(0, "$gbin;")
-        & $exe $args
-    } finally {
-        $env:PATH = $oldPath
+        try {
+            $env:PATH = $env:PATH.Insert(0, "$gbin;")
+            & $exe $args
+        } finally {
+            $env:PATH = $oldPath
+        }
     }
 }
