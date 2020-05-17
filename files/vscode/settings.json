@@ -36,4 +36,7 @@
 
     // Theme
     "workbench.colorTheme": "Dracula",
+
+    // Increase terminal scrollback
+    "terminal.integrated.scrollback": 10000,
 }
