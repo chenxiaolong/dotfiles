@@ -26,7 +26,9 @@ function Get-PSReadLineHistory
 #try { $null = Get-Command concfg -ea stop; concfg tokencolor -n enable } catch { }
 
 # FZF
-Remove-Item env:TERM -ErrorAction Ignore
+if ($IsWindows) {
+    Remove-Item env:TERM -ErrorAction Ignore
+}
 Remove-PSReadlineKeyHandler 'Ctrl+r'
 Import-Module PSFzf -ArgumentList 'Ctrl+t','Ctrl+r'
 
