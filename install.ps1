@@ -41,10 +41,6 @@ function New-DotFileSymlink {
 
 Set-Location (Split-Path $MyInvocation.MyCommand.Path)
 
-# git
-New-DotFileSymlink ~\.gitconfig files\git\gitconfig
-New-DotFileSymlink ~\.gitconfig.platform files\git\gitconfig.windows
-
 # pwsh
 New-DotFileSymlink $PROFILE.CurrentUserAllHosts files\pwsh\profile.ps1
 New-DotFileSymlink (Join-Path (Split-Path -Parent $PROFILE) 'PoshThemes') files\pwsh\PoshThemes
@@ -55,6 +51,16 @@ New-DotFileSymlink (Join-Path (Split-Path -Parent $PROFILE) 'PoshThemes') files\
     [System.Environment]::SetEnvironmentVariable(
         $_.Name, $_.Value, [System.EnvironmentVariableTarget]::User)
 }
+
+# For non-Windows, also use install.sh
+if (!$IsWindows) {
+    & ./install.sh
+    exit
+}
+
+# git
+New-DotFileSymlink ~\.gitconfig files\git\gitconfig
+New-DotFileSymlink ~\.gitconfig.platform files\git\gitconfig.windows
 
 # rg
 New-DotFileSymlink ~\.ripgreprc files\ripgreprc
