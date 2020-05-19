@@ -1,6 +1,6 @@
 if [[ -z "${__os}" ]]; then
     case "$(uname -r)" in
-    *Microsoft*)
+    *Microsoft*|*microsoft*)
         __os=WSL
         ;;
     esac
