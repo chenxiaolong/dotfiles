@@ -83,3 +83,6 @@ New-DotFileSymlink $env:APPDATA\Code\User\settings.json files\vscode\settings.js
         New-DotFileSymlink $localStatePath\settings.json files\windows_terminal\settings.json
     }
 }
+
+# Alacritty
+New-DotFileSymlink $env:APPDATA\alacritty\alacritty.yml files\alacritty\alacritty.yml
