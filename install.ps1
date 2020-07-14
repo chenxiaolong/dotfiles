@@ -74,7 +74,12 @@ New-DotFileSymlink $env:APPDATA\Code\User\keybindings.json files\vscode\keybindi
 New-DotFileSymlink $env:APPDATA\Code\User\settings.json files\vscode\settings.json
 
 # Windows Terminal
-if ($appx = Get-AppxPackage Microsoft.WindowsTerminal) {
-    $localStatePath = "$env:LOCALAPPDATA\Packages\$($appx.Name)_$($appx.PublisherId)\LocalState"
-    New-DotFileSymlink $localStatePath\settings.json files\windows_terminal\settings.json
+(
+    'Microsoft.WindowsTerminal',
+    'Microsoft.WindowsTerminalPreview'
+) | ForEach-Object {
+    if ($appx = Get-AppxPackage $_) {
+        $localStatePath = "$env:LOCALAPPDATA\Packages\$($appx.Name)_$($appx.PublisherId)\LocalState"
+        New-DotFileSymlink $localStatePath\settings.json files\windows_terminal\settings.json
+    }
 }
