@@ -53,7 +53,7 @@ New-DotFileSymlink (Join-Path (Split-Path -Parent $PROFILE) 'PoshThemes') files\
 }
 
 # For non-Windows, also use install.sh
-if (!$IsWindows) {
+if ($PSVersionTable.PSVersion.Major -gt 5 -and !$IsWindows) {
     & ./install.sh
     exit
 }
