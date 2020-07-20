@@ -69,6 +69,11 @@ if (Test-IsWindows) {
     $env:LESSCHARSET = 'utf-8'
 }
 
+# Set COLORTERM on Windows (primarily for delta)
+if (Test-IsWindows) {
+    $env:COLORTERM = 'truecolor'
+}
+
 # Wrapper to run commands shipped with git
 if (Test-IsWindows) {
     $gbin = "$env:ProgramFiles\git\usr\bin"
