@@ -1,3 +1,7 @@
+function Test-IsWindows {
+    return $PSVersionTable.PSVersion.Major -le 5 -or $IsWindows
+}
+
 # Use emacs edit mode to make ^D, ^A, ^E, etc. work
 Set-PSReadlineOption -EditMode Emacs
 
@@ -26,7 +30,7 @@ function Get-PSReadLineHistory
 #try { $null = Get-Command concfg -ea stop; concfg tokencolor -n enable } catch { }
 
 # FZF
-if ($IsWindows) {
+if (Test-IsWindows) {
     Remove-Item env:TERM -ErrorAction Ignore
 }
 Remove-PSReadlineKeyHandler 'Ctrl+r'
@@ -46,7 +50,7 @@ Import-Module DirColors
 $PSDefaultParameterValues['Out-File:Encoding'] = 'utf8NoBOM'
 
 # Chocolatey profile
-if ($IsWindows) {
+if (Test-IsWindows) {
     $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
     if (Test-Path($ChocolateyProfile)) {
         Import-Module "$ChocolateyProfile"
@@ -54,19 +58,19 @@ if ($IsWindows) {
 }
 
 # Use less as the pager if it's installed
-if ($IsWindows -and !$env:PAGER) {
+if (Test-IsWindows -and !$env:PAGER) {
     if (Get-Command less -ErrorAction SilentlyContinue) {
         $env:PAGER = 'less'
     }
 }
 
 # Set less' encoding to UTF-8 (primarily for git pager)
-if ($IsWindows) {
+if (Test-IsWindows) {
     $env:LESSCHARSET = 'utf-8'
 }
 
 # Wrapper to run commands shipped with git
-if ($IsWindows) {
+if (Test-IsWindows) {
     $gbin = "$env:ProgramFiles\git\usr\bin"
     function gexec {
         [CmdletBinding()]
