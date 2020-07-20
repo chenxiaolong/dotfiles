@@ -35,6 +35,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 
 # git
 new_dotfile_symlink ~/.gitconfig files/git/gitconfig
+new_dotfile_symlink ~/.gitconfig.delta files/git/gitconfig.delta
 if [[ "$(uname -r)" = *Microsoft* ]]; then
     new_dotfile_symlink ~/.gitconfig.platform files/git/gitconfig.wsl
 fi

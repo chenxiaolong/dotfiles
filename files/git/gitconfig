@@ -23,4 +23,5 @@
 	autocrlf = false
 [include]
 	path = .gitconfig.platform
+	path = .gitconfig.delta
 	path = .gitconfig.local
