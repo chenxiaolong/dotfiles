@@ -10,6 +10,6 @@
 	#whitespace-error-style = 22 reverse
 
 [delta "decorations"]
-	commit-decoration-style = bold yellow box ul
+	commit-decoration-style = bold yellow box
 	file-style = bold yellow ul
 	file-decoration-style = none
