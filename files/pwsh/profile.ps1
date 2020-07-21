@@ -74,6 +74,11 @@ if (Test-IsWindows) {
     $env:COLORTERM = 'truecolor'
 }
 
+# bat
+if (Get-Command bat) {
+    $env:BAT_THEME = 'base16-tomorrow-night'
+}
+
 # Wrapper to run commands shipped with git
 if (Test-IsWindows) {
     $gbin = "$env:ProgramFiles\git\usr\bin"
