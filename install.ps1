@@ -87,3 +87,9 @@ New-DotFileSymlink $env:APPDATA\Code\User\settings.json files\vscode\settings.js
 
 # Alacritty
 New-DotFileSymlink $env:APPDATA\alacritty\alacritty.yml files\alacritty\alacritty.yml
+
+# bat
+if (Get-Command bat) {
+    New-DotFileSymlink (bat --config-dir) files\bat
+    bat cache --build
+}

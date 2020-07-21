@@ -77,3 +77,9 @@ fi
 if [[ -f /etc/arch-release ]]; then
     new_dotfile_symlink ~/.makepkg.conf files/makepkg.conf
 fi
+
+# bat
+if command -v bat >/dev/null; then
+    new_dotfile_symlink "$(bat --config-dir)" files/bat
+    bat cache --build
+fi
