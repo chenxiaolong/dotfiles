@@ -28,6 +28,9 @@
     // Guess file encoding
     "files.autoGuessEncoding": true,
 
+    // Default to LF line endings
+    "files.eol": "\n",
+
     // Rulers
     "editor.rulers": [
         80,
