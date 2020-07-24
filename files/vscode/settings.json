@@ -42,4 +42,7 @@
 
     // Increase terminal scrollback
     "terminal.integrated.scrollback": 10000,
+
+    // In here because vscode keeps adding it
+    "window.zoomLevel": 0,
 }
