@@ -74,6 +74,11 @@ if (Test-IsWindows) {
     $env:COLORTERM = 'truecolor'
 }
 
+# GitHub CLI
+if (Get-Command gh) {
+    gh completion -s powershell | Out-String | Invoke-Expression
+}
+
 # bat
 if (Get-Command bat) {
     $env:BAT_THEME = 'base16-tomorrow-night'
