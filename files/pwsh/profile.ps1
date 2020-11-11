@@ -75,12 +75,12 @@ if (Test-IsWindows) {
 }
 
 # GitHub CLI
-if (Get-Command gh) {
+if (Get-Command gh -ErrorAction SilentlyContinue) {
     gh completion -s powershell | Out-String | Invoke-Expression
 }
 
 # bat
-if (Get-Command bat) {
+if (Get-Command bat -ErrorAction SilentlyContinue) {
     $env:BAT_THEME = 'base16-tomorrow-night'
 }
 
