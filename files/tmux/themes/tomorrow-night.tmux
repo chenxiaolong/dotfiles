@@ -59,11 +59,11 @@ set -g status-right '#[fg=#f99157,bg=#2d2d2d] %H:%M |#[fg=#6699cc] %y.%m.%d '
 
 # make background window look like white tab
 set-window-option -g window-status-style none,bg=default,fg=white
-set-window-option -g window-status-format '#[fg=#6699cc,bg=colour235] #I #[fg=#999999,bg=#2d2d2d] #W #[default]'
+set-window-option -g window-status-format '#[fg=#6699cc,bg=colour235] #I#{?pane_synchronized, [sync],} #[fg=#999999,bg=#2d2d2d] #W #[default]'
 
 # make foreground window look like bold yellow foreground tab
 set-window-option -g window-status-current-style none
-set-window-option -g window-status-current-format '#[fg=#f99157,bg=#2d2d2d] #I #[fg=#cccccc,bg=#393939] #W #[default]'
+set-window-option -g window-status-current-format '#[fg=#f99157,bg=#2d2d2d] #I#{?pane_synchronized, [sync],} #[fg=#cccccc,bg=#393939] #W #[default]'
 
 # active terminal yellow border, non-active white
 set -g pane-border-style "bg=default,fg=#999999"
