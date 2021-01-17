@@ -83,3 +83,8 @@ if command -v bat >/dev/null; then
     new_dotfile_symlink "$(bat --config-dir)" files/bat
     bat cache --build
 fi
+
+# mock
+if [[ -f /etc/redhat-release ]]; then
+    new_dotfile_symlink ~/.config/mock.cfg files/mock.cfg
+fi
