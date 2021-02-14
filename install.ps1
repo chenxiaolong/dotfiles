@@ -70,6 +70,11 @@ New-DotFileSymlink ~\.ripgreprc files\ripgreprc
 New-DotFileSymlink ~\.vim files\vim
 New-DotFileSymlink ~\.vimrc files\vim\vimrc
 
+# starship
+if (Get-Command starship -ErrorAction SilentlyContinue) {
+    New-DotFileSymlink ~\.config\starship.toml files\starship.toml
+}
+
 # vscode
 New-DotFileSymlink $env:APPDATA\Code\User\keybindings.json files\vscode\keybindings.json
 New-DotFileSymlink $env:APPDATA\Code\User\settings.json files\vscode\settings.json

@@ -1,0 +1,49 @@
+format = """
+$time\
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$package\
+$python\
+$cmd_duration\
+$line_break\
+$jobs\
+$status\
+$character
+"""
+
+[cmd_duration]
+show_milliseconds = true
+
+[directory]
+truncation_length = 2
+truncation_symbol = '…/'
+
+[git_branch]
+format = '[$symbol$branch]($style) '
+
+[hostname]
+format = '[$hostname]($style) '
+ssh_only = false
+style = 'bold 177'
+
+[package]
+format = '[$version]($style) '
+
+[python]
+format = '[${pyenv_prefix}(\($virtualenv\))]($style) '
+
+[status]
+disabled = false
+
+[time]
+disabled = false
+format = '\[[$time]($style)\] '
+style = 'bold 69'
+
+[username]
+format = '[$user]($style)@'

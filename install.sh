@@ -55,6 +55,11 @@ new_dotfile_symlink ~/.vimrc files/vim/vimrc
 # nvim
 new_dotfile_symlink ~/.config/nvim files/vim
 
+# starship
+if command -v starship >/dev/null; then
+    new_dotfile_symlink ~/.config/starship.toml files/starship.toml
+fi
+
 # vscode
 if [[ "$(uname -s)" == Darwin ]]; then
     vscode_dir=~/Library/Application\ Support/Code/User
