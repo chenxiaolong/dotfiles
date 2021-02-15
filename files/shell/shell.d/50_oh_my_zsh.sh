@@ -23,28 +23,8 @@ if is_shell zsh; then
 
     # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
     plugins=(
-        git
-        #command-not-found
-        mercurial
-        cp
-        git-extras
-        sudo
         gradle
-        python
-        gitignore
-        #vi-mode
-        #kubectl
     )
-
-    if is_os Linux; then
-        plugins+=(kate systemd)
-
-        if is_distro Arch; then
-            plugins+=(archlinux)
-        elif is_distro Fedora; then
-            plugins+=(yum)
-        fi
-    fi
 
     ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root)
 fi
