@@ -39,9 +39,23 @@ Import-Module PSFzf -ArgumentList 'Ctrl+t','Ctrl+r'
 # Git integration
 Import-Module posh-git
 
-# oh-my-posh themes
-Import-Module oh-my-posh
-Set-Theme wedisagree
+# starship prompt
+if (Get-Command starship -ErrorAction SilentlyContinue) {
+    Invoke-Expression (& starship init powershell)
+
+    # Add OSC 9;9 to prompt
+    Rename-Item function:prompt prompt_starship
+
+    function prompt() {
+        prompt_starship
+
+        $location = Get-Location
+        if ($location.Provider -eq (Get-PSProvider FileSystem)) {
+            Write-Host -NoNewline `
+                "`u{1b}]9;9;`"$($location.ProviderPath)`"`u{1b}\"
+        }
+    }
+}
 
 # Enable colors with ls
 Import-Module DirColors

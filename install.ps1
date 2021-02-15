@@ -43,7 +43,6 @@ Set-Location (Split-Path $MyInvocation.MyCommand.Path)
 
 # pwsh
 New-DotFileSymlink $PROFILE.CurrentUserAllHosts files\pwsh\profile.ps1
-New-DotFileSymlink (Join-Path (Split-Path -Parent $PROFILE) 'PoshThemes') files\pwsh\PoshThemes
 @{
     DOTNET_CLI_TELEMETRY_OPTOUT = '1';
     POWERSHELL_TELEMETRY_OPTOUT = '1';
