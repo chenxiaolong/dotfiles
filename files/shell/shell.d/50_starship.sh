@@ -8,9 +8,18 @@ if command -v starship >/dev/null && (is_shell bash || is_shell zsh); then
         starship_append_wsl() {
             local hostname=$(hostname)
             hostname=${hostname%.*}
-            PROMPT=${PROMPT/${hostname}/${hostname}(WSL)}
+            PS1=${PS1/${hostname}/${hostname}(WSL)}
         }
 
-        precmd_functions+=(starship_append_wsl)
+        if is_shell zsh; then
+            precmd_functions+=(starship_append_wsl)
+        else
+            starship_prompt_command=${PROMPT_COMMAND}
+            starship_prompt_wrap() {
+                eval "${starship_prompt_command}"
+                starship_append_wsl
+            }
+            PROMPT_COMMAND=starship_prompt_wrap
+        fi
     fi
 fi
