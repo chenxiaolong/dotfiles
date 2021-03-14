@@ -62,12 +62,20 @@ fi
 
 # vscode
 if [[ "$(uname -s)" == Darwin ]]; then
-    vscode_dir=~/Library/Application\ Support/Code/User
+    vscode_dirs=(~/Library/Application\ Support/Code/User)
 else
-    vscode_dir=~/.config/Code/User
+    vscode_dirs=()
+    if command -v flatpak >/dev/null && flatpak info com.visualstudio.code &>/dev/null; then
+        vscode_dirs+=(~/.var/app/com.visualstudio.code/config/Code/User)
+    fi
+    if command -v code >/dev/null; then
+        vscode_dir+=(~/.config/Code/User)
+    fi
 fi
-new_dotfile_symlink "${vscode_dir}"/keybindings.json files/vscode/keybindings.json
-new_dotfile_symlink "${vscode_dir}"/settings.json files/vscode/settings.json
+for vscode_dir in "${vscode_dirs[@]}"; do
+    new_dotfile_symlink "${vscode_dir}"/keybindings.json files/vscode/keybindings.json
+    new_dotfile_symlink "${vscode_dir}"/settings.json files/vscode/settings.json
+done
 
 # tmux
 new_dotfile_symlink ~/.tmux files/tmux
