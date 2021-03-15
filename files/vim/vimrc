@@ -99,9 +99,6 @@ set noshowmode
 let g:airline_powerline_fonts = 1
 "let g:airline#extensions#tabline#enabled = 1
 
-" https://github.com/airblade/vim-gitgutter/issues/287
-autocmd VimEnter * :AirlineRefresh
-
 """""""""""""""""
 " Color schemes "
 """""""""""""""""
