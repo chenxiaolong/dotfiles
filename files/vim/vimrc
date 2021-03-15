@@ -13,6 +13,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-bufferline'
 Plug 'wycats/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'ervandew/supertab'
+Plug 'jasonccox/vim-wayland-clipboard'
 "Plug 'majutsushi/tagbar'
 Plug 'airblade/vim-gitgutter'
 "Plug 'scrooloose/syntastic'
