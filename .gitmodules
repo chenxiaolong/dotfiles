@@ -7,9 +7,6 @@
 [submodule "files/tmux/plugins/tmux-fpp"]
 	path = files/tmux/plugins/tmux-fpp
 	url = https://github.com/tmux-plugins/tmux-fpp
-[submodule "files/tmux/plugins/tmux-resurrect"]
-	path = files/tmux/plugins/tmux-resurrect
-	url = https://github.com/tmux-plugins/tmux-resurrect
 [submodule "files/tmux/plugins/tmux-sensible"]
 	path = files/tmux/plugins/tmux-sensible
 	url = https://github.com/tmux-plugins/tmux-sensible
