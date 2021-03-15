@@ -1,30 +1,7 @@
 " Don't retain compatibility with vi
 set nocompatible
-" Disable filetype plugin
-filetype off
 
-source ~/.vim/vim-plug/plug.vim
-
-call plug#begin('~/.vim/plugged')
-" Plugins
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'jasonccox/vim-wayland-clipboard'
-Plug 'airblade/vim-gitgutter'
-Plug 'w0rp/ale'
-Plug 'christoomey/vim-tmux-navigator'
-" Color schemes
-Plug 'danielwe/base16-vim'
-" Syntax highlighting
-Plug 'kelwin/vim-smali'
-Plug 'tmux-plugins/vim-tmux'
-Plug 'Firef0x/PKGBUILD.vim'
-Plug 'rodjek/vim-puppet'
-Plug 'berdandy/ansiesc.vim'
-" Other
-Plug 'ap/vim-css-color'
-call plug#end()
-
+" Load ftplugin and indent
 filetype plugin indent on
 
 """"""""""""""""
