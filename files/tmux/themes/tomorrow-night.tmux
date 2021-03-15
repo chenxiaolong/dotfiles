@@ -55,7 +55,7 @@ set -g status-left '#[fg=#cc99cc,bg=#2d2d2d] #H#[fg=]:#[fg=#99cc99]#S '
 # right side of status bar holds "[host name] (date time)"
 set -g status-right-length 100
 set -g status-right-style bold,fg=black
-set -g status-right '#[fg=#f99157,bg=#2d2d2d] %H:%M |#[fg=#6699cc] %y.%m.%d '
+set -g status-right '#[fg=#f99157,bg=#2d2d2d] #{?mouse,[M] | ,}%H:%M |#[fg=#6699cc] %y.%m.%d '
 
 # make background window look like white tab
 set-window-option -g window-status-style none,bg=default,fg=white
