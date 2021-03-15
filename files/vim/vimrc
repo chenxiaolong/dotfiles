@@ -7,27 +7,13 @@ source ~/.vim/vim-plug/plug.vim
 
 call plug#begin('~/.vim/plugged')
 " Plugins
-Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'bling/vim-bufferline'
-Plug 'wycats/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'ervandew/supertab'
 Plug 'jasonccox/vim-wayland-clipboard'
-"Plug 'majutsushi/tagbar'
 Plug 'airblade/vim-gitgutter'
-"Plug 'scrooloose/syntastic'
 Plug 'w0rp/ale'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
-"Plug 'Valloric/YouCompleteMe'
 " Color schemes
-Plug 'junegunn/seoul256.vim'
-Plug 'w0ng/vim-hybrid'
-Plug 'zeis/vim-kolor'
-Plug 'nanotech/jellybeans.vim'
-Plug 'morhetz/gruvbox'
 Plug 'danielwe/base16-vim'
 " Syntax highlighting
 Plug 'kelwin/vim-smali'
@@ -115,13 +101,6 @@ let g:airline_powerline_fonts = 1
 
 " https://github.com/airblade/vim-gitgutter/issues/287
 autocmd VimEnter * :AirlineRefresh
-
-""""""""""""
-" nerdtree "
-""""""""""""
-
-" Open nerdtree with Ctrl+n
-map <C-n> :NERDTreeToggle<CR>
 
 """""""""""""""""
 " Color schemes "
