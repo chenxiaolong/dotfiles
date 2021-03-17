@@ -69,7 +69,7 @@ else
         vscode_dirs+=(~/.var/app/com.visualstudio.code/config/Code/User)
     fi
     if command -v code >/dev/null; then
-        vscode_dir+=(~/.config/Code/User)
+        vscode_dirs+=(~/.config/Code/User)
     fi
 fi
 for vscode_dir in "${vscode_dirs[@]}"; do
