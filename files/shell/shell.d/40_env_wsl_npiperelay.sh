@@ -1,9 +1,10 @@
 if is_os WSL \
         && command -v npiperelay.exe &>/dev/null \
-        && command -v socat &>/dev/null; then
+        && command -v socat &>/dev/null \
+        && command -v ss &>/dev/null; then
     export SSH_AUTH_SOCK=${HOME}/.ssh/agent.sock
 
-    if ! ss -a | grep -qF "${SSH_AUTH_SOCK}"; then
+    if ! ss -xl | grep -qF "${SSH_AUTH_SOCK}"; then
         rm -f "${SSH_AUTH_SOCK}"
         (
             setsid socat \
