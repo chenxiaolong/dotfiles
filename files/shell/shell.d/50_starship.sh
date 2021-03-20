@@ -8,7 +8,7 @@ if command -v starship >/dev/null && (is_shell bash || is_shell zsh); then
             # https://github.com/starship/starship/issues/1194
             local hostname=$(hostname)
             hostname=${hostname%.*}
-            PS1=${PS1/${hostname}/${hostname}(WSL)}
+            PS1=${PS1/${hostname}/${hostname}(WSL:${WSL_DISTRO_NAME})}
 
             # OSC 9;9
             printf "\e]9;9;\"%s\"\e\\" "$(wslpath -w "$(pwd)")"
