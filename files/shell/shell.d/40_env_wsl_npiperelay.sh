@@ -7,7 +7,7 @@ if is_os WSL \
 
         (
             exec {lock_fd}> "${lin_socket}.lock"
-            flock "${lock_fd}"
+            flock_fd "${lock_fd}"
 
             if ! socat OPEN:/dev/null UNIX-CONNECT:"${lin_socket}" &>/dev/null; then
                 rm -f "${lin_socket}"
