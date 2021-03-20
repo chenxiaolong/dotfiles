@@ -36,7 +36,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 # git
 new_dotfile_symlink ~/.gitconfig files/git/gitconfig
 new_dotfile_symlink ~/.gitconfig.delta files/git/gitconfig.delta
-if [[ "$(uname -r)" = *Microsoft* ]]; then
+if [[ "$(uname -r)" = *[Mm]icrosoft* ]]; then
     new_dotfile_symlink ~/.gitconfig.platform files/git/gitconfig.wsl
 fi
 
@@ -82,7 +82,7 @@ new_dotfile_symlink ~/.tmux files/tmux
 new_dotfile_symlink ~/.tmux.conf files/tmux.conf
 
 # X11
-if [[ "$(uname -r)" != *Microsoft* ]]; then
+if [[ "$(uname -r)" != *[Mm]icrosoft* ]]; then
     new_dotfile_symlink ~/.Xresources files/Xresources
 fi
 
