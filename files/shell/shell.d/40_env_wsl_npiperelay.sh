@@ -4,6 +4,7 @@ if is_os WSL \
     pipe_windows_socket() {
         local win_socket=${1}
         local lin_socket=${2}
+        shift 2
 
         (
             exec {lock_fd}> "${lin_socket}.lock"
@@ -23,7 +24,7 @@ if is_os WSL \
                     # socat should not inherit the lock file's file descriptor
                     setsid socat \
                         UNIX-LISTEN:"${lin_socket}",fork \
-                        EXEC:'./npiperelay_helper.sh',nofork \
+                        EXEC:"./npiperelay_helper.sh${*:+ ${*}}",nofork \
                         {lock_fd}>&- \
                         &
                 fi
@@ -31,11 +32,16 @@ if is_os WSL \
         )
     }
 
+    mkdir -p -m 0700 ~/.ssh ~/.gnupg
     export SSH_AUTH_SOCK=${HOME}/.ssh/agent.sock
 
     pipe_windows_socket \
         //./pipe/openssh-ssh-agent \
         "${SSH_AUTH_SOCK}"
+    pipe_windows_socket \
+        "$(win_echo '%APPDATA%\gnupg\S.gpg-agent')" \
+        ~/.gnupg/S.gpg-agent \
+        -ep -a
 
     unset -f pipe_windows_socket
 fi
