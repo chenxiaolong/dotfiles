@@ -51,8 +51,9 @@ if (Get-Command starship -ErrorAction SilentlyContinue) {
 
         $location = Get-Location
         if ($location.Provider -eq (Get-PSProvider FileSystem)) {
+            $esc = [char] 0x1b
             Write-Host -NoNewline `
-                "`u{1b}]9;9;`"$($location.ProviderPath)`"`u{1b}\"
+                "${esc}]9;9;`"$($location.ProviderPath)`"${esc}\"
         }
     }
 }
