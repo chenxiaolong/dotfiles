@@ -66,7 +66,7 @@ New-DotFileSymlink ~\.gitconfig.platform files\git\gitconfig.windows
 New-DotFileSymlink ~\.ripgreprc files\ripgreprc
 
 # vim
-New-DotFileSymlink ~\.vim files\vim
+New-DotFileSymlink ~\vimfiles files\vim
 New-DotFileSymlink ~\.vimrc files\vim\vimrc
 
 # starship
