@@ -13,7 +13,7 @@ $cmd_duration\
 $line_break\
 $jobs\
 $status\
-$character
+$character\
 """
 
 [cmd_duration]
