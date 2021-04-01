@@ -68,3 +68,6 @@ set-window-option -g window-status-current-format '#[fg=#f99157,bg=#2d2d2d] #I#{
 # active terminal yellow border, non-active white
 set -g pane-border-style "bg=default,fg=#999999"
 set -g pane-active-border-style "fg=#f99157"
+
+set -g pane-border-format " #{pane_title} "
+setenv TMUX_XPANES_PANE_BORDER_FORMAT " #{pane_title} "
