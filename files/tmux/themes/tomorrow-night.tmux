@@ -70,4 +70,4 @@ set -g pane-border-style "bg=default,fg=#999999"
 set -g pane-active-border-style "fg=#f99157"
 
 set -g pane-border-format " #{pane_title} "
-setenv TMUX_XPANES_PANE_BORDER_FORMAT " #{pane_title} "
+set-environment -g TMUX_XPANES_PANE_BORDER_FORMAT " #{pane_title} "
