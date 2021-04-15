@@ -21,7 +21,10 @@
 # YELLOW=ffcc66
 
 ## set status bar
+# tmux < 3.2:
 set-option -g status-bg default
+# tmux >= 3.2:
+set-option -g status-style bg=default
 
 ## highlight active window
 set-option -gw window-status-current-style "bg=#282a2e,fg=#81a2be"
