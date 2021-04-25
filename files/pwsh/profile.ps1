@@ -121,3 +121,8 @@ if (Test-IsWindows) {
         }
     }
 }
+
+# sccache
+if (Get-Command sccache -ErrorAction SilentlyContinue) {
+    $env:RUSTC_WRAPPER = 'sccache'
+}
