@@ -19,8 +19,8 @@ if starship_path=$(command -v starship) && (is_shell bash || is_shell zsh); then
 
         if is_shell zsh; then
             starship_prompt_wrap() {
-                "${starship_path}" "${@}" | starship_wsl_hostname_replace
                 starship_wsl_osc99
+                "${starship_path}" "${@}" | starship_wsl_hostname_replace
             }
             PROMPT=$(literal_replace "${starship_path}" starship_prompt_wrap <<< "${PROMPT}")
         else
