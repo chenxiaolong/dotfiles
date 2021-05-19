@@ -78,6 +78,11 @@ if (Get-Command starship -ErrorAction SilentlyContinue) {
 New-DotFileSymlink $env:APPDATA\Code\User\keybindings.json files\vscode\keybindings.json
 New-DotFileSymlink $env:APPDATA\Code\User\settings.json files\vscode\settings.json
 
+# https://github.com/PowerShell/PowerShell/issues/13138
+if ($PSVersionTable.PSVersion -ge [version]'7.1') {
+    Import-Module Appx -UseWindowsPowerShell
+}
+
 # Windows Terminal
 (
     'Microsoft.WindowsTerminal',
