@@ -58,16 +58,22 @@ if ($PSVersionTable.PSVersion.Major -gt 5 -and !$IsWindows) {
 }
 
 # git
-New-DotFileSymlink ~\.gitconfig files\git\gitconfig
-New-DotFileSymlink ~\.gitconfig.delta files\git\gitconfig.delta
-New-DotFileSymlink ~\.gitconfig.platform files\git\gitconfig.windows
+if (Get-Command git -ErrorAction SilentlyContinue) {
+    New-DotFileSymlink ~\.gitconfig files\git\gitconfig
+    New-DotFileSymlink ~\.gitconfig.delta files\git\gitconfig.delta
+    New-DotFileSymlink ~\.gitconfig.platform files\git\gitconfig.windows
+}
 
 # rg
-New-DotFileSymlink ~\.ripgreprc files\ripgreprc
+if (Get-Command rg -ErrorAction SilentlyContinue) {
+    New-DotFileSymlink ~\.ripgreprc files\ripgreprc
+}
 
 # vim
-New-DotFileSymlink ~\vimfiles files\vim
-New-DotFileSymlink ~\.vimrc files\vim\vimrc
+if (Get-Command vim -ErrorAction SilentlyContinue) {
+    New-DotFileSymlink ~\vimfiles files\vim
+    New-DotFileSymlink ~\.vimrc files\vim\vimrc
+}
 
 # starship
 if (Get-Command starship -ErrorAction SilentlyContinue) {
@@ -75,8 +81,10 @@ if (Get-Command starship -ErrorAction SilentlyContinue) {
 }
 
 # vscode
-New-DotFileSymlink $env:APPDATA\Code\User\keybindings.json files\vscode\keybindings.json
-New-DotFileSymlink $env:APPDATA\Code\User\settings.json files\vscode\settings.json
+if (Get-Command code -ErrorAction SilentlyContinue) {
+    New-DotFileSymlink $env:APPDATA\Code\User\keybindings.json files\vscode\keybindings.json
+    New-DotFileSymlink $env:APPDATA\Code\User\settings.json files\vscode\settings.json
+}
 
 # https://github.com/PowerShell/PowerShell/issues/13138
 if ($PSVersionTable.PSVersion -ge [version]'7.1') {
