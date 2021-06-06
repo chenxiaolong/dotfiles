@@ -34,26 +34,38 @@ new_dotfile_symlink() {
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
 # git
-new_dotfile_symlink ~/.gitconfig files/git/gitconfig
-new_dotfile_symlink ~/.gitconfig.delta files/git/gitconfig.delta
-if [[ "$(uname -r)" = *[Mm]icrosoft* ]]; then
-    new_dotfile_symlink ~/.gitconfig.platform files/git/gitconfig.wsl
+if command -v git >/dev/null; then
+    new_dotfile_symlink ~/.gitconfig files/git/gitconfig
+    new_dotfile_symlink ~/.gitconfig.delta files/git/gitconfig.delta
+    if [[ "$(uname -r)" = *[Mm]icrosoft* ]]; then
+        new_dotfile_symlink ~/.gitconfig.platform files/git/gitconfig.wsl
+    fi
 fi
 
 # Mercurial
-new_dotfile_symlink ~/.hgrc files/hgrc
+if command -v hg >/dev/null; then
+    new_dotfile_symlink ~/.hgrc files/hgrc
+fi
 
 # rg
-new_dotfile_symlink ~/.ripgreprc files/ripgreprc
+if command -v rg >/dev/null; then
+    new_dotfile_symlink ~/.ripgreprc files/ripgreprc
+fi
 
 # emacs
-new_dotfile_symlink ~/.emacs files/emacs
+if command -v emacs >/dev/null; then
+    new_dotfile_symlink ~/.emacs files/emacs
+fi
 
 # vim
-new_dotfile_symlink ~/.vim files/vim
-new_dotfile_symlink ~/.vimrc files/vim/vimrc
+if command -v vim >/dev/null; then
+    new_dotfile_symlink ~/.vim files/vim
+    new_dotfile_symlink ~/.vimrc files/vim/vimrc
+fi
 # nvim
-new_dotfile_symlink ~/.config/nvim files/vim
+if command -v nvim >/dev/null; then
+    new_dotfile_symlink ~/.config/nvim files/vim
+fi
 
 # starship
 if command -v starship >/dev/null; then
@@ -81,8 +93,10 @@ for vscode_dir in "${vscode_dirs[@]}"; do
 done
 
 # tmux
-new_dotfile_symlink ~/.tmux files/tmux
-new_dotfile_symlink ~/.tmux.conf files/tmux.conf
+if command -v tmux >/dev/null; then
+    new_dotfile_symlink ~/.tmux files/tmux
+    new_dotfile_symlink ~/.tmux.conf files/tmux.conf
+fi
 
 # X11
 if [[ "$(uname -r)" != *[Mm]icrosoft* ]]; then
@@ -101,6 +115,6 @@ if command -v bat >/dev/null; then
 fi
 
 # mock
-if [[ -f /etc/redhat-release ]]; then
+if command -v mock >/dev/null; then
     new_dotfile_symlink ~/.config/mock.cfg files/mock.cfg
 fi
