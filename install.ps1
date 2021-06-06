@@ -64,6 +64,11 @@ if (Get-Command git -ErrorAction SilentlyContinue) {
     New-DotFileSymlink ~\.gitconfig.platform files\git\gitconfig.windows
 }
 
+# gpg
+if (Get-Command gpg -ErrorAction SilentlyContinue) {
+    New-DotFileSymlink $env:APPDATA\gnupg\gpg-agent.conf files\gnupg\gpg-agent.conf
+}
+
 # rg
 if (Get-Command rg -ErrorAction SilentlyContinue) {
     New-DotFileSymlink ~\.ripgreprc files\ripgreprc
