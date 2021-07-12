@@ -16,8 +16,7 @@
     "profiles": {
         "defaults": {
             "cursorShape": "underscore",
-            "useAcrylic": true,
-            "acrylicOpacity": 0.85,
+            "useAcrylic": false,
             "colorScheme": "Base16 - Tomorrow Night",
             "fontFace": "Fira Code",
             "fontSize": 9
