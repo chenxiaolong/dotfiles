@@ -108,11 +108,6 @@ if [[ "$(uname -r)" != *[Mm]icrosoft* ]]; then
     new_dotfile_symlink ~/.Xresources files/Xresources
 fi
 
-# makepkg
-if [[ -f /etc/arch-release ]]; then
-    new_dotfile_symlink ~/.makepkg.conf files/makepkg.conf
-fi
-
 # bat
 if command -v bat >/dev/null; then
     new_dotfile_symlink "$(bat --config-dir)" files/bat
@@ -122,4 +117,13 @@ fi
 # mock
 if command -v mock >/dev/null; then
     new_dotfile_symlink ~/.config/mock.cfg files/mock.cfg
+fi
+
+# Arch Linux
+if [[ -f /etc/arch-release ]]; then
+    # makepkg
+    new_dotfile_symlink ~/.makepkg.conf files/makepkg.conf
+
+    # pinentry
+    new_dotfile_symlink ~/.config/pinentry files/pinentry
 fi
