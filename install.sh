@@ -91,6 +91,9 @@ else
     if command -v code-oss >/dev/null; then
         vscode_dirs+=(~/.config/'Code - OSS'/User)
     fi
+    if command -v codium >/dev/null; then
+        vscode_dirs+=(~/.config/VSCodium/User)
+    fi
 fi
 for vscode_dir in "${vscode_dirs[@]}"; do
     new_dotfile_symlink "${vscode_dir}"/keybindings.json files/vscode/keybindings.json
