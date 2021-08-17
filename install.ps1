@@ -79,6 +79,10 @@ if (Get-Command vim -ErrorAction SilentlyContinue) {
     New-DotFileSymlink ~\vimfiles files\vim
     New-DotFileSymlink ~\.vimrc files\vim\vimrc
 }
+# nvim
+if (Get-Command nvim -ErrorAction SilentlyContinue) {
+    New-DotFileSymlink $env:LOCALAPPDATA\nvim files\vim
+}
 
 # starship
 if (Get-Command starship -ErrorAction SilentlyContinue) {
