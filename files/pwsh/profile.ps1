@@ -126,3 +126,8 @@ if (Test-IsWindows) {
 if (Get-Command sccache -ErrorAction SilentlyContinue) {
     $env:RUSTC_WRAPPER = 'sccache'
 }
+
+# Prefer nvim
+if (Get-Command nvim -ErrorAction SilentlyContinue) {
+    Set-Alias vim nvim
+}
