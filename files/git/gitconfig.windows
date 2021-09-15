@@ -1,5 +1,5 @@
 [core]
-	editor = C:\\\\Windows\\\\vim.bat
+	editor = C:\\\\tools\\\\neovim\\\\Neovim\\\\bin\\\\nvim.exe
 	sshCommand = C:\\\\Windows\\\\System32\\\\OpenSSH\\\\ssh.exe
 	symlinks = true
 [gpg]
