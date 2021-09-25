@@ -8,6 +8,11 @@
 --write-subs
 --write-auto-subs
 
+# Don't prefer VP9 (codec:vp9.2) over higher bitrate alternatives, but still
+# prefer opus audio by increasing the audio sample rate priority. (Youtube uses
+# 48KHz for opus and 44.1KHz for m4a.)
+--format-sort lang,quality,res,fps,asr,size,br,proto,ext,hasaud,source,id
+
 # Keep most metadata in separate files aside from the chapters since video
 # players can't read those from the info json
 --embed-chapters
@@ -23,7 +28,7 @@
 --downloader aria2c
 
 # Store each video in a subdirectory
--o '%(title)s [%(id)s]/%(title)s [%(id)s].%(ext)s'
+--output '%(title)s [%(id)s]/%(title)s [%(id)s].%(ext)s'
 
 # Put multiple streams in the same container
 #--video-multistreams
