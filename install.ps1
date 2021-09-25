@@ -116,3 +116,8 @@ if (Get-Command bat -ErrorAction SilentlyContinue) {
     New-DotFileSymlink (bat --config-dir) files\bat
     bat cache --build
 }
+
+# yt-dlp
+if (Get-Command yt-dlp -ErrorAction SilentlyContinue) {
+    New-DotFileSymlink $env:APPDATA\yt-dlp\config files\yt-dlp\config
+}

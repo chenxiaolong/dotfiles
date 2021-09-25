@@ -130,3 +130,8 @@ if [[ -f /etc/arch-release ]]; then
     # pinentry
     new_dotfile_symlink ~/.config/pinentry files/pinentry
 fi
+
+# yt-dlp
+if command -v yt-dlp >/dev/null; then
+    new_dotfile_symlink ~/.config/yt-dlp/config files/yt-dlp/config
+fi

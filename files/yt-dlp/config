@@ -1,0 +1,30 @@
+# Preserve as much metadata as possible
+--write-description
+--write-info-json
+--no-clean-infojson
+--write-comments
+--write-all-thumbnails
+--sub-langs all
+--write-subs
+--write-auto-subs
+
+# Keep most metadata in separate files aside from the chapters since video
+# players can't read those from the info json
+--embed-chapters
+--sponsorblock-mark all
+
+# Parallel downloads
+--concurrent-fragments 4
+
+# Use Windows' filename restrictions to preserve compatibility with SMB shares
+--windows-filenames
+
+# Use aria2c
+--downloader aria2c
+
+# Store each video in a subdirectory
+-o '%(title)s [%(id)s]/%(title)s [%(id)s].%(ext)s'
+
+# Put multiple streams in the same container
+#--video-multistreams
+#--audio-multistreams
