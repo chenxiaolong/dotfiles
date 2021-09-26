@@ -62,14 +62,9 @@ if command -v emacs >/dev/null; then
     new_dotfile_symlink ~/.emacs files/emacs
 fi
 
-# vim
-if command -v vim >/dev/null; then
-    new_dotfile_symlink ~/.vim files/vim
-    new_dotfile_symlink ~/.vimrc files/vim/vimrc
-fi
 # nvim
 if command -v nvim >/dev/null; then
-    new_dotfile_symlink ~/.config/nvim files/vim
+    new_dotfile_symlink ~/.config/nvim files/nvim
 fi
 
 # starship

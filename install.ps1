@@ -74,14 +74,9 @@ if (Get-Command rg -ErrorAction SilentlyContinue) {
     New-DotFileSymlink ~\.ripgreprc files\ripgreprc
 }
 
-# vim
-if (Get-Command vim -ErrorAction SilentlyContinue) {
-    New-DotFileSymlink ~\vimfiles files\vim
-    New-DotFileSymlink ~\.vimrc files\vim\vimrc
-}
 # nvim
 if (Get-Command nvim -ErrorAction SilentlyContinue) {
-    New-DotFileSymlink $env:LOCALAPPDATA\nvim files\vim
+    New-DotFileSymlink $env:LOCALAPPDATA\nvim files\nvim
 }
 
 # starship
