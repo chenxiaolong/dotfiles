@@ -52,3 +52,6 @@
 [submodule "files/vim/pack/vim-css-color/start/vim-css-color"]
 	path = files/vim/pack/vim-css-color/start/vim-css-color
 	url = https://github.com/ap/vim-css-color.git
+[submodule "files/vim/pack/which-key.nvim/start/which-key.nvim"]
+	path = files/vim/pack/which-key.nvim/start/which-key.nvim
+	url = https://github.com/folke/which-key.nvim.git

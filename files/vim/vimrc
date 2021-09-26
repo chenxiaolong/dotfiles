@@ -102,3 +102,13 @@ autocmd BufRead,BufNewFile Jenkinsfile setfiletype groovy
 """"""""""""""
 
 let g:ale_linters = {'ruby': []}
+
+"""""""""""""
+" Which key "
+"""""""""""""
+
+if has('nvim')
+lua << EOF
+    require('which-key').setup {}
+EOF
+endif
