@@ -112,3 +112,9 @@ lua << EOF
     require('which-key').setup {}
 EOF
 endif
+
+""""""""
+" Glow "
+""""""""
+
+let g:glow_binary_path = ""
