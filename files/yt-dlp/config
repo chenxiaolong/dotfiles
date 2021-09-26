@@ -8,10 +8,10 @@
 --write-subs
 --write-auto-subs
 
-# Don't prefer VP9 (codec:vp9.2) over higher bitrate alternatives, but still
-# prefer opus audio by increasing the audio sample rate priority. (Youtube uses
-# 48KHz for opus and 44.1KHz for m4a.)
---format-sort lang,quality,res,fps,asr,size,br,proto,ext,hasaud,source,id
+# - Avoid default preference of VP9 (codec:vp9.2) over higher bitrate alternatives
+# - Prefer AV1 over alternatives
+# - Prefer opus audio on Youtube by prioritizing audio sample rate
+--format-sort lang,quality,res,fps,codec:av1,asr,size,br,proto,ext,hasaud,source,id
 
 # Keep most metadata in separate files aside from the chapters since video
 # players can't read those from the info json
