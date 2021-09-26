@@ -13,15 +13,30 @@ function M.multiply_color(color, ratio)
     return string.format('#%02x%02x%02x', r * ratio, g * ratio, b * ratio)
 end
 
-function M.get_highlight_options(name)
-    local raw = vim.api.nvim_exec('highlight ' .. name, true)
+function parse_highlight_kv_pairs(line)
     local result = {}
 
-    for k, v in string.gmatch(raw, '(%S+)=(%S+)') do
+    for k, v in line:gmatch('(%S+)=(%S+)') do
         result[k] = v
     end
 
     return result
+end
+
+function M.get_all_highlight_options()
+    local raw = vim.api.nvim_exec('highlight', true)
+    local result = {}
+
+    for name, rest in raw:gmatch('(%S+)%s*([^\r\n]+)') do
+        result[name] = parse_highlight_kv_pairs(rest)
+    end
+
+    return result
+end
+
+function M.get_highlight_options(name)
+    local raw = vim.api.nvim_exec('highlight ' .. name, true)
+    return parse_highlight_kv_pairs(raw)
 end
 
 return M
