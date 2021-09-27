@@ -22,7 +22,7 @@ return require('packer').startup(
                     if options.gui then
                         local modifiers = {}
 
-                        for i in options.gui:gmatch('([^,]+)') do
+                        for i in vim.gsplit(options.gui, ',', true) do
                             if i ~= 'italic' then
                                 table.insert(modifiers, i)
                             end
