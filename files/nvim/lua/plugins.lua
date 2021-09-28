@@ -148,6 +148,18 @@ return require('packer').startup(
                         { name = 'nvim_lsp' },
                         { name = 'buffer' },
                     },
+                    documentation = {
+                        border = {
+                            '┌', -- Top-left corner
+                            '─', -- Top edge
+                            '┐', -- Top-right corner
+                            '│', -- Right edge
+                            '┘', -- Bottom-right corner
+                            '─', -- Bottom edge
+                            '└', -- Bottom-left corner
+                            '│', -- Left edge
+                        },
+                    },
                 }
             end
         }
