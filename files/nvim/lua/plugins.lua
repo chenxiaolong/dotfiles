@@ -77,7 +77,7 @@ return require('packer').startup(
                     },
                     indent = {
                         enable = true
-                    }
+                    },
                 }
             end
         }
@@ -98,17 +98,57 @@ return require('packer').startup(
         -- Language servers
         use {
             'neovim/nvim-lspconfig',
+            requires = {'hrsh7th/cmp-nvim-lsp'},
             config = function()
                 local lspconfig = require('lspconfig')
-                lspconfig.rust_analyzer.setup {}
+                local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+                lspconfig.rust_analyzer.setup {
+                    capabilities = capabilities,
+                }
             end
         }
 
+        -- Inlay hints for Rust
         use {
             'nvim-lua/lsp_extensions.nvim',
             config = function()
-                -- Show inlay hints for Rust
                 vim.cmd([[autocmd InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *.rs :lua require('lsp_extensions').inlay_hints()]])
+            end
+        }
+
+        -- LSP autocompletion
+        use {
+            'hrsh7th/nvim-cmp',
+            requires = {'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-buffer'},
+            config = function()
+                local cmp = require('cmp')
+                local autocomplete_key
+
+                -- https://github.com/neovim/neovim/issues/13680
+                -- https://github.com/libuv/libuv/pull/2535
+                -- https://github.com/microsoft/terminal/issues/2865
+                -- NOTE: Requires corresponding Windows Terminal setting
+                if vim.fn.has('win32') then
+                    autocomplete_key = '<C-S-Insert>'
+                else
+                    autocomplete_key = '<C-Space>'
+                end
+
+                cmp.setup {
+                    mapping = {
+                        -- Recommended key bindings from README
+                        ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+                        ['<C-f>'] = cmp.mapping.scroll_docs(4),
+                        [autocomplete_key] = cmp.mapping.complete(),
+                        ['<C-e>'] = cmp.mapping.close(),
+                        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+                    },
+                    sources = {
+                        { name = 'nvim_lsp' },
+                        { name = 'buffer' },
+                    },
+                }
             end
         }
 

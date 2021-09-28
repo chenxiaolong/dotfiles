@@ -83,7 +83,7 @@
 
     // Add any keybinding overrides to this array.
     // To unbind a default keybinding, set the command to "unbound"
-    "keybindings": [
+    "actions": [
         {
             "command": "duplicateTab",
             "keys": "ctrl+shift+t"
@@ -103,6 +103,15 @@
                 "splitMode": "duplicate"
             },
             "keys": "alt+shift+plus"
+        },
+        // Until Ctrl+Space can be properly handled in neovim/libuv
+        {
+            "command": {
+                "action": "sendInput",
+                // Ctrl+Shift+Insert
+                "input": "\u001b[2;6~",
+            },
+            "keys": "ctrl+space",
         }
     ]
 }
