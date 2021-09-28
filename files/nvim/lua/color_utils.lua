@@ -34,6 +34,7 @@ function M.get_all_highlight_options()
 
     for line in vim.gsplit(raw, '[\r\n]') do
         local name, options = parse_highlight_line(line)
+        result[name] = options
     end
 
     return result
