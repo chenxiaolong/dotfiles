@@ -256,13 +256,26 @@ return require('packer').startup(
             requires = {'nvim-lua/plenary.nvim'},
             config = function()
                 local bindings = {
-                    fa = 'lsp_code_actions',
+                    -- General
                     fb = 'buffers',
-                    fc = 'command_history',
-                    ff = 'find_files',
+                    fc = 'commands',
                     fg = 'live_grep',
                     fh = 'help_tags',
+                    -- Files
+                    fff = 'find_files',
+                    ffo = 'oldfiles',
+                    fft = 'filetypes',
+                    -- History
+                    fhc = 'command_history',
+                    fhs = 'search_history',
+                    -- Treesitter
                     ft = 'treesitter',
+                    -- LSP
+                    fla = 'lsp_code_actions',
+                    fld = 'lsp_definitions',
+                    fli = 'lsp_implementations',
+                    flr = 'lsp_references',
+                    flt = 'lsp_type_definitions',
                 }
 
                 for k, v in pairs(bindings) do
