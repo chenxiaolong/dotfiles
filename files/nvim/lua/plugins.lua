@@ -274,6 +274,7 @@ return require('packer').startup(
                     fla = 'lsp_code_actions',
                     fld = 'lsp_definitions',
                     fli = 'lsp_implementations',
+                    flo = 'lsp_document_diagnostics',
                     flr = 'lsp_references',
                     flt = 'lsp_type_definitions',
                 }
