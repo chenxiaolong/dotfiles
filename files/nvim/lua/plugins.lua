@@ -175,7 +175,7 @@ return require('packer').startup(
                 -- a fix to support surrogate pairs, preventing emojis from
                 -- displaying properly: https://github.com/libuv/libuv/pull/2971
                 if vim.fn.has('win32') then
-                    vim.fn.sign_define('LightBulbSign', { text = "!", texthl = "LspDiagnosticsDefaultInformation" })
+                    vim.fn.sign_define('LightBulbSign', { text = '?', texthl = 'LspDiagnosticsDefaultInformation' })
                 end
             end
         }
