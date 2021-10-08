@@ -43,9 +43,9 @@ Import-Module posh-git
 if (Get-Command starship -ErrorAction SilentlyContinue) {
     Invoke-Expression (& starship init powershell)
 
-    # Add OSC 9;9 to prompt
     Rename-Item function:prompt prompt_starship
 
+    # Add OSC 9;9 and OSC 7 to prompt
     function prompt() {
         prompt_starship
 
@@ -54,6 +54,10 @@ if (Get-Command starship -ErrorAction SilentlyContinue) {
             $esc = [char] 0x1b
             Write-Host -NoNewline `
                 "${esc}]9;9;`"$($location.ProviderPath)`"${esc}\"
+
+            $provider_path = $location.ProviderPath -Replace "\\", "/"
+            Write-Host -NoNewline `
+                "${esc}]7;file://${env:COMPUTERNAME}/${provider_path}${esc}\"
         }
     }
 }
