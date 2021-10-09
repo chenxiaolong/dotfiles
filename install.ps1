@@ -110,3 +110,8 @@ if (Get-Command bat -ErrorAction SilentlyContinue) {
 if (Get-Command yt-dlp -ErrorAction SilentlyContinue) {
     New-DotFileSymlink $env:APPDATA\yt-dlp\config files\yt-dlp\config
 }
+
+# wezterm
+if (Get-Command wezterm -ErrorAction SilentlyContinue) {
+    New-DotFileSymlink ~\.config\wezterm files\wezterm
+}
