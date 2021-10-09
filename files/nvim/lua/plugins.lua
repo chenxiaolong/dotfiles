@@ -259,15 +259,14 @@ return require('packer').startup(
                     -- General
                     fb = 'buffers',
                     fc = 'commands',
+                    fC = 'command_history',
                     fg = 'live_grep',
                     fh = 'help_tags',
+                    fs = 'search_history',
                     -- Files
                     fff = 'find_files',
                     ffo = 'oldfiles',
                     fft = 'filetypes',
-                    -- History
-                    fhc = 'command_history',
-                    fhs = 'search_history',
                     -- Treesitter
                     ft = 'treesitter',
                     -- LSP
