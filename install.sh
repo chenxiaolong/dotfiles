@@ -72,29 +72,6 @@ if command -v starship >/dev/null; then
     new_dotfile_symlink ~/.config/starship.toml files/starship.toml
 fi
 
-# vscode
-if [[ "$(uname -s)" == Darwin ]]; then
-    vscode_dirs=(~/Library/Application\ Support/Code/User)
-else
-    vscode_dirs=()
-    if command -v flatpak >/dev/null && flatpak info com.visualstudio.code &>/dev/null; then
-        vscode_dirs+=(~/.var/app/com.visualstudio.code/config/Code/User)
-    fi
-    if command -v code >/dev/null; then
-        vscode_dirs+=(~/.config/Code/User)
-    fi
-    if command -v code-oss >/dev/null; then
-        vscode_dirs+=(~/.config/'Code - OSS'/User)
-    fi
-    if command -v codium >/dev/null; then
-        vscode_dirs+=(~/.config/VSCodium/User)
-    fi
-fi
-for vscode_dir in "${vscode_dirs[@]}"; do
-    new_dotfile_symlink "${vscode_dir}"/keybindings.json files/vscode/keybindings.json
-    new_dotfile_symlink "${vscode_dir}"/settings.json files/vscode/settings.json
-done
-
 # tmux
 if command -v tmux >/dev/null; then
     new_dotfile_symlink ~/.tmux files/tmux
