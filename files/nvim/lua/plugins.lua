@@ -11,6 +11,10 @@ return require('packer').startup(
                 -- For vim-airline-themes
                 vim.g.base16colorspace = 256
 
+                -- Colorize TSField (primarily for YAML)
+                local colorscheme = require('colorscheme')
+                colorscheme.highlight.TSField = 'TSVariable'
+
                 -- Unbold and dim NonText
                 local utils = require('color_utils')
                 local nontext = utils.get_highlight_options('NonText')
