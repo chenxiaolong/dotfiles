@@ -72,6 +72,7 @@ return require('packer').startup(
         use {
             'nvim-treesitter/nvim-treesitter',
             branch = '0.5-compat',
+            requires = 'nvim-treesitter/playground',
             run = ':TSUpdate',
             config = function()
                 require 'nvim-treesitter.configs'.setup {
@@ -84,18 +85,21 @@ return require('packer').startup(
                         -- https://github.com/nvim-treesitter/nvim-treesitter/issues/1377
                         disable = {'yaml'},
                     },
+                    playground = {
+                        enable = true,
+                    },
                 }
 
                 local bindings = {
-                    wn = 'print(ts_utils.get_node_at_cursor())',
-                    wt = 'print(vim.inspect(ts_utils.get_node_text(ts_utils.get_node_at_cursor())))',
+                    th = 'TSHighlightCapturesUnderCursor',
+                    tp = 'TSPlaygroundToggle',
                 }
 
                 for k, v in pairs(bindings) do
                     vim.api.nvim_set_keymap(
                         'n',
                         '<leader>' .. k,
-                        '<cmd>lua ts_utils = require("nvim-treesitter.ts_utils"); ' .. v .. '<cr>',
+                        '<cmd>' .. v .. '<cr>',
                         {noremap = true}
                     )
                 end
