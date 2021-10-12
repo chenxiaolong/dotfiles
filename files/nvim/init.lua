@@ -40,6 +40,10 @@ end
 -- Hide the default mode text (e.g. -- INSERT -- below the status line)
 vim.opt.showmode = false
 
+-- Sane splitting behavior
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
 -- Treat Jenkinsfiles as groovy code
 vim.cmd([[autocmd BufRead,BufNewFile Jenkinsfile setfiletype groovy]])
 
