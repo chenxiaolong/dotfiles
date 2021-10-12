@@ -77,10 +77,12 @@ return require('packer').startup(
                 require 'nvim-treesitter.configs'.setup {
                     ensure_installed = 'maintained',
                     highlight = {
-                        enable = true
+                        enable = true,
                     },
                     indent = {
-                        enable = true
+                        enable = true,
+                        -- https://github.com/nvim-treesitter/nvim-treesitter/issues/1377
+                        disable = {'yaml'},
                     },
                 }
 
