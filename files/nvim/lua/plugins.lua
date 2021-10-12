@@ -79,6 +79,20 @@ return require('packer').startup(
                         enable = true
                     },
                 }
+
+                local bindings = {
+                    wn = 'print(ts_utils.get_node_at_cursor())',
+                    wt = 'print(vim.inspect(ts_utils.get_node_text(ts_utils.get_node_at_cursor())))',
+                }
+
+                for k, v in pairs(bindings) do
+                    vim.api.nvim_set_keymap(
+                        'n',
+                        '<leader>' .. k,
+                        '<cmd>lua ts_utils = require("nvim-treesitter.ts_utils"); ' .. v .. '<cr>',
+                        {noremap = true}
+                    )
+                end
             end
         }
 
@@ -250,7 +264,7 @@ return require('packer').startup(
         -- tmux.conf highlighting
         use 'tmux-plugins/vim-tmux'
 
-        -- File search
+        -- Fuzzy search
         use {
             'nvim-telescope/telescope.nvim',
             requires = {'nvim-lua/plenary.nvim'},
