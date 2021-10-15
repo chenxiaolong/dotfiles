@@ -133,6 +133,15 @@ return require('packer').startup(
             end
         }
 
+        -- Function signature previews
+
+        use {
+            'ray-x/lsp_signature.nvim',
+            config = function()
+                require('lsp_signature').setup {}
+            end
+        }
+
         -- Inlay hints for Rust
         use {
             'nvim-lua/lsp_extensions.nvim',
