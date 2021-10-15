@@ -257,7 +257,10 @@ return require('packer').startup(
             requires = 'nvim-lua/plenary.nvim',
             config = function()
                 require('todo-comments').setup {
-                    signs = false
+                    highlight = {
+                        keyword = 'bg',
+                    },
+                    signs = false,
                 }
             end
         }
