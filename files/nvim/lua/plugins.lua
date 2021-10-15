@@ -221,14 +221,6 @@ return require('packer').startup(
             end
         }
 
-        -- Markdown preview
-        use {
-            'ellisonleao/glow.nvim',
-            config = function()
-                vim.g.glow_binary_path = ''
-            end
-        }
-
         -- Colorize color values
         use {
             'norcalli/nvim-colorizer.lua',
