@@ -8,8 +8,6 @@ return require('packer').startup(
             'RRethy/nvim-base16',
             config = function()
                 vim.cmd('colorscheme base16-tomorrow-night')
-                -- For vim-airline-themes
-                vim.g.base16colorspace = 256
 
                 -- Colorize TSField (primarily for YAML)
                 local colorscheme = require('colorscheme')
@@ -50,13 +48,11 @@ return require('packer').startup(
 
         -- Status line
         use {
-            'vim-airline/vim-airline-themes',
-            requires = 'vim-airline/vim-airline',
+            'Famiu/feline.nvim',
+            -- The config queries the current colorscheme
+            after = 'nvim-base16',
             config = function()
-                vim.g.airline_powerline_fonts = 1
-                -- Airline's base16 theme looks better than the matching
-                -- base16_tomorrow_night theme
-                vim.g.airline_theme = 'base16'
+                require('status')
             end
         }
 
