@@ -5,7 +5,7 @@ local colorscheme = require('colorscheme')
 colorscheme.highlight.TSField = 'TSVariable'
 
 -- Unbold and dim NonText
-local utils = require('color_utils')
+local utils = require('utils.color')
 local nontext = utils.get_highlight_options('NonText')
 local guifg = utils.multiply_color(nontext.guifg, 0.5)
 vim.cmd('highlight NonText gui=NONE guifg=' .. guifg)
