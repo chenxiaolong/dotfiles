@@ -22,8 +22,8 @@ return require('packer').startup(
 
         -- Toggle comments
         use {
-            'terrortylor/nvim-comment',
-            config = function() require('plugins.nvim-comment') end,
+            'numToStr/Comment.nvim',
+            config = function() require('plugins.Comment') end,
         }
 
         -- AST-based highlighting
