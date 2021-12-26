@@ -35,11 +35,6 @@ local vi_mode_colors = {
 }
 
 local custom_providers = {
-    -- File line ending type
-    file_format = function()
-        return vim.bo.fileformat
-    end,
-
     -- Like 'file_info', but without padding
     file_info_unpadded = function(component, opts)
         local file = require('feline.providers.file')
