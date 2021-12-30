@@ -39,7 +39,7 @@ local custom_providers = {
     file_info_unpadded = function(component, opts)
         local file = require('feline.providers.file')
         local str, icon = file.file_info(component, opts)
-        return string.sub(str, 2, -2), icon
+        return string.sub(str, 2, -1), icon
     end,
 
     -- Like 'file_type', but without forced capitalization
