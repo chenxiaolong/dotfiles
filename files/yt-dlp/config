@@ -24,9 +24,6 @@
 # Use Windows' filename restrictions to preserve compatibility with SMB shares
 --windows-filenames
 
-# Use aria2c
---downloader aria2c
-
 # Store each video in a subdirectory
 --output '%(title)s [%(id)s]/%(title)s [%(id)s].%(ext)s'
 
