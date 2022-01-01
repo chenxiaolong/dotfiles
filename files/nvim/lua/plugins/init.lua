@@ -71,6 +71,7 @@ return require('packer').startup(
                 'hrsh7th/cmp-nvim-lsp',
                 'hrsh7th/cmp-vsnip',
                 'hrsh7th/vim-vsnip',
+                'Saecki/crates.nvim',
             },
             config = function() require('plugins.nvim-cmp') end,
         }
@@ -108,6 +109,19 @@ return require('packer').startup(
             'folke/todo-comments.nvim',
             requires = {'nvim-lua/plenary.nvim'},
             config = function() require('plugins.todo-comments') end,
+        }
+
+        -- Rust
+        use {
+            'simrat39/rust-tools.nvim',
+            config = function() require('plugins.rust-tools') end,
+        }
+
+        -- Rust crates
+        use {
+            'Saecki/crates.nvim',
+            requires = {'nvim-lua/plenary.nvim'},
+            config = function() require('plugins.crates') end,
         }
 
         -- puppet highlighting
