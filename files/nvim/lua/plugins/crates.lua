@@ -27,3 +27,27 @@ require('crates').setup {
         },
     },
 }
+
+local bindings = {
+    ct = 'toggle',
+    cr = 'reload',
+
+    cv = 'show_versions_popup',
+    cf = 'show_features_popup',
+
+    cu = 'update_crate',
+    cu = 'update_crates',
+    ca = 'update_all_crates',
+    cU = 'upgrade_crate',
+    cU = 'upgrade_crates',
+    cA = 'upgrade_all_crates',
+}
+
+for k, v in pairs(bindings) do
+    vim.api.nvim_set_keymap(
+        'n',
+        '<leader>' .. k,
+        '<cmd>lua require("crates").' .. v .. '()<cr>',
+        {noremap = true}
+    )
+end
