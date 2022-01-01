@@ -121,5 +121,8 @@ return require('packer').startup(
             requires = {'nvim-lua/plenary.nvim'},
             config = function() require('plugins.telescope') end,
         }
+
+        -- vim.ui implementation
+        use 'stevearc/dressing.nvim'
     end
 )
