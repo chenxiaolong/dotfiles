@@ -44,6 +44,9 @@ vim.opt.showmode = false
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
+-- Don't fold by default
+vim.opt.foldlevelstart = 99
+
 -- Treat Jenkinsfiles as groovy code
 vim.cmd([[autocmd BufRead,BufNewFile Jenkinsfile setfiletype groovy]])
 
