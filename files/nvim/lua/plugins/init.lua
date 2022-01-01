@@ -53,12 +53,6 @@ return require('packer').startup(
             config = function() require('plugins.lsp_signature') end,
         }
 
-        -- Inlay hints for Rust
-        use {
-            'nvim-lua/lsp_extensions.nvim',
-            config = function() require('plugins.lsp_extensions') end,
-        }
-
         -- LSP autocompletion
         use {
             'hrsh7th/nvim-cmp',
