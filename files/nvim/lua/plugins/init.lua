@@ -53,6 +53,16 @@ return require('packer').startup(
             config = function() require('plugins.lsp_signature') end,
         }
 
+        -- LSP bridge to external tools
+        use {
+            'jose-elias-alvarez/null-ls.nvim',
+            requires = {
+                'nvim-lua/plenary.nvim',
+                'lewis6991/gitsigns.nvim',
+            },
+            config = function() require('plugins.null-ls') end,
+        }
+
         -- LSP autocompletion
         use {
             'hrsh7th/nvim-cmp',
@@ -69,12 +79,6 @@ return require('packer').startup(
         use {
             'kosayoda/nvim-lightbulb',
             config = function() require('plugins.nvim-lightbulb') end,
-        }
-
-        -- Linting
-        use {
-            'w0rp/ale',
-            config = function() require('plugins.ale') end,
         }
 
         -- Show available keybindings
