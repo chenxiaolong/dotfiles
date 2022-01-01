@@ -76,10 +76,10 @@ return require('packer').startup(
             config = function() require('plugins.nvim-cmp') end,
         }
 
-        -- Code actions
+        -- Pretty list of diagnostics, code actions, etc.
         use {
-            'kosayoda/nvim-lightbulb',
-            config = function() require('plugins.nvim-lightbulb') end,
+            "folke/trouble.nvim",
+            config = function() require('plugins.trouble') end,
         }
 
         -- Show available keybindings
