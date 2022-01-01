@@ -108,9 +108,6 @@ return require('packer').startup(
             config = function() require('plugins.todo-comments') end,
         }
 
-        -- PKGBUILD highlighting
-        use 'm-pilia/vim-pkgbuild'
-
         -- puppet highlighting
         use 'rodjek/vim-puppet'
 
