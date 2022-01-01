@@ -47,6 +47,9 @@ vim.opt.splitright = true
 -- Don't fold by default
 vim.opt.foldlevelstart = 99
 
+-- Don't select a completion item by default
+vim.opt.completeopt = 'menuone,noselect'
+
 -- Treat Jenkinsfiles as groovy code
 vim.cmd([[autocmd BufRead,BufNewFile Jenkinsfile setfiletype groovy]])
 
