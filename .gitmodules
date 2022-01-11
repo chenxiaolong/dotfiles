@@ -13,3 +13,6 @@
 [submodule "files/tmux/plugins/tmux-yank"]
 	path = files/tmux/plugins/tmux-yank
 	url = https://github.com/tmux-plugins/tmux-yank
+[submodule "files/tmux/plugins/tmux-thumbs"]
+	path = files/tmux/plugins/tmux-thumbs
+	url = https://github.com/fcsonline/tmux-thumbs.git
