@@ -76,6 +76,12 @@ return require('packer').startup(
             config = function() require('plugins.nvim-cmp') end,
         }
 
+        -- LSP virtual lines instead of virtual text
+        use {
+            "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+            config = function() require('plugins.lsp_lines') end,
+        }
+
         -- Pretty list of diagnostics, code actions, etc.
         use {
             "folke/trouble.nvim",
