@@ -114,6 +114,7 @@ return require('packer').startup(
         -- Rust
         use {
             'simrat39/rust-tools.nvim',
+            requires = {'neovim/nvim-lspconfig'},
             config = function() require('plugins.rust-tools') end,
         }
 
