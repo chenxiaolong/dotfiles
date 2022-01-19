@@ -2,6 +2,7 @@ format = """
 $time\
 $username\
 $hostname\
+${custom.wsl_distro}\
 $directory\
 $git_branch\
 $git_commit\
@@ -18,6 +19,13 @@ $character\
 
 [cmd_duration]
 show_milliseconds = true
+
+[custom.wsl_distro]
+command = "echo -n \"${WSL_DISTRO_NAME:+WSL:${WSL_DISTRO_NAME}}\""
+format = '[\($output\)]($style) '
+style = 'bold 177'
+os = "linux"
+when = "true"
 
 [directory]
 truncation_length = 2
