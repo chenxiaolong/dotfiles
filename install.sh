@@ -107,3 +107,8 @@ fi
 if command -v yt-dlp >/dev/null; then
     new_dotfile_symlink ~/.config/yt-dlp/config files/yt-dlp/config
 fi
+
+# foot
+if command -v foot >/dev/null; then
+    new_dotfile_symlink ~/.config/foot files/foot
+fi
