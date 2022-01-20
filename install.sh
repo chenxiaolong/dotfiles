@@ -54,11 +54,6 @@ if command -v rg >/dev/null; then
     new_dotfile_symlink ~/.ripgreprc files/ripgreprc
 fi
 
-# emacs
-if command -v emacs >/dev/null; then
-    new_dotfile_symlink ~/.emacs files/emacs
-fi
-
 # nvim
 if command -v nvim >/dev/null; then
     new_dotfile_symlink ~/.config/nvim files/nvim
