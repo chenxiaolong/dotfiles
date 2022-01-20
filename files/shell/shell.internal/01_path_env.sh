@@ -1,5 +1,5 @@
 path_push_front() {
-    if [[ ! -z "${PATH}" ]]; then
+    if [[ -n "${PATH}" ]]; then
         export PATH=${1}:${PATH}
     else
         export PATH=${1}
@@ -7,7 +7,7 @@ path_push_front() {
 }
 
 path_push_back() {
-    if [[ ! -z "${PATH}" ]]; then
+    if [[ -n "${PATH}" ]]; then
         export PATH=${PATH}:${1}
     else
         export PATH=${1}
