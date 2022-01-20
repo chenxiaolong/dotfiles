@@ -1,5 +1,3 @@
-# Written by: Andrew Gunnerson <andrewgunnerson@gmail.com>
-
 __config_current_shell=
 __config_dotfiles_dir=
 __config_script_dir=
@@ -16,37 +14,20 @@ detect_shell() {
 }
 
 is_shell() {
-    [ "x${__config_current_shell}" = "x${1}" ]
+    [[ "${__config_current_shell}" == "${1}" ]]
 }
 
 detect_shell
 
-if is_shell bash; then
-    __config_script_dir=$(dirname "${BASH_SOURCE[0]}")
-elif is_shell zsh; then
-    __config_script_dir=$(dirname "${0}")
-fi
+__config_script_dir=$(dirname "${BASH_SOURCE[0]:-${(%):-%x}}")
 
 if [[ -n "${__config_script_dir}" ]]; then
     __config_dotfiles_dir=${__config_script_dir}/../..
 fi
 
-for i in "${__config_script_dir}"/shell.internal/*.sh; do
+for i in "${__config_script_dir}"/shell.{internal,d}/*.sh; do
     source "${i}"
 done
-if [[ -d "${__config_script_dir}"/shell.local.pre ]]; then
-    for i in "${__config_script_dir}"/shell.local.pre/*.sh; do
-        source "${i}"
-    done
-fi
-for i in "${__config_script_dir}"/shell.d/*.sh; do
-    source "${i}"
-done
-if [[ -d "${__config_script_dir}"/shell.local.post ]]; then
-    for i in "${__config_script_dir}"/shell.local.post/*.sh; do
-        source "${i}"
-    done
-fi
 unset i
 
 export DOTFILES=${__config_dotfiles_dir}
