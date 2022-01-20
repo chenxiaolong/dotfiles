@@ -21,11 +21,5 @@ if [[ -z "${__os}" ]]; then
 fi
 
 is_os() {
-    local i
-    for i in "${@}"; do
-        if [[ "${__os}" == "${i}" ]]; then
-            return 0
-        fi
-    done
-    return 1
+    [[ "${__os}" == "${1}" ]]
 }
