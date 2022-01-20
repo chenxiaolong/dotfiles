@@ -79,7 +79,7 @@ if command -v tmux >/dev/null; then
 fi
 
 # X11
-if [[ "$(uname -r)" != *[Mm]icrosoft* ]]; then
+if command -v xrdb; then
     new_dotfile_symlink ~/.Xresources files/Xresources
 fi
 
