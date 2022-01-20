@@ -14,18 +14,8 @@ if is_os Linux; then
             __distro=Unknown
         fi
     fi
+
+    is_distro() {
+        [[ "${__distro}" == "${1}" ]]
+    }
 fi
-
-is_distro() {
-    if ! is_os Linux; then
-        return 1
-    fi
-
-    local i
-    for i in "${@}"; do
-        if [[ "${__distro}" == "${i}" ]]; then
-            return 0
-        fi
-    done
-    return 1
-}
