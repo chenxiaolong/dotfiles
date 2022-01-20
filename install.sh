@@ -37,9 +37,6 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 if command -v git >/dev/null; then
     new_dotfile_symlink ~/.gitconfig files/git/gitconfig
     new_dotfile_symlink ~/.gitconfig.delta files/git/gitconfig.delta
-    if [[ "$(uname -r)" = *[Mm]icrosoft* ]]; then
-        new_dotfile_symlink ~/.gitconfig.platform files/git/gitconfig.wsl
-    fi
 fi
 
 # gpg
