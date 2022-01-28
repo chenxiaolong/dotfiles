@@ -1,4 +1,10 @@
-return require('packer').startup(
+local status, packer = pcall(require, 'packer')
+if not status then
+    print 'packer is not installed'
+    return
+end
+
+return packer.startup(
     function()
         -- Manage self
         use 'wbthomason/packer.nvim'
