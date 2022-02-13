@@ -39,11 +39,6 @@ local custom_providers = {
     file_type_uncapitalized = function()
         return vim.bo.filetype
     end,
-
-    -- Like 'position', but without padding
-    position_unpadded = function()
-        return string.format('%d:%d', unpack(vim.api.nvim_win_get_cursor(0)))
-    end,
 }
 
 local components = {
@@ -138,7 +133,7 @@ local components = {
                 },
             },
             {
-                provider = 'position_unpadded',
+                provider = 'position',
                 right_sep = ' ',
                 hl = {
                     fg = colors.cyan,
