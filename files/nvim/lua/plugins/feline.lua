@@ -34,13 +34,6 @@ local vi_mode_colors = {
     NONE = colors.white,
 }
 
-local custom_providers = {
-    -- Like 'file_type', but without forced capitalization
-    file_type_uncapitalized = function()
-        return vim.bo.filetype
-    end,
-}
-
 local components = {
     active = {
         {
@@ -126,7 +119,12 @@ local components = {
                 },
             },
             {
-                provider = 'file_type_uncapitalized',
+                provider = {
+                    name = 'file_type',
+                    opts = {
+                        case = 'lowercase'
+                    },
+                },
                 right_sep = ' ',
                 hl = {
                     fg = colors.purple,
@@ -169,6 +167,5 @@ require('feline').setup {
         fg = colors.fg,
     },
     components = components,
-    custom_providers = custom_providers,
     vi_mode_colors = vi_mode_colors,
 }
