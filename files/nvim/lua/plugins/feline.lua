@@ -35,13 +35,6 @@ local vi_mode_colors = {
 }
 
 local custom_providers = {
-    -- Like 'file_info', but without padding
-    file_info_unpadded = function(component, opts)
-        local file = require('feline.providers.file')
-        local str, icon = file.file_info(component, opts)
-        return string.sub(str, 2, -1), icon
-    end,
-
     -- Like 'file_type', but without forced capitalization
     file_type_uncapitalized = function()
         return vim.bo.filetype
@@ -68,7 +61,7 @@ local components = {
             },
             {
                 provider = {
-                    name = 'file_info_unpadded',
+                    name = 'file_info',
                     opts = {
                         colored_icon = false,
                         file_modified_icon = '[*]',
