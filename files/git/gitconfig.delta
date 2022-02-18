@@ -7,9 +7,16 @@
 [delta]
 	features = decorations
 	line-numbers = true
+	navigate = true
 	#whitespace-error-style = 22 reverse
 
 [delta "decorations"]
 	commit-decoration-style = bold yellow box
 	file-style = bold yellow ul
 	file-decoration-style = none
+
+[merge]
+	conflictstyle = diff3
+
+[diff]
+	colorMoved = default
