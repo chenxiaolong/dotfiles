@@ -12,8 +12,6 @@
 
 [delta "decorations"]
 	commit-decoration-style = bold yellow box
-	file-style = bold yellow ul
-	file-decoration-style = none
 
 [merge]
 	conflictstyle = diff3
