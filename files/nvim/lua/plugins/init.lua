@@ -40,10 +40,10 @@ return packer.startup(
             config = function() require('plugins.nvim-treesitter') end,
         }
 
-        -- Indent lines
+        -- A bunch of one-file mini-plugins
         use {
-            'lukas-reineke/indent-blankline.nvim',
-            config = function() require('plugins.indent-blankline') end,
+            'echasnovski/mini.nvim',
+            config = function() require('plugins.mini') end,
         }
 
         -- Language servers
