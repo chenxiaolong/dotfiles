@@ -117,6 +117,13 @@ return packer.startup(
             config = function() require('plugins.todo-comments') end,
         }
 
+        -- Clang
+        use {
+            'p00f/clangd_extensions.nvim',
+            requires = {'neovim/nvim-lspconfig'},
+            config = function() require('plugins.clangd_extensions') end,
+        }
+
         -- Rust
         use {
             'simrat39/rust-tools.nvim',
