@@ -46,6 +46,12 @@ return packer.startup(
             config = function() require('plugins.mini') end,
         }
 
+        -- Indent lines
+        use {
+            'lukas-reineke/indent-blankline.nvim',
+            config = function() require('plugins.indent-blankline') end,
+        }
+
         -- Language servers
         use {
             'neovim/nvim-lspconfig',
