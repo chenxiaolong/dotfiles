@@ -32,6 +32,12 @@ return packer.startup(
             config = function() require('plugins.Comment') end,
         }
 
+        -- Automatically detect indentation
+        use {
+            'nmac427/guess-indent.nvim',
+            config = function() require('plugins.guess-indent') end,
+        }
+
         -- AST-based highlighting
         use {
             'nvim-treesitter/nvim-treesitter',
