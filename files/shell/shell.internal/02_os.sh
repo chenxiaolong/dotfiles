@@ -1,4 +1,4 @@
-if [[ -z "${__os}" ]]; then
+if [[ -z "${__os:-}" ]]; then
     case "$(uname -r)" in
     *Microsoft*|*microsoft*)
         __os=WSL
@@ -6,13 +6,16 @@ if [[ -z "${__os}" ]]; then
     esac
 fi
 
-if [[ -z "${__os}" ]]; then
+if [[ -z "${__os:-}" ]]; then
     case "$(uname -s)" in
     Linux)
         __os=Linux
         ;;
     Darwin)
         __os=macOS
+        ;;
+    MINGW*|MSYS*)
+        __os=Windows
         ;;
     *)
         __os=Unknown
