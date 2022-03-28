@@ -1,7 +1,7 @@
 [core]
 	editor = C:\\\\tools\\\\neovim\\\\Neovim\\\\bin\\\\nvim.exe
 	# https://github.com/PowerShell/Win32-OpenSSH/issues/1322
-	sshCommand = bash "${DOTFILES}"/files/shell/npiperelay/proxy.sh
+	sshCommand = SSH_AUTH_SOCK="${HOME}/wincrypt-cygwin.sock" ssh
 	symlinks = true
 [gpg]
 	program = C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe

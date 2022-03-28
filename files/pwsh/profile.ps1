@@ -76,8 +76,6 @@ if (Test-IsWindows) {
     }
 }
 
-$env:DOTFILES = (Join-Path (Split-Path (Get-Item $MyInvocation.MyCommand.Path).Target) '..\..')
-
 # Use less as the pager if it's installed
 if (Test-IsWindows -and !$env:PAGER) {
     if (Get-Command less -ErrorAction SilentlyContinue) {
