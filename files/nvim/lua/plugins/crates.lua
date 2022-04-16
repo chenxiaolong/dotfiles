@@ -1,5 +1,7 @@
+local crates = require('crates')
+
 -- Default configuration from the README for setups without patched fonts
-require('crates').setup {
+crates.setup {
     text = {
         loading = "  Loading...",
         version = "  %s",
@@ -47,7 +49,10 @@ for k, v in pairs(bindings) do
     vim.api.nvim_set_keymap(
         'n',
         '<leader>' .. k,
-        '<cmd>lua require("crates").' .. v .. '()<cr>',
-        {noremap = true}
+        '',
+        {
+            noremap = true,
+            callback = crates[v],
+        }
     )
 end

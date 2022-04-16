@@ -21,11 +21,16 @@ local bindings = {
     flt = 'lsp_type_definitions',
 }
 
+local builtin = require('telescope.builtin')
+
 for k, v in pairs(bindings) do
     vim.api.nvim_set_keymap(
         'n',
         '<leader>' .. k,
-        '<cmd>lua require("telescope.builtin").' .. v .. '()<cr>',
-        {noremap = true}
+        '',
+        {
+            noremap = true,
+            callback = builtin[v],
+        }
     )
 end
