@@ -40,6 +40,9 @@ end
 -- Hide the default mode text (e.g. -- INSERT -- below the status line)
 vim.opt.showmode = false
 
+-- Use a global status line
+vim.opt.laststatus = 3
+
 -- Sane splitting behavior
 vim.opt.splitbelow = true
 vim.opt.splitright = true
