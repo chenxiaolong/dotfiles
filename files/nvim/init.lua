@@ -53,8 +53,16 @@ vim.opt.foldlevelstart = 99
 -- Don't select a completion item by default
 vim.opt.completeopt = 'menuone,noselect'
 
+-- Use filetype.lua instead of filetype.vim
+vim.g.do_filetype_lua = 1
+vim.g.did_load_filetypes = 0
+
 -- Treat Jenkinsfiles as groovy code
-vim.cmd([[autocmd BufRead,BufNewFile Jenkinsfile setfiletype groovy]])
+vim.filetype.add({
+    filename = {
+        ['Jenkinsfile'] = 'groovy',
+    },
+})
 
 -- Show yanked lines
 vim.cmd([[autocmd TextYankPost * lua vim.highlight.on_yank()]])
