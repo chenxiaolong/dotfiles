@@ -46,13 +46,9 @@ local bindings = {
 }
 
 for k, v in pairs(bindings) do
-    vim.api.nvim_set_keymap(
+    vim.keymap.set(
         'n',
         '<leader>' .. k,
-        '',
-        {
-            noremap = true,
-            callback = crates[v],
-        }
+        crates[v]
     )
 end

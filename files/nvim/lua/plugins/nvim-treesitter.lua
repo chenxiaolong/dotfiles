@@ -22,10 +22,9 @@ local bindings = {
 }
 
 for k, v in pairs(bindings) do
-    vim.api.nvim_set_keymap(
+    vim.keymap.set(
         'n',
         '<leader>' .. k,
-        '<cmd>' .. v .. '<cr>',
-        {noremap = true}
+        '<cmd>' .. v .. '<cr>'
     )
 end
