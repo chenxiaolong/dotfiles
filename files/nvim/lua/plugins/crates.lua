@@ -22,7 +22,7 @@ crates.setup {
             transitive = " ~ %s ",
         },
     },
-    cmp = {
+    src = {
         text = {
             prerelease = " pre-release ",
             yanked = " yanked ",
