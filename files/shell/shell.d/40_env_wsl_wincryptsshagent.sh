@@ -1,5 +1,5 @@
 if is_os WSL \
-        && command -v WinCryptSSHAgent.exe &>/dev/null \
+        && (command -v WinCryptSSHAgent.exe || command -v wincrypt-sshagent.exe) &>/dev/null \
         && command -v socat &>/dev/null; then
     export SSH_AUTH_SOCK=${HOME}/.ssh/agent.sock
 
