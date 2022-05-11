@@ -1,5 +1,5 @@
 [core]
-	editor = C:\\\\tools\\\\neovim\\\\Neovim\\\\bin\\\\nvim.exe
+	editor = nvim.exe
 	# https://github.com/PowerShell/Win32-OpenSSH/issues/1322
 	sshCommand = SSH_AUTH_SOCK="${HOME}/wincrypt-cygwin.sock" ssh
 	symlinks = true
