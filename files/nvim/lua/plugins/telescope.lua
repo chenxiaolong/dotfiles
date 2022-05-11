@@ -1,32 +1,29 @@
-local bindings = {
-    -- General
-    fb = 'buffers',
-    fc = 'commands',
-    fC = 'command_history',
-    fd = 'diagnostics',
-    fg = 'live_grep',
-    fh = 'help_tags',
-    fs = 'search_history',
-    -- Files
-    fff = 'find_files',
-    ffo = 'oldfiles',
-    fft = 'filetypes',
-    -- Treesitter
-    ft = 'treesitter',
-    -- LSP
-    fla = 'lsp_code_actions',
-    fld = 'lsp_definitions',
-    fli = 'lsp_implementations',
-    flr = 'lsp_references',
-    flt = 'lsp_type_definitions',
-}
-
 local builtin = require('telescope.builtin')
 
+local bindings = {
+    -- General
+    fb = builtin.buffers,
+    fc = builtin.commands,
+    fC = builtin.command_history,
+    fd = builtin.diagnostics,
+    fg = builtin.live_grep,
+    fh = builtin.help_tags,
+    fs = builtin.search_history,
+    -- Files
+    fff = builtin.find_files,
+    ffo = builtin.oldfiles,
+    fft = builtin.filetypes,
+    -- Treesitter
+    ft = builtin.treesitter,
+    -- LSP
+    fla = vim.lsp.buf.code_action,
+    fld = builtin.lsp_definitions,
+    fli = builtin.lsp_implementations,
+    flr = builtin.lsp_references,
+    flt = builtin.lsp_type_definitions,
+}
+
+
 for k, v in pairs(bindings) do
-    vim.keymap.set(
-        'n',
-        '<leader>' .. k,
-        builtin[v]
-    )
+    vim.keymap.set('n', '<leader>' .. k, v)
 end
