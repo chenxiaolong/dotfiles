@@ -32,6 +32,7 @@ local options = {
     enable_scroll_bar = true,
     scrollback_lines = 50000,
     tab_max_width = 24,
+    use_fancy_tab_bar = false,
 }
 
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
