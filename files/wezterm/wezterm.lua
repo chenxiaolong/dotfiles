@@ -24,24 +24,9 @@ colors.cursor_fg = colors.background
 wezterm.on('format-tab-title', tab_bar.format_tab_title)
 wezterm.on('update-right-status', tab_bar.update_right_status)
 
--- Reduced font weight across the board
-local fira_light = wezterm.font('Fira Code', {weight = 'Light'})
-local fira_medium = wezterm.font('Fira Code', {weight = 'Medium'})
-
 local options = {
     colors = colors,
-    font = fira_light,
-    font_rules = {
-        {
-            intensity = 'Bold',
-            font = fira_medium,
-        },
-        -- Disable italics
-        {
-            italic = true,
-            font = fira_light,
-        },
-    },
+    font = wezterm.font('Fira Code'),
     font_size = 9,
     enable_wayland = true,
     enable_scroll_bar = true,
