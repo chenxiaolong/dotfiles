@@ -22,7 +22,7 @@ show_milliseconds = true
 
 [custom.wsl_distro]
 command = "echo -n \"${WSL_DISTRO_NAME}\""
-format = '[WSL:\($output\)]($style) '
+format = '[\(WSL:$output\)]($style) '
 style = 'bold 177'
 os = "linux"
 when = "test -n \"${WSL_DISTRO_NAME}\""
