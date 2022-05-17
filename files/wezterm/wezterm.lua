@@ -6,8 +6,8 @@ local colors = {
     ansi = base16.ansi,
     brights = base16.brights,
     indexed = base16.indexed,
-    selection_bg = base16.selection_bg,
-    selection_fg = base16.selection_fg,
+    selection_bg = 'rgba(50% 50% 50% 50%)',
+    selection_fg = 'none',
     -- Same as tmux
     scrollbar_thumb = '#999999',
     split = '#999999',

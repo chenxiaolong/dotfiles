@@ -28,9 +28,6 @@ local M = {
         [0x20] = '#b4b7b4',
         [0x21] = '#e0e0e0',
     },
-    -- From base16-iterm2
-    selection_bg = '#c7c9c6',
-    selection_fg = '#413b37',
 }
 
 return M
