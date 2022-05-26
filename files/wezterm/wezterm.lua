@@ -30,6 +30,17 @@ local options = {
     font_size = 9,
     enable_wayland = true,
     enable_scroll_bar = true,
+    keys = {
+        {
+            mods = "CTRL|SHIFT",
+            key = "x",
+            action = wezterm.action({
+                CloseCurrentPane = {
+                    confirm = true,
+                },
+            }),
+        },
+    },
     scrollback_lines = 50000,
     tab_max_width = 24,
     use_fancy_tab_bar = false,
