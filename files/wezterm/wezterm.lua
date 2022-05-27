@@ -33,7 +33,7 @@ local options = {
     keys = {
         {
             mods = "CTRL|SHIFT",
-            key = "x",
+            key = "e",
             action = wezterm.action({
                 CloseCurrentPane = {
                     confirm = true,
