@@ -17,7 +17,7 @@ __wsl_osc99() {
     printf '\e]9;9;"%s"\e\\' "$(wslpath -w "${PWD}")"
 }
 
-if is_os WSL; then
+if is_os WSL && [[ "${TERM_PROGRAM}" != WezTerm ]]; then
     __osc_func=__wsl_osc99
 else
     __osc_func=__osc7
