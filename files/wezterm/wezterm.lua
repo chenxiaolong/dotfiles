@@ -40,6 +40,15 @@ local options = {
                 },
             }),
         },
+        {
+            mods = "CTRL|SHIFT",
+            key = "Enter",
+            action = wezterm.action({
+                ShowLauncherArgs = {
+                    flags = 'TABS|LAUNCH_MENU_ITEMS|DOMAINS|WORKSPACES',
+                },
+            }),
+        },
     },
     scrollback_lines = 50000,
     tab_max_width = 24,
