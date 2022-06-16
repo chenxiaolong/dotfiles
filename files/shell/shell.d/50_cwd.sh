@@ -28,5 +28,5 @@ if is_shell bash; then
     PROMPT_COMMAND+=("${__osc_func}")
 elif is_shell zsh; then
     autoload -Uz add-zsh-hook
-    add-zsh-hook -Uz chpwd "${__osc_func}"
+    add-zsh-hook -Uz precmd "${__osc_func}"
 fi
