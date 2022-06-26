@@ -23,7 +23,7 @@ else
     __osc_func=__osc7
 fi
 
-if is_shell bash; then
+if is_shell bash && [[ -z "${__bp_imported:-}" ]]; then
     declare -a PROMPT_COMMAND
     PROMPT_COMMAND+=("${__osc_func}")
 elif is_shell zsh; then
