@@ -19,17 +19,17 @@ set_up_android_sdk() {
         export ANDROID_SDK_ROOT=${sdk_path}
         export ANDROID_HOME=${sdk_path}
 
-        path_push_back "${sdk_path}/tools"
-        path_push_back "${sdk_path}/tools/bin"
-        path_push_back "${sdk_path}/cmdline-tools/tools/bin"
-        path_push_back "${sdk_path}/platform-tools"
+        path_push_front "${sdk_path}/tools"
+        path_push_front "${sdk_path}/tools/bin"
+        path_push_front "${sdk_path}/cmdline-tools/tools/bin"
+        path_push_front "${sdk_path}/platform-tools"
 
         if [[ -d "${sdk_path}/build-tools" ]]; then
             build_tools_ver="$(find "${sdk_path}/build-tools" \
                                -mindepth 1 -maxdepth 1 \
                                | sort -V | tail -1)"
             build_tools_ver="$(basename "${build_tools_ver}")"
-            path_push_back "${sdk_path}/build-tools/${build_tools_ver}"
+            path_push_front "${sdk_path}/build-tools/${build_tools_ver}"
         fi
     fi
 }
@@ -56,7 +56,7 @@ set_up_android_ndk() {
         export ANDROID_NDK_ROOT=${ndk_path}
         export ANDROID_NDK=${ndk_path}
         export ANDROID_NDK_HOME=${ndk_path}
-        path_push_back "${ndk_path}"
+        path_push_front "${ndk_path}"
     fi
 }
 
