@@ -28,7 +28,6 @@ local options = {
     colors = colors,
     font = wezterm.font('Fira Code'),
     font_size = 9,
-    enable_wayland = true,
     enable_kitty_keyboard = true,
     enable_scroll_bar = true,
     keys = {
