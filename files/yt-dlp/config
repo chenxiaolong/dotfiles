@@ -6,7 +6,6 @@
 --write-all-thumbnails
 --sub-langs all
 --write-subs
---write-auto-subs
 
 # - Avoid default preference of VP9 (codec:vp9.2) over higher bitrate alternatives
 # - Prefer AV1 over alternatives
