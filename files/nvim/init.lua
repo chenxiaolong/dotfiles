@@ -53,10 +53,6 @@ vim.opt.foldlevelstart = 99
 -- Don't select a completion item by default
 vim.opt.completeopt = 'menuone,noselect'
 
--- Use filetype.lua instead of filetype.vim
-vim.g.do_filetype_lua = 1
-vim.g.did_load_filetypes = 0
-
 -- Treat Jenkinsfiles as groovy code
 vim.filetype.add({
     filename = {
