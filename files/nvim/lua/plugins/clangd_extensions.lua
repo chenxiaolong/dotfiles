@@ -1,4 +1,4 @@
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- https://github.com/neovim/neovim/pull/16694
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/issues/428
