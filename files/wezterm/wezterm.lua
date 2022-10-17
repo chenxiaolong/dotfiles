@@ -50,6 +50,50 @@ local options = {
             }),
         },
     },
+    mouse_bindings = {
+        -- Remove link opening behavior for default bindings
+        {
+            event = {
+                Up = {
+                    streak = 1,
+                    button = 'Left',
+                },
+            },
+            mods = 'NONE',
+            action = wezterm.action.CompleteSelection('PrimarySelection'),
+        },
+        {
+            event = {
+                Up = {
+                    streak = 1,
+                    button = 'Left',
+                },
+            },
+            mods = 'SHIFT',
+            action = wezterm.action.CompleteSelection('PrimarySelection'),
+        },
+        -- Use control click to open links
+        {
+            event = {
+                Up = {
+                    streak = 1,
+                    button = 'Left',
+                },
+            },
+            mods = 'CTRL',
+            action = wezterm.action.OpenLinkAtMouseCursor,
+        },
+        {
+            event = {
+                Down = {
+                    streak = 1,
+                    button = 'Left',
+                },
+            },
+            mods = 'CTRL',
+            action = wezterm.action.Nop,
+        }
+    },
     scrollback_lines = 50000,
     tab_max_width = 24,
     use_fancy_tab_bar = false,
