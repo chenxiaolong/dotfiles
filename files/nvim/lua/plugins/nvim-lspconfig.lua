@@ -6,6 +6,9 @@ local lspconfig = require('lspconfig')
 if vim.fn.executable('bash-language-server') == 1 then
     lspconfig.bashls.setup({})
 end
+if vim.fn.executable('gopls') == 1 then
+    lspconfig.gopls.setup({})
+end
 if vim.fn.executable('pylsp') == 1 then
     lspconfig.pylsp.setup({})
 end
