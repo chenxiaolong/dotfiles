@@ -119,9 +119,6 @@ return packer.startup(
             config = function() require('plugins.gitsigns') end,
         }
 
-        -- Code formatting
-        use 'sbdchd/neoformat'
-
         -- Clang
         use {
             'p00f/clangd_extensions.nvim',
