@@ -70,11 +70,6 @@ if command -v tmux >/dev/null; then
     new_dotfile_symlink ~/.tmux.conf files/tmux.conf
 fi
 
-# X11
-if command -v xrdb; then
-    new_dotfile_symlink ~/.Xresources files/Xresources
-fi
-
 # bat
 if command -v bat >/dev/null; then
     new_dotfile_symlink "$(bat --config-dir)" files/bat
