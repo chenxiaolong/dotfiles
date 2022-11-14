@@ -161,9 +161,8 @@ return packer.startup(
 
         -- Fuzzy search
         use {
-            'nvim-telescope/telescope.nvim',
-            requires = {'nvim-lua/plenary.nvim'},
-            config = function() require('plugins.telescope') end,
+            'ibhagwan/fzf-lua',
+            config = function() require('plugins.fzf-lua') end,
         }
 
         -- vim.ui implementation
