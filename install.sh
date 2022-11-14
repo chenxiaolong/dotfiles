@@ -105,11 +105,6 @@ if command -v foot >/dev/null; then
     new_dotfile_symlink ~/.config/foot files/foot
 fi
 
-# alacritty
-if command -v alacritty >/dev/null; then
-    new_dotfile_symlink ~/.config/alacritty files/alacritty
-fi
-
 # wezterm
 if command -v wezterm >/dev/null; then
     new_dotfile_symlink ~/.config/wezterm files/wezterm
