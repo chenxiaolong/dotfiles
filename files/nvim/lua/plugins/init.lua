@@ -122,13 +122,6 @@ return packer.startup(
         -- Code formatting
         use 'sbdchd/neoformat'
 
-        -- Highlight TODOs
-        use {
-            'folke/todo-comments.nvim',
-            requires = {'nvim-lua/plenary.nvim'},
-            config = function() require('plugins.todo-comments') end,
-        }
-
         -- Clang
         use {
             'p00f/clangd_extensions.nvim',
