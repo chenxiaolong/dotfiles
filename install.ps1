@@ -84,22 +84,6 @@ if (Get-Command starship -ErrorAction SilentlyContinue) {
     New-DotFileSymlink ~\.config\starship.toml files\starship.toml
 }
 
-# https://github.com/PowerShell/PowerShell/issues/13138
-if ($PSVersionTable.PSVersion -ge [version]'7.1') {
-    Import-Module Appx -UseWindowsPowerShell
-}
-
-# Windows Terminal
-(
-    'Microsoft.WindowsTerminal',
-    'Microsoft.WindowsTerminalPreview'
-) | ForEach-Object {
-    if ($appx = Get-AppxPackage $_) {
-        $localStatePath = "$env:LOCALAPPDATA\Packages\$($appx.Name)_$($appx.PublisherId)\LocalState"
-        New-DotFileSymlink $localStatePath\settings.json files\windows_terminal\settings.json
-    }
-}
-
 # bat
 if (Get-Command bat -ErrorAction SilentlyContinue) {
     New-DotFileSymlink (bat --config-dir) files\bat
