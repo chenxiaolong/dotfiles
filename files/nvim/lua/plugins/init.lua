@@ -94,12 +94,6 @@ return packer.startup(
             config = function() require('plugins.nvim-cmp') end,
         }
 
-        -- Pretty list of diagnostics, code actions, etc.
-        use {
-            "folke/trouble.nvim",
-            config = function() require('plugins.trouble') end,
-        }
-
         -- Show available keybindings
         use {
             'folke/which-key.nvim',
