@@ -150,9 +150,6 @@ return packer.startup(
             config = function() require('plugins.crates') end,
         }
 
-        -- puppet highlighting
-        use 'rodjek/vim-puppet'
-
         -- smali highlighting
         use 'kelwin/vim-smali'
 
