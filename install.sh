@@ -114,8 +114,3 @@ fi
 if command -v wezterm >/dev/null; then
     new_dotfile_symlink ~/.config/wezterm files/wezterm
 fi
-
-# kitty
-if command -v kitty >/dev/null; then
-    new_dotfile_symlink ~/.config/kitty files/kitty
-fi
