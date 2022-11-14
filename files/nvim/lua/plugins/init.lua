@@ -106,12 +106,6 @@ return packer.startup(
             config = function() require('plugins.which-key') end,
         }
 
-        -- Colorize color values
-        use {
-            'norcalli/nvim-colorizer.lua',
-            config = function() require('plugins.nvim-colorizer') end,
-        }
-
         -- git sidebar indicators
         use {
             'lewis6991/gitsigns.nvim',
