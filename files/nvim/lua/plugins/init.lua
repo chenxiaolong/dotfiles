@@ -15,9 +15,6 @@ return packer.startup(
             config = function() require('plugins.nvim-base16') end,
         }
 
-        -- Navigate between tmux and vim splits
-        use 'christoomey/vim-tmux-navigator'
-
         -- Status line
         use {
             'Famiu/feline.nvim',

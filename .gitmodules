@@ -7,9 +7,6 @@
 [submodule "submodules/base16-shell"]
 	path = submodules/base16-shell
 	url = https://github.com/chriskempson/base16-shell.git
-[submodule "files/tmux/plugins/vim-tmux-navigator"]
-	path = files/tmux/plugins/vim-tmux-navigator
-	url = https://github.com/christoomey/vim-tmux-navigator.git
 [submodule "files/tmux/plugins/tmux-thumbs"]
 	path = files/tmux/plugins/tmux-thumbs
 	url = https://github.com/fcsonline/tmux-thumbs.git
