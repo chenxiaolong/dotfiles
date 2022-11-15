@@ -69,11 +69,6 @@ if (Get-Command gpg -ErrorAction SilentlyContinue) {
     New-DotFileSymlink $env:APPDATA\gnupg\gpg-agent.conf files\gnupg\gpg-agent.conf
 }
 
-# rg
-if (Get-Command rg -ErrorAction SilentlyContinue) {
-    New-DotFileSymlink ~\.ripgreprc files\ripgreprc
-}
-
 # nvim
 if (Get-Command nvim -ErrorAction SilentlyContinue) {
     New-DotFileSymlink $env:LOCALAPPDATA\nvim files\nvim

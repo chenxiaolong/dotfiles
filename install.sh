@@ -49,11 +49,6 @@ if command -v hg >/dev/null; then
     new_dotfile_symlink ~/.hgrc files/hgrc
 fi
 
-# rg
-if command -v rg >/dev/null; then
-    new_dotfile_symlink ~/.ripgreprc files/ripgreprc
-fi
-
 # nvim
 if command -v nvim >/dev/null; then
     new_dotfile_symlink ~/.config/nvim files/nvim
