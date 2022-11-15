@@ -44,11 +44,6 @@ if command -v gpg >/dev/null; then
     new_dotfile_symlink ~/.gnupg/gpg-agent.conf files/gnupg/gpg-agent.conf
 fi
 
-# Mercurial
-if command -v hg >/dev/null; then
-    new_dotfile_symlink ~/.hgrc files/hgrc
-fi
-
 # nvim
 if command -v nvim >/dev/null; then
     new_dotfile_symlink ~/.config/nvim files/nvim
