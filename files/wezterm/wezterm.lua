@@ -50,6 +50,16 @@ local options = {
                 },
             }),
         },
+        {
+            mods = 'SHIFT',
+            key = 'UpArrow',
+            action = wezterm.action.ScrollToPrompt(-1),
+        },
+        {
+            mods = 'SHIFT',
+            key = 'DownArrow',
+            action = wezterm.action.ScrollToPrompt(1),
+        },
     },
     mouse_bindings = {
         -- Remove link opening behavior for default bindings
