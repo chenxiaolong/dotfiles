@@ -1,0 +1,52 @@
+# Android AOSP
+[url "https://android.googlesource.com/platform/"]
+	insteadOf = android:
+
+# Arch Linux AUR
+[url "https://aur.archlinux.org/"]
+	insteadOf = aur:
+[url "aur@aur.archlinux.org:"]
+	pushInsteadOf = "https://aur.archlinux.org/"
+	pushInsteadOf = aur:
+
+# freedesktop.org Gitlab
+[url "https://gitlab.freedesktop.org/"]
+	insteadOf = freedesktop:
+[url "git@gitlab.freedesktop.org:"]
+	pushInsteadOf = "https://gitlab.freedesktop.org/"
+	pushInsteadOf = freedesktop:
+
+# Github
+[url "https://github.com/"]
+	insteadOf = github:
+[url "git@github.com:"]
+	pushInsteadOf = "https://github.com/"
+	pushInsteadOf = github:
+
+# Gitlab
+[url "https://gitlab.com/"]
+	insteadOf = gitlab:
+[url "git@gitlab.com:"]
+	pushInsteadOf = "https://gitlab.com/"
+	pushInsteadOf = gitlab:
+
+# GNOME Gitlab
+[url "https://gitlab.gnome.org/"]
+	insteadOf = gnome:
+[url "git@gitlab.gnome.org:"]
+	pushInsteadOf = "https://gitlab.gnome.org/"
+	pushInsteadOf = gnome:
+
+# KDE Gitlab
+[url "https://invent.kde.org/"]
+	insteadOf = kde:
+[url "git@invent.kde.org:"]
+	pushInsteadOf = "https://invent.kde.org/"
+	pushInsteadOf = kde:
+
+# VLC Gitlab
+[url "https://code.videolan.org/"]
+	insteadOf = vlc:
+[url "git@code.videolan.org:"]
+	pushInsteadOf = "https://code.videolan.org/"
+	pushInsteadOf = vlc:

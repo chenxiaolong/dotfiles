@@ -37,6 +37,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 if command -v git >/dev/null; then
     new_dotfile_symlink ~/.gitconfig files/git/gitconfig
     new_dotfile_symlink ~/.gitconfig.delta files/git/gitconfig.delta
+    new_dotfile_symlink ~/.gitconfig.urls files/git/gitconfig.urls
 fi
 
 # gpg

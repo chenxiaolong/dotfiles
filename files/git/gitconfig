@@ -6,19 +6,6 @@
 	ui = true
 [push]
 	default = simple
-[url "git@github.com:"]
-	pushInsteadOf = "git://github.com/"
-	pushInsteadOf = "https://github.com/"
-	insteadOf = github:
-[url "https://android.googlesource.com/platform/"]
-	insteadOf = android:
-[url "https://invent.kde.org/"]
-	insteadOf = kde:
-[url "ssh://git@invent.kde.org/"]
-	pushInsteadOf = kde:
-[url "aur@aur.archlinux.org:"]
-	pushInsteadOf = "https://aur.archlinux.org/"
-	insteadOf = aur:
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
@@ -31,4 +18,5 @@
 [include]
 	path = .gitconfig.platform
 	path = .gitconfig.delta
+	path = .gitconfig.urls
 	path = .gitconfig.local

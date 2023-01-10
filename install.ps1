@@ -61,6 +61,7 @@ if ($PSVersionTable.PSVersion.Major -gt 5 -and !$IsWindows) {
 if (Get-Command git -ErrorAction SilentlyContinue) {
     New-DotFileSymlink ~\.gitconfig files\git\gitconfig
     New-DotFileSymlink ~\.gitconfig.delta files\git\gitconfig.delta
+    New-DotFileSymlink ~\.gitconfig.urls files\git\gitconfig.urls
     New-DotFileSymlink ~\.gitconfig.platform files\git\gitconfig.windows
 }
 
