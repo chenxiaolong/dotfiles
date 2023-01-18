@@ -9,6 +9,10 @@
 	pushInsteadOf = "https://aur.archlinux.org/"
 	pushInsteadOf = aur:
 
+# Fedora
+[url "https://src.fedoraproject.org/rpms/"]
+	insteadOf = fedora:
+
 # freedesktop.org Gitlab
 [url "https://gitlab.freedesktop.org/"]
 	insteadOf = freedesktop:
