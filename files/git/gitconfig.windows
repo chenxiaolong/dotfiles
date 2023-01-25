@@ -5,3 +5,5 @@
 	symlinks = true
 [gpg]
 	program = C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe
+[gpg "ssh"]
+	program = C:\\Windows\\System32\\OpenSSH\\ssh-keygen.exe
