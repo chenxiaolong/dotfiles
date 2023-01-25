@@ -1,7 +1,11 @@
 [user]
 	name = Andrew Gunnerson
 	email = chillermillerlong@hotmail.com
-	signingkey = 19C3E6E8FB86AD288B38AF2714200B173D8A3BF5!
+	signingkey = key::ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDOe6/tBnO7xZhAWXRj3ApUYgn+XZ0wnQiXM8B7tPgv4
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = ~/.ssh/allowed_signers
 [color]
 	ui = true
 [push]
