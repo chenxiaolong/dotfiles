@@ -10,12 +10,12 @@ from pathlib import Path
 
 
 def link(source: Path, target: Path):
-    abs_target = target.absolute()
+    abs_target = target.resolve()
 
     source.parent.mkdir(exist_ok=True)
 
     try:
-        link_target = source.readlink()
+        link_target = source.readlink().resolve()
         if link_target != abs_target:
             raise Exception(
                 f'{source}: path exists, but is symlinked to {link_target}')
@@ -87,7 +87,8 @@ def main():
         link(pwsh_dir / 'profile.ps1', files / 'pwsh' / 'profile.ps1')
 
         if os.name == 'nt':
-            subprocess.check_call(('pwsh', '-c', pwsh_dir / 'env_vars.ps1'))
+            subprocess.check_call(('pwsh', '-c',
+                                   files / 'pwsh' / 'env_vars.ps1'))
 
     if shutil.which('starship'):
         link(home / '.config' / 'starship.toml', files / 'starship.toml')
