@@ -1,143 +1,151 @@
-local status, packer = pcall(require, 'packer')
-if not status then
-    print 'packer is not installed'
-    return
+local lazy_path = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
+if not vim.loop.fs_stat(lazy_path) then
+    vim.fn.system({
+        'git',
+        'clone',
+        '--filter=blob:none',
+        'https://github.com/folke/lazy.nvim.git',
+        '--branch=stable',
+        lazy_path,
+    })
 end
+vim.opt.rtp:prepend(lazy_path)
 
-return packer.startup(
-    function()
-        -- Manage self
-        use 'wbthomason/packer.nvim'
+require('lazy').setup({
+    -- base16 theme
+    {
+        'RRethy/nvim-base16',
+        config = function() require('plugins.nvim-base16') end,
+    },
 
-        -- base16 theme
-        use {
-            'RRethy/nvim-base16',
-            config = function() require('plugins.nvim-base16') end,
-        }
+    -- Status line
+    {
+        'Famiu/feline.nvim',
+        -- The config queries the current colorscheme
+        dependencies = {'nvim-base16'},
+        config = function() require('plugins.feline') end,
+    },
 
-        -- Status line
-        use {
-            'Famiu/feline.nvim',
-            -- The config queries the current colorscheme
-            after = 'nvim-base16',
-            config = function() require('plugins.feline') end,
-        }
+    -- Toggle comments
+    {
+        'numToStr/Comment.nvim',
+        config = function() require('plugins.Comment') end,
+    },
 
-        -- Toggle comments
-        use {
-            'numToStr/Comment.nvim',
-            config = function() require('plugins.Comment') end,
-        }
+    -- Automatically detect indentation
+    {
+        'nmac427/guess-indent.nvim',
+        config = function() require('plugins.guess-indent') end,
+    },
 
-        -- Automatically detect indentation
-        use {
-            'nmac427/guess-indent.nvim',
-            config = function() require('plugins.guess-indent') end,
-        }
+    -- AST-based highlighting
+    {
+        'nvim-treesitter/nvim-treesitter',
+        dependencies = {'nvim-treesitter/playground'},
+        build = ':TSUpdate',
+        config = function() require('plugins.nvim-treesitter') end,
+    },
 
-        -- AST-based highlighting
-        use {
-            'nvim-treesitter/nvim-treesitter',
-            requires = {'nvim-treesitter/playground'},
-            run = ':TSUpdate',
-            config = function() require('plugins.nvim-treesitter') end,
-        }
+    -- A bunch of one-file mini-plugins
+    {
+        'echasnovski/mini.nvim',
+        config = function() require('plugins.mini') end,
+    },
 
-        -- A bunch of one-file mini-plugins
-        use {
-            'echasnovski/mini.nvim',
-            config = function() require('plugins.mini') end,
-        }
+    -- Indent lines
+    {
+        'lukas-reineke/indent-blankline.nvim',
+        config = function() require('plugins.indent-blankline') end,
+    },
 
-        -- Indent lines
-        use {
-            'lukas-reineke/indent-blankline.nvim',
-            config = function() require('plugins.indent-blankline') end,
-        }
+    -- Language servers
+    {
+        'neovim/nvim-lspconfig',
+        dependencies = {'hrsh7th/cmp-nvim-lsp'},
+        config = function() require('plugins.nvim-lspconfig') end,
+    },
 
-        -- Language servers
-        use {
-            'neovim/nvim-lspconfig',
-            requires = {'hrsh7th/cmp-nvim-lsp'},
-            config = function() require('plugins.nvim-lspconfig') end,
-        }
+    -- Function signature previews
+    {
+        'ray-x/lsp_signature.nvim',
+        config = function() require('plugins.lsp_signature') end,
+    },
 
-        -- Function signature previews
-        use {
-            'ray-x/lsp_signature.nvim',
-            config = function() require('plugins.lsp_signature') end,
-        }
-
-        -- LSP bridge to external tools
-        use {
-            'jose-elias-alvarez/null-ls.nvim',
-            requires = {
-                'nvim-lua/plenary.nvim',
-                'lewis6991/gitsigns.nvim',
-            },
-            config = function() require('plugins.null-ls') end,
-        }
-
-        -- LSP autocompletion
-        use {
-            'hrsh7th/nvim-cmp',
-            requires = {
-                'hrsh7th/cmp-buffer',
-                'hrsh7th/cmp-nvim-lsp',
-                'hrsh7th/cmp-vsnip',
-                'hrsh7th/vim-vsnip',
-                'Saecki/crates.nvim',
-            },
-            config = function() require('plugins.nvim-cmp') end,
-        }
-
-        -- Show available keybindings
-        use {
-            'folke/which-key.nvim',
-            config = function() require('plugins.which-key') end,
-        }
-
-        -- git sidebar indicators
-        use {
+    -- LSP bridge to external tools
+    {
+        'jose-elias-alvarez/null-ls.nvim',
+        dependencies = {
+            'nvim-lua/plenary.nvim',
             'lewis6991/gitsigns.nvim',
-            requires = {'nvim-lua/plenary.nvim'},
-            config = function() require('plugins.gitsigns') end,
-        }
+        },
+        config = function() require('plugins.null-ls') end,
+    },
 
-        -- Clang
-        use {
-            'p00f/clangd_extensions.nvim',
-            requires = {'neovim/nvim-lspconfig'},
-            config = function() require('plugins.clangd_extensions') end,
-        }
-
-        -- Rust
-        use {
-            'simrat39/rust-tools.nvim',
-            requires = {'neovim/nvim-lspconfig'},
-            config = function() require('plugins.rust-tools') end,
-        }
-
-        -- Rust crates
-        use {
+    -- LSP autocompletion
+    {
+        'hrsh7th/nvim-cmp',
+        dependencies = {
+            'hrsh7th/cmp-buffer',
+            'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-vsnip',
+            'hrsh7th/vim-vsnip',
             'Saecki/crates.nvim',
-            requires = {'nvim-lua/plenary.nvim'},
-            config = function() require('plugins.crates') end,
-        }
+        },
+        config = function() require('plugins.nvim-cmp') end,
+    },
 
-        -- smali highlighting
-        use 'kelwin/vim-smali'
+    -- Show available keybindings
+    {
+        'folke/which-key.nvim',
+        config = function() require('plugins.which-key') end,
+    },
 
-        -- tmux.conf highlighting
-        use 'tmux-plugins/vim-tmux'
+    -- git sidebar indicators
+    {
+        'lewis6991/gitsigns.nvim',
+        dependencies = {'nvim-lua/plenary.nvim'},
+        config = function() require('plugins.gitsigns') end,
+    },
 
-        -- Fuzzy search
-        use {
-            'ibhagwan/fzf-lua',
-            config = function() require('plugins.fzf-lua') end,
-        }
+    -- Clang
+    {
+        'p00f/clangd_extensions.nvim',
+        dependencies = {'neovim/nvim-lspconfig'},
+        config = function() require('plugins.clangd_extensions') end,
+    },
 
-        -- vim.ui implementation
-        use 'stevearc/dressing.nvim'
-    end
-)
+    -- Rust
+    {
+        'simrat39/rust-tools.nvim',
+        dependencies = {'neovim/nvim-lspconfig'},
+        config = function() require('plugins.rust-tools') end,
+    },
+
+    -- Rust crates
+    {
+        'Saecki/crates.nvim',
+        dependencies = {'nvim-lua/plenary.nvim'},
+        config = function() require('plugins.crates') end,
+    },
+
+    -- smali highlighting
+    {
+        'kelwin/vim-smali',
+    },
+
+    -- tmux.conf highlighting
+    {
+        'tmux-plugins/vim-tmux',
+    },
+
+    -- Fuzzy search
+    {
+        'ibhagwan/fzf-lua',
+        config = function() require('plugins.fzf-lua') end,
+    },
+
+    -- vim.ui implementation
+    {
+        'stevearc/dressing.nvim',
+    },
+})
