@@ -1,0 +1,11 @@
+[
+    {
+        "key": "ctrl+shift+q",
+        "command": "workbench.action.quit",
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.terminal.clear",
+        "when": "terminalFocus",
+    },
+]

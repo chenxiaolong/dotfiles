@@ -45,6 +45,17 @@ def main():
 
         subprocess.check_call(('bat', 'cache', '--build'))
 
+    if shutil.which('codium'):
+        if os.name == 'nt':
+            codium_dir = Path(os.environ['APPDATA']) / 'VSCodium'
+        else:
+            codium_dir = home / '.config' / 'VSCodium'
+
+        for f in ('keybindings.json', 'settings.json'):
+            link(codium_dir / 'User' / f, files / 'vscodium' / f)
+
+        link(codium_dir / 'product.json', files / 'vscodium' / 'product.json')
+
     if shutil.which('foot'):
         link(home / '.config' / 'foot', files / 'foot')
 
@@ -97,6 +108,9 @@ def main():
         for f in ('tmux.conf', 'tmux'):
             link(home / f'.{f}', files / f)
 
+    if shutil.which('wezterm'):
+        link(home / '.config' / 'wezterm', files / 'wezterm')
+
     if shutil.which('yt-dlp'):
         if os.name == 'nt':
             yt_dlp_dir = Path(os.environ['APPDATA']) / 'yt-dlp'
@@ -104,9 +118,6 @@ def main():
             yt_dlp_dir = home / '.config' / 'yt-dlp'
 
         link(yt_dlp_dir / 'config', files / 'yt-dlp' / 'config')
-
-    if shutil.which('wezterm'):
-        link(home / '.config' / 'wezterm', files / 'wezterm')
 
     if Path('/etc/arch-release').exists():
         link(home / '.config' / 'pinentry', files / 'pinentry')

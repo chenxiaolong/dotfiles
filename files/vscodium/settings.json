@@ -1,0 +1,47 @@
+{
+    // Show whitespace
+    "editor.renderWhitespace": "boundary",
+
+    // Disable preview feature
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+
+    // Disable telemetry
+    "telemetry.telemetryLevel":"off",
+    "gitlens.telemetry.enabled": false,
+    "partialDiff.enableTelemetry": false,
+
+    // Use CSD
+    "window.titleBarStyle": "custom",
+
+    // Preserve open windows on exit
+    "window.restoreWindows": "all",
+    "files.hotExit": "onExitAndWindowClose",
+
+    // Icon theme
+    "workbench.iconTheme": "vscode-icons",
+
+    // Trim whitespace on save
+    "files.trimTrailingWhitespace": true,
+
+    // Guess file encoding
+    "files.autoGuessEncoding": true,
+
+    // Default to LF line endings
+    "files.eol": "\n",
+
+    // Rulers
+    "editor.rulers": [
+        80,
+        100
+    ],
+
+    // Theme
+    "workbench.colorTheme": "Dracula",
+
+    // Increase terminal scrollback
+    "terminal.integrated.scrollback": 10000,
+
+    // In here because vscode keeps adding it
+    "window.zoomLevel": 0,
+}
