@@ -1,14 +1,6 @@
 if is_shell zsh; then
     zmodload -i zsh/complist
 
-    # Enable support for zsh completion
-    autoload -Uz compinit
-    compinit
-
-    # Enable support for bash completion
-    autoload -Uz bashcompinit
-    bashcompinit
-
     # Autocomplete on both sides if in the middle of a word
     setopt COMPLETE_IN_WORD
 
