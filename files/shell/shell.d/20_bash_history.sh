@@ -1,3 +1,7 @@
-if is_shell bash && [[ -z "${HISTCONTROL}" ]]; then
-    HISTCONTROL=ignoredups
+if is_shell bash; then
+    if [[ -z "${HISTCONTROL}" ]]; then
+        HISTCONTROL=ignoredups
+    fi
+
+    shopt -s histverify
 fi
