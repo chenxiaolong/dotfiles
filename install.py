@@ -9,14 +9,33 @@ import sys
 from pathlib import Path
 
 
-def link(source: Path, target: Path):
-    abs_target = target.resolve()
+LONG_PATH_PREFIX = '\\\\?\\'
 
-    source.parent.mkdir(exist_ok=True)
+
+if os.name == 'nt':
+    def long_path(p):
+        p_str = os.fspath(p)
+        if not p_str.startswith(LONG_PATH_PREFIX):
+            p = Path(LONG_PATH_PREFIX + p_str)
+
+        return p
+
+
+def paths_equal(a, b):
+    if os.name == 'nt':
+        return long_path(a) == long_path(b)
+    else:
+        return a == b
+
+
+def link(source: Path, target: Path):
+    abs_target = target.absolute()
+
+    source.parent.mkdir(parents=True, exist_ok=True)
 
     try:
-        link_target = source.readlink().resolve()
-        if link_target != abs_target:
+        link_target = source.readlink()
+        if not paths_equal(abs_target, link_target):
             raise Exception(
                 f'{source}: path exists, but is symlinked to {link_target}')
 
