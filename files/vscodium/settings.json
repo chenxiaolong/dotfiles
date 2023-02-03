@@ -4,7 +4,6 @@
 
     // Disable preview feature
     "workbench.editor.enablePreview": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
 
     // Disable telemetry
     "telemetry.telemetryLevel":"off",
@@ -15,7 +14,6 @@
     "window.titleBarStyle": "custom",
 
     // Preserve open windows on exit
-    "window.restoreWindows": "all",
     "files.hotExit": "onExitAndWindowClose",
 
     // Font
