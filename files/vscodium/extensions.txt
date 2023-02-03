@@ -10,7 +10,6 @@ ms-python.python
 ms-python.vscode-pylance
 ms-vscode.cmake-tools
 ms-vscode.cpptools
-ms-vscode.powershell
 panicbit.cargo
 pepri.subtitles-editor
 redhat.vscode-xml
