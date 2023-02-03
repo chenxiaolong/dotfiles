@@ -79,8 +79,11 @@ def main():
         link(home / '.config' / 'foot', files / 'foot')
 
     if shutil.which('git'):
-        for f in ('gitconfig', 'gitconfig.delta', 'gitconfig.urls'):
+        for f in ('gitconfig', 'gitconfig.urls'):
             link(home / f'.{f}', files / 'git' / f)
+
+        if shutil.which('delta'):
+            link(home / f'.gitconfig.delta', files / 'git' / 'gitconfig.delta')
 
         if os.name == 'nt':
             link(home / '.gitconfig.platform',
