@@ -45,4 +45,7 @@
     // Increase terminal scrollback
     "terminal.integrated.scrollback": 10000,
 
+    // Python
+    "python.analysis.completeFunctionParens": true,
+    "python.linting.pycodestyleEnabled": true,
 }
