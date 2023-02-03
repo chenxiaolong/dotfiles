@@ -2,7 +2,6 @@ aeschli.vscode-css-formatter
 aster.vscode-subtitles
 coolbear.systemd-unit-file
 dawidd6.debian-vscode
-dracula-theme.theme-dracula
 eamodio.gitlens
 geekidos.vdf
 maelvalais.autoconf
