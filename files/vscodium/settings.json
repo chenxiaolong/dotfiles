@@ -18,7 +18,13 @@
     "window.restoreWindows": "all",
     "files.hotExit": "onExitAndWindowClose",
 
-    // Icon theme
+    // Font
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontSize": 12,
+    "terminal.integrated.fontSize": 12,
+
+    // Theme
+    "workbench.colorTheme": "Default Dark+ Experimental",
     "workbench.iconTheme": "vscode-icons",
 
     // Trim whitespace on save
@@ -36,12 +42,7 @@
         100
     ],
 
-    // Theme
-    "workbench.colorTheme": "Dracula",
-
     // Increase terminal scrollback
     "terminal.integrated.scrollback": 10000,
 
-    // In here because vscode keeps adding it
-    "window.zoomLevel": 0,
 }
