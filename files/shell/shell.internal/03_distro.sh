@@ -1,6 +1,10 @@
 if is_os Linux; then
     if [[ -z "${__distro}" ]]; then
-        __distro="$(source /etc/os-release && echo "${ID}")"
+        if [[ -n "${TERMUX_VERSION}" ]]; then
+            __distro=termux
+        else
+            __distro="$(source /etc/os-release && echo "${ID}")"
+        fi
     fi
 
     is_distro() {
