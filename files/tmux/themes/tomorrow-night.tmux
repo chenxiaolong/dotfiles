@@ -58,7 +58,7 @@ set-option -g status-left '#[fg=#cc99cc,bg=#2d2d2d] #H#[fg=]:#[fg=#99cc99]#S '
 # right side of status bar holds "[host name] (date time)"
 set-option -g status-right-length 100
 set-option -g status-right-style bold,fg=black
-set-option -g status-right '#[fg=#f99157,bg=#2d2d2d] #{?mouse,[M] | ,}%H:%M |#[fg=#6699cc] %Y-%m-%d '
+set-option -g status-right '#[fg=#f99157,bg=#2d2d2d]#{?mouse, [M] ,}'
 
 # make background window look like white tab
 set-option -gw window-status-style none,bg=default,fg=white

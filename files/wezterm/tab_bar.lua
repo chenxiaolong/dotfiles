@@ -95,18 +95,4 @@ function M.format_tab_title(tab, tabs, panes, config, hover, max_width)
     return result
 end
 
-function M.update_right_status(window, pane)
-    local time = wezterm.strftime('%H:%M')
-    local date = wezterm.strftime('%Y-%m-%d')
-
-    window:set_right_status(wezterm.format({
-        {Attribute = {Intensity = 'Bold'}},
-        {Background = {Color = M.constants.active.prefix_bg}},
-        {Foreground = {Color = M.constants.active.prefix_fg}},
-        {Text = ' ' .. time .. ' | '},
-        {Foreground = {Color = M.constants.inactive.prefix_fg}},
-        {Text = date .. ' '},
-    }))
-end
-
 return M

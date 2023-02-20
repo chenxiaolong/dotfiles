@@ -22,7 +22,6 @@ colors.cursor_bg = colors.foreground
 colors.cursor_fg = colors.background
 
 wezterm.on('format-tab-title', tab_bar.format_tab_title)
-wezterm.on('update-right-status', tab_bar.update_right_status)
 
 local options = {
     colors = colors,
