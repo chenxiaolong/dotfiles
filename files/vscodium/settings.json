@@ -45,5 +45,4 @@
 
     // Python
     "python.analysis.completeFunctionParens": true,
-    "python.linting.pycodestyleEnabled": true,
 }
