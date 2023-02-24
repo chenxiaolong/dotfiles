@@ -4,11 +4,11 @@ charliermarsh.ruff
 coolbear.systemd-unit-file
 dawidd6.debian-vscode
 GEEKiDoS.vdf
+llvm-vs-code-extensions.vscode-clangd
 maelvalais.autoconf
 ms-python.python
 ms-python.vscode-pylance
 ms-vscode.cmake-tools
-ms-vscode.cpptools
 panicbit.cargo
 pepri.subtitles-editor
 redhat.vscode-xml
