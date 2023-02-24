@@ -3,7 +3,6 @@ aster.vscode-subtitles
 charliermarsh.ruff
 coolbear.systemd-unit-file
 dawidd6.debian-vscode
-eamodio.gitlens
 GEEKiDoS.vdf
 maelvalais.autoconf
 ms-python.python
