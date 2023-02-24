@@ -1,5 +1,4 @@
 charliermarsh.ruff
-josetr.cmake-language-support-vscode
 llvm-vs-code-extensions.vscode-clangd
 ms-python.python
 ms-python.vscode-pylance
