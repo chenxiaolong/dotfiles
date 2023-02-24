@@ -31,7 +31,6 @@ def main():
             args.executable,
             '--uninstall-extension', ext,
         ])
-    # DELETE
 
     for ext in desired - actual:
         subprocess.check_call([
