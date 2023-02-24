@@ -1,16 +1,9 @@
-aeschli.vscode-css-formatter
-aster.vscode-subtitles
 charliermarsh.ruff
-coolbear.systemd-unit-file
-dawidd6.debian-vscode
-GEEKiDoS.vdf
 josetr.cmake-language-support-vscode
 llvm-vs-code-extensions.vscode-clangd
-maelvalais.autoconf
 ms-python.python
 ms-python.vscode-pylance
 ms-vscode.cmake-tools
-pepri.subtitles-editor
 redhat.vscode-xml
 rust-lang.rust-analyzer
 ryu1kn.partial-diff
@@ -18,4 +11,3 @@ slevesque.vscode-hexdump
 tamasfe.even-better-toml
 vadimcn.vscode-lldb
 vscode-icons-team.vscode-icons
-zgm.cuesheet
