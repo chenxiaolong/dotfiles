@@ -4,7 +4,7 @@ charliermarsh.ruff
 coolbear.systemd-unit-file
 dawidd6.debian-vscode
 eamodio.gitlens
-geekidos.vdf
+GEEKiDoS.vdf
 maelvalais.autoconf
 ms-python.python
 ms-python.vscode-pylance
