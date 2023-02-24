@@ -4,6 +4,7 @@ charliermarsh.ruff
 coolbear.systemd-unit-file
 dawidd6.debian-vscode
 GEEKiDoS.vdf
+josetr.cmake-language-support-vscode
 llvm-vs-code-extensions.vscode-clangd
 maelvalais.autoconf
 ms-python.python
@@ -15,7 +16,6 @@ rust-lang.rust-analyzer
 ryu1kn.partial-diff
 slevesque.vscode-hexdump
 tamasfe.even-better-toml
-twxs.cmake
 vadimcn.vscode-lldb
 vscode-icons-team.vscode-icons
 zgm.cuesheet
