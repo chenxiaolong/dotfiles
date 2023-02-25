@@ -1,7 +1,6 @@
 charliermarsh.ruff
 llvm-vs-code-extensions.vscode-clangd
 ms-python.python
-ms-python.vscode-pylance
 ms-vscode.cmake-tools
 redhat.vscode-xml
 rust-lang.rust-analyzer
