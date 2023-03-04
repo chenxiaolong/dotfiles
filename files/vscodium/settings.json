@@ -6,9 +6,7 @@
     "workbench.editor.enablePreview": false,
 
     // Disable telemetry
-    "telemetry.telemetryLevel":"off",
-    "gitlens.telemetry.enabled": false,
-    "partialDiff.enableTelemetry": false,
+    "telemetry.telemetryLevel": "off",
 
     // Use CSD
     "window.titleBarStyle": "custom",
@@ -42,7 +40,4 @@
 
     // Increase terminal scrollback
     "terminal.integrated.scrollback": 10000,
-
-    // Python
-    "python.analysis.completeFunctionParens": true,
 }
