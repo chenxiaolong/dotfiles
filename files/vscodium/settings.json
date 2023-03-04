@@ -5,6 +5,9 @@
     // Disable preview feature
     "workbench.editor.enablePreview": false,
 
+    // Disable experiments
+    "workbench.enableExperiments": false,
+
     // Disable telemetry
     "telemetry.telemetryLevel": "off",
 
