@@ -1,4 +1,5 @@
 charliermarsh.ruff
+citreae535.sparse-crates
 llvm-vs-code-extensions.vscode-clangd
 ms-python.python
 ms-vscode.cmake-tools
