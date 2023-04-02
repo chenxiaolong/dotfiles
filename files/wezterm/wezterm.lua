@@ -28,6 +28,7 @@ local options = {
     font = wezterm.font('Fira Code'),
     font_size = 9,
     warn_about_missing_glyphs = false,
+    front_end = "WebGpu",
     enable_kitty_keyboard = true,
     enable_scroll_bar = true,
     keys = {
