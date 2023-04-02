@@ -2,7 +2,7 @@ format = """
 $time\
 $username\
 $hostname\
-${custom.wsl_distro}\
+${env_var.wsl_distro}\
 $directory\
 $git_branch\
 $git_commit\
@@ -20,12 +20,10 @@ $character\
 [cmd_duration]
 show_milliseconds = true
 
-[custom.wsl_distro]
-command = "echo -n \"${WSL_DISTRO_NAME}\""
-format = '[\(WSL:$output\)]($style) '
+[env_var.wsl_distro]
+variable = 'WSL_DISTRO_NAME'
+format = '[\(WSL:$env_value\)]($style) '
 style = 'bold 177'
-os = "linux"
-when = "test -n \"${WSL_DISTRO_NAME}\""
 
 [directory]
 truncation_length = 2
