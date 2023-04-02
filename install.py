@@ -83,7 +83,7 @@ def main():
             link(home / f'.{f}', files / 'git' / f)
 
         if shutil.which('delta'):
-            link(home / f'.gitconfig.delta', files / 'git' / 'gitconfig.delta')
+            link(home / '.gitconfig.delta', files / 'git' / 'gitconfig.delta')
 
         if os.name == 'nt':
             link(home / '.gitconfig.platform',
@@ -102,6 +102,14 @@ def main():
 
     if shutil.which('mock'):
         link(home / '.config' / 'mock.cfg', files / 'mock.cfg')
+
+    if shutil.which('mpv'):
+        if os.name == 'nt':
+            mpv_dir = Path(os.environ['APPDATA']) / 'mpv'
+        else:
+            mpv_dir = home / '.config' / 'mpv'
+
+        link(mpv_dir, files / 'mpv')
 
     if shutil.which('nvim'):
         if os.name == 'nt':
