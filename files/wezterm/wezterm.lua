@@ -101,7 +101,6 @@ local options = {
         }
     },
     scrollback_lines = 50000,
-    tab_max_width = 24,
 }
 
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
