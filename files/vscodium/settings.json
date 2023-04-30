@@ -18,7 +18,6 @@
     "files.hotExit": "onExitAndWindowClose",
 
     // Font
-    "editor.fontFamily": "'Fira Code'",
     "editor.fontSize": 12,
     "terminal.integrated.fontSize": 12,
 
