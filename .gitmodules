@@ -13,3 +13,9 @@
 [submodule "files/tmux/tmux-fuzzback"]
 	path = files/tmux/plugins/tmux-fuzzback
 	url = https://github.com/roosta/tmux-fuzzback.git
+[submodule "files/tmux/plugins/tmux-resurrect"]
+	path = files/tmux/plugins/tmux-resurrect
+	url = https://github.com/tmux-plugins/tmux-resurrect.git
+[submodule "files/tmux/plugins/tmux-continuum"]
+	path = files/tmux/plugins/tmux-continuum
+	url = https://github.com/tmux-plugins/tmux-continuum.git
