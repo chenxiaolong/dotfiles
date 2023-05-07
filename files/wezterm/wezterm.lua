@@ -20,7 +20,7 @@ colors.cursor_fg = colors.background
 
 local options = {
     colors = colors,
-    font = wezterm.font('JetBrains Mono NL'),
+    font = wezterm.font('DejaVu Sans Mono'),
     font_size = 9,
     warn_about_missing_glyphs = false,
     front_end = "WebGpu",
