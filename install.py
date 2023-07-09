@@ -52,10 +52,8 @@ def link(source: Path, target: Path):
 
 
 def main():
-    os.chdir(sys.path[0])
-
     home = Path.home()
-    dotfiles = Path('.')
+    dotfiles = Path(sys.path[0])
     files = dotfiles / 'files'
 
     if shutil.which('bat'):
