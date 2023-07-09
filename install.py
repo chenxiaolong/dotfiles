@@ -55,7 +55,8 @@ def main():
     os.chdir(sys.path[0])
 
     home = Path.home()
-    files = Path('files')
+    dotfiles = Path('.')
+    files = dotfiles / 'files'
 
     if shutil.which('bat'):
         bat_dir = subprocess.check_output(('bat', '--config-dir')).rstrip()
@@ -96,6 +97,14 @@ def main():
             gpg_dir = home / '.gnupg'
 
         link(gpg_dir / 'gpg-agent.conf', files / 'gnupg' / 'gpg-agent.conf')
+
+    if shutil.which('konsole'):
+        kcs = 'base16-tomorrow-night.colorscheme'
+
+        link(home / '.local' / 'share' / 'konsole' / kcs,
+             dotfiles / 'submodules' / 'base16-konsole' / 'colorscheme' / kcs)
+        link(home / '.local' / 'share' / 'konsole' / 'main.profile',
+             files / 'konsole' / 'main.profile')
 
     if shutil.which('makepkg'):
         link(home / '.makepkg.conf', files / 'makepkg.conf')
