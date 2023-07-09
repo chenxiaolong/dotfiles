@@ -26,6 +26,16 @@ require('lazy').setup({
         config = function() require('plugins.feline') end,
     },
 
+    -- Better messages UI
+    {
+        'folke/noice.nvim',
+        event = 'VeryLazy',
+        dependencies = {
+            'MunifTanjim/nui.nvim',
+        },
+        config = function() require('plugins.noice') end,
+    },
+
     -- Toggle comments
     {
         'numToStr/Comment.nvim',
