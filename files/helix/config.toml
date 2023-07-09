@@ -1,0 +1,14 @@
+theme = "dark_plus_v2"
+
+[editor]
+lsp.display-inlay-hints = true
+rulers = [81, 101]
+
+[editor.indent-guides]
+render = true
+
+[editor.soft-wrap]
+enable = true
+
+[editor.statusline]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
