@@ -56,6 +56,9 @@ def main():
     dotfiles = Path(sys.path[0])
     files = dotfiles / 'files'
 
+    if shutil.which('alacritty'):
+        link(home / '.config' / 'alacritty', files / 'alacritty')
+
     if shutil.which('bat'):
         bat_dir = subprocess.check_output(('bat', '--config-dir')).rstrip()
 
