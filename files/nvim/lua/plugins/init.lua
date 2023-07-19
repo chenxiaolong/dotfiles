@@ -81,10 +81,14 @@ require('lazy').setup({
         config = function() require('plugins.lsp_signature') end,
     },
 
-    -- Linting
+    -- LSP bridge to external tools
     {
-        'dense-analysis/ale',
-        config = function() require('plugins.ale') end,
+        'jose-elias-alvarez/null-ls.nvim',
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            'lewis6991/gitsigns.nvim',
+        },
+        config = function() require('plugins.null-ls') end,
     },
 
     -- LSP autocompletion
