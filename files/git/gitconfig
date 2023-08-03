@@ -18,6 +18,8 @@
 	version = 2
 [core]
 	autocrlf = false
+[alias]
+	set-fetch-all = "!sh -c 'git remote | while read -r remote; do git config \"remote.${remote}.fetch\" \"+refs/*:refs/remotes/${remote}/*\"; done'"
 [include]
 	path = .gitconfig.platform
 	path = .gitconfig.delta
