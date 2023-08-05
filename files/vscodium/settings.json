@@ -22,7 +22,6 @@
     "terminal.integrated.fontSize": 12,
 
     // Theme
-    "workbench.colorTheme": "Default Dark+ Experimental",
     "workbench.iconTheme": "vscode-icons",
 
     // Trim whitespace on save
