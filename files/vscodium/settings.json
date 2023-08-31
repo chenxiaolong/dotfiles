@@ -13,6 +13,7 @@
 
     // Use CSD
     "window.titleBarStyle": "custom",
+    "window.commandCenter": true,
 
     // Preserve open windows on exit
     "files.hotExit": "onExitAndWindowClose",
