@@ -45,4 +45,7 @@
 
     // Disable inlay hints by default
     "editor.inlayHints.enabled": "offUnlessPressed",
+
+    // Don't use super:: imports in Rust
+    "rust-analyzer.imports.prefix": "crate",
 }
