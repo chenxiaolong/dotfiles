@@ -48,8 +48,6 @@
 	pushInsteadOf = "https://invent.kde.org/"
 	pushInsteadOf = kde:
 [url "ssh://git@invent.kde.org/"]
-	pushInsteadOf = "https://invent.kde.org/"
-	pushInsteadOf = kde:
 
 # VLC Gitlab
 [url "https://code.videolan.org/"]
