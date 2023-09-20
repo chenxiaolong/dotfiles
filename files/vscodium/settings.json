@@ -42,6 +42,9 @@
     // Increase terminal scrollback
     "terminal.integrated.scrollback": 10000,
 
+    // Keep context on screen when scrolling
+    "editor.stickyScroll.enabled": true,
+
     // Disable inlay hints by default
     "editor.inlayHints.enabled": "offUnlessPressed",
 
