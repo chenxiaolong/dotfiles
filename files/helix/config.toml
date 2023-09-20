@@ -4,6 +4,9 @@ theme = "dark_plus_no_background"
 lsp.display-inlay-hints = true
 rulers = [81, 101]
 
+[editor.cursor-shape]
+insert = "bar"
+
 [editor.indent-guides]
 render = true
 
