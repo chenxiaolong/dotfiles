@@ -1,5 +1,5 @@
-# THis is the same as Helix's dark_plus theme, except with the status bar
-# background removed to look more like vscode's new v2 theme.
+# THis is the same as Helix's dark_plus theme, except with the UI background
+# removed to preserve the terminal's default background color.
 
 # Author: Shafkath Shuhan <shafkathshuhannyc@gmail.com>
 
@@ -57,7 +57,7 @@
 "diff.delta" = { fg = "blue4" }
 "diff.minus" = { fg = "orange_red" }
 
-"ui.background" = { fg = "light_gray", bg = "dark_gray2" }
+"ui.background" = { fg = "light_gray" }
 
 "ui.window" = { bg = "widget" }
 "ui.popup" = { fg = "text", bg = "widget" }
@@ -77,14 +77,14 @@
 "ui.linenr.selected" = { fg = "light_gray2" }
 
 "ui.cursorline.primary" = { bg = "dark_gray3" }
-"ui.statusline" = { fg = "white", bg = "background" }
-"ui.statusline.inactive" = { fg = "white", bg = "background" }
+"ui.statusline" = { fg = "white" }
+"ui.statusline.inactive" = { fg = "white" }
 "ui.statusline.insert" = { fg = "white", bg = "yellow" }
 "ui.statusline.select" = { fg = "white", bg = "magenta" }
 
 "ui.bufferline" = { fg = "text", bg = "widget" }
 "ui.bufferline.active" = { fg = "white", bg = "blue" }
-"ui.bufferline.background" = { bg = "background" }
+"ui.bufferline.background" = { }
 
 "ui.text" = { fg = "text" }
 "ui.text.focus" = { fg = "white" }
@@ -92,7 +92,7 @@
 "ui.virtual.whitespace" = { fg = "dark_gray" }
 "ui.virtual.ruler" = { bg = "borders" }
 "ui.virtual.indent-guide" = { fg = "dark_gray4" }
-"ui.virtual.inlay-hint" = { fg = "white", bg = "#444444" }
+"ui.virtual.inlay-hint" = { fg = "dark_gray5"}
 
 "warning" = { fg = "gold2" }
 "error" = { fg = "red" }
@@ -117,6 +117,7 @@ dark_gray = "#858585"
 dark_gray2 = "#1e1e1e"
 dark_gray3 = "#282828"
 dark_gray4 = "#404040"
+dark_gray5 = "#8b949e"
 blue = "#007acc"
 blue2 = "#569CD6"
 blue3 = "#6796E6"
@@ -133,7 +134,6 @@ variable = "#9CDCFE"
 fn_declaration = "#DCDCAA"
 constant = "#4FC1FF"
 
-background = "#1e1e1e"
 text = "#d4d4d4"
 cursor = "#a6a6a6"
 widget = "#252526"

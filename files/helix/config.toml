@@ -1,4 +1,4 @@
-theme = "dark_plus_v2"
+theme = "dark_plus_no_background"
 
 [editor]
 lsp.display-inlay-hints = true
