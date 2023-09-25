@@ -16,3 +16,6 @@
 [submodule "submodules/base16-konsole"]
 	path = submodules/base16-konsole
 	url = https://github.com/cskeeters/base16-konsole.git
+[submodule "submodules/tree-sitter-smali"]
+	path = submodules/tree-sitter-smali
+	url = https://git.sr.ht/~yotam/tree-sitter-smali
