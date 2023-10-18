@@ -101,12 +101,6 @@ require('lazy').setup({
         'tmux-plugins/vim-tmux',
     },
 
-    -- Fuzzy search
-    {
-        'ibhagwan/fzf-lua',
-        config = function() require('plugins.fzf-lua') end,
-    },
-
     -- vim.ui implementation
     {
         'stevearc/dressing.nvim',

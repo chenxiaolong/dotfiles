@@ -8,4 +8,5 @@ indentscope.setup({
     },
 })
 
+require('mini.pick').setup()
 require('mini.trailspace').setup()
