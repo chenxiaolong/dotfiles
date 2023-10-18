@@ -138,11 +138,6 @@ require('lazy').setup({
         config = function() require('plugins.crates') end,
     },
 
-    -- smali highlighting
-    {
-        'kelwin/vim-smali',
-    },
-
     -- tmux.conf highlighting
     {
         'tmux-plugins/vim-tmux',
