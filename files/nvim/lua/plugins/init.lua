@@ -36,12 +36,6 @@ require('lazy').setup({
         config = function() require('plugins.noice') end,
     },
 
-    -- Toggle comments
-    {
-        'numToStr/Comment.nvim',
-        config = function() require('plugins.Comment') end,
-    },
-
     -- Automatically detect indentation
     {
         'nmac427/guess-indent.nvim',
