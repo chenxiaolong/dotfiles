@@ -1,3 +1,7 @@
+require('mini.base16').setup({
+    palette = require('utils.base16_palette'),
+})
+
 require('mini.comment').setup()
 require('mini.completion').setup()
 

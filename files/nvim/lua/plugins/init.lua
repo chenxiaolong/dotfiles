@@ -12,17 +12,9 @@ end
 vim.opt.rtp:prepend(lazy_path)
 
 require('lazy').setup({
-    -- base16 theme
-    {
-        'RRethy/nvim-base16',
-        config = function() require('plugins.nvim-base16') end,
-    },
-
     -- Status line
     {
         'freddiehaddad/feline.nvim',
-        -- The config queries the current colorscheme
-        dependencies = {'nvim-base16'},
         config = function() require('plugins.feline') end,
     },
 

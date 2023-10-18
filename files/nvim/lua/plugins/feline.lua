@@ -127,23 +127,22 @@ for section_index, section in ipairs(components.active) do
     end
 end
 
-local colorscheme = vim.api.nvim_exec('colorscheme', true)
-local base16_theme = require('colorscheme').colorschemes[string.sub(colorscheme, 8)]
+local base16_palette = require('utils.base16_palette')
 
 require('feline').setup {
     components = components,
     theme = {
-        bg = base16_theme.base00,
-        fg = base16_theme.base05,
-        cyan = base16_theme.base0C,
-        green = base16_theme.base0B,
-        light_blue = base16_theme.base0D,
-        light_gray = base16_theme.base03,
-        orange = base16_theme.base09,
-        purple = base16_theme.base0E,
-        red = base16_theme.base08,
-        white = base16_theme.base07,
-        yellow = base16_theme.base0A,
+        bg = base16_palette.base00,
+        fg = base16_palette.base05,
+        cyan = base16_palette.base0C,
+        green = base16_palette.base0B,
+        light_blue = base16_palette.base0D,
+        light_gray = base16_palette.base03,
+        orange = base16_palette.base09,
+        purple = base16_palette.base0E,
+        red = base16_palette.base08,
+        white = base16_palette.base07,
+        yellow = base16_palette.base0A,
     },
     vi_mode_colors = {
         NORMAL = 'green',

@@ -1,7 +1,7 @@
-require('plugins')
-
 -- Enable 24-bit colors
 vim.opt.termguicolors = true
+
+require('plugins')
 
 -- Enable line numbering
 vim.opt.number = true
