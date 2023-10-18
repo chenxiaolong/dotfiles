@@ -1,3 +1,5 @@
+require('mini.completion').setup()
+
 local indentscope = require('mini.indentscope')
 indentscope.setup({
     draw = {

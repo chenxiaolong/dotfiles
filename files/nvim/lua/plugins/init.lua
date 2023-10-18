@@ -65,14 +65,7 @@ require('lazy').setup({
     -- Language servers
     {
         'neovim/nvim-lspconfig',
-        dependencies = {'hrsh7th/cmp-nvim-lsp'},
         config = function() require('plugins.nvim-lspconfig') end,
-    },
-
-    -- Function signature previews
-    {
-        'ray-x/lsp_signature.nvim',
-        config = function() require('plugins.lsp_signature') end,
     },
 
     -- LSP bridge to external tools
@@ -83,19 +76,6 @@ require('lazy').setup({
             'lewis6991/gitsigns.nvim',
         },
         config = function() require('plugins.null-ls') end,
-    },
-
-    -- LSP autocompletion
-    {
-        'hrsh7th/nvim-cmp',
-        dependencies = {
-            'hrsh7th/cmp-buffer',
-            'hrsh7th/cmp-nvim-lsp',
-            'hrsh7th/cmp-vsnip',
-            'hrsh7th/vim-vsnip',
-            'Saecki/crates.nvim',
-        },
-        config = function() require('plugins.nvim-cmp') end,
     },
 
     -- Show available keybindings
