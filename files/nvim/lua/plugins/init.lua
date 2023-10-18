@@ -26,16 +26,6 @@ require('lazy').setup({
         config = function() require('plugins.feline') end,
     },
 
-    -- Better messages UI
-    {
-        'folke/noice.nvim',
-        event = 'VeryLazy',
-        dependencies = {
-            'MunifTanjim/nui.nvim',
-        },
-        config = function() require('plugins.noice') end,
-    },
-
     -- Automatically detect indentation
     {
         'nmac427/guess-indent.nvim',
