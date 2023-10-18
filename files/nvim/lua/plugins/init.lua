@@ -100,9 +100,4 @@ require('lazy').setup({
     {
         'tmux-plugins/vim-tmux',
     },
-
-    -- vim.ui implementation
-    {
-        'stevearc/dressing.nvim',
-    },
 })
