@@ -62,12 +62,6 @@ require('lazy').setup({
         config = function() require('plugins.mini') end,
     },
 
-    -- Indent lines
-    {
-        'lukas-reineke/indent-blankline.nvim',
-        config = function() require('plugins.indent-blankline') end,
-    },
-
     -- Language servers
     {
         'neovim/nvim-lspconfig',
