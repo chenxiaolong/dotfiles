@@ -2,6 +2,9 @@ require('mini.base16').setup({
     palette = require('utils.base16_palette'),
 })
 
+-- Get rid of background behind line numbers
+vim.cmd('highlight LineNr guibg=NONE ctermbg=NONE')
+
 require('mini.comment').setup()
 require('mini.completion').setup()
 
