@@ -10,3 +10,11 @@ comment-token = "#"
 name = "smali"
 # Keep in sync with submodule
 source = { git = "https://git.sr.ht/~yotam/tree-sitter-smali", rev = "72e334b2630f5852825ba5ff9dfd872447175eb5" }
+
+[[language]]
+name = "c"
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "cpp"
+indent = { tab-width = 4, unit = "    " }
