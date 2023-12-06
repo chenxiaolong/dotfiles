@@ -1,6 +1,7 @@
 theme = "dark_plus_no_background"
 
 [editor]
+auto-format = false
 lsp.display-inlay-hints = true
 rulers = [81, 101]
 
