@@ -1,0 +1,23 @@
+[window]
+dynamic_padding = true
+
+[font]
+normal = { family = "DejaVu Sans Mono" }
+size = 9.0
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[[hints.enabled]]
+command = "xdg-open"
+hyperlinks = true
+post_processing = true
+persist = false
+mouse = { mods = "Control", enabled = true }
+binding = { key = "U", mods = "Control|Shift" }
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
+
+[keyboard]
+bindings = [
+    { key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
+]
