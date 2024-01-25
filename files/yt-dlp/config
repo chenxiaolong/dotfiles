@@ -24,7 +24,7 @@
 --windows-filenames
 
 # Store each video in a subdirectory
---output '%(uploader|.)s/%(title)s [%(id)s]/%(title)s [%(id)s].%(ext)s'
+--output '%(uploader|.)s/%(upload_date)s - %(title)s [%(id)s]/%(title)s [%(id)s].%(ext)s'
 
 # Put multiple streams in the same container
 #--video-multistreams
