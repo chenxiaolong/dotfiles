@@ -1,10 +1,7 @@
 set_up_android_sdk() {
     local sdk_path
-    local build_tools_ver
 
-    if [[ -n "${ANDROID_SDK_ROOT}" ]]; then
-        sdk_path=${ANDROID_SDK_ROOT}
-    elif [[ -n "${ANDROID_HOME}" ]]; then
+    if [[ -n "${ANDROID_HOME}" ]]; then
         sdk_path=${ANDROID_HOME}
     elif [[ -d /opt/android-sdk ]]; then
         sdk_path=/opt/android-sdk
@@ -16,20 +13,16 @@ set_up_android_sdk() {
             return 1
         fi
 
-        export ANDROID_SDK_ROOT=${sdk_path}
         export ANDROID_HOME=${sdk_path}
 
         path_push_front "${sdk_path}/tools"
         path_push_front "${sdk_path}/tools/bin"
-        path_push_front "${sdk_path}/cmdline-tools/tools/bin"
         path_push_front "${sdk_path}/platform-tools"
 
         if [[ -d "${sdk_path}/build-tools" ]]; then
-            build_tools_ver="$(find "${sdk_path}/build-tools" \
-                               -mindepth 1 -maxdepth 1 \
-                               | sort -V | tail -1)"
-            build_tools_ver="$(basename "${build_tools_ver}")"
-            path_push_front "${sdk_path}/build-tools/${build_tools_ver}"
+            path_push_front "$(find "${sdk_path}/build-tools" \
+                               -mindepth 1 -maxdepth 1 -print0 \
+                               | sort -zV | tail -zn1 | tr -d '\0')"
         fi
     fi
 }
@@ -39,10 +32,10 @@ set_up_android_ndk() {
 
     if [[ -n "${ANDROID_NDK_ROOT}" ]]; then
         ndk_path=${ANDROID_NDK_ROOT}
-    elif [[ -n "${ANDROID_NDK}" ]]; then
-        ndk_path=${ANDROID_NDK}
-    elif [[ -n "${ANDROID_NDK_HOME}" ]]; then
-        ndk_path=${ANDROID_NDK_HOME}
+    elif [[ -n "${ANDROID_HOME}" && -d "${ANDROID_HOME}/ndk" ]]; then
+        ndk_path=$(find "${ANDROID_HOME}/ndk" \
+                   -mindepth 1 -maxdepth 1 ! -name magisk -print0 \
+                   | sort -zV | tail -zn1 | tr -d '\0')
     elif [[ -d /opt/android-ndk ]]; then
         ndk_path=/opt/android-ndk
     fi
@@ -54,8 +47,6 @@ set_up_android_ndk() {
         fi
 
         export ANDROID_NDK_ROOT=${ndk_path}
-        export ANDROID_NDK=${ndk_path}
-        export ANDROID_NDK_HOME=${ndk_path}
         path_push_front "${ndk_path}"
     fi
 }
