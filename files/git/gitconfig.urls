@@ -9,6 +9,13 @@
 	pushInsteadOf = "https://aur.archlinux.org/"
 	pushInsteadOf = aur:
 
+# Codeberg
+[url "https://codeberg.org/"]
+	insteadOf = codeberg:
+[url "git@codeberg.org:"]
+	pushInsteadOf = "https://codeberg.org/"
+	pushInsteadOf = codeberg:
+
 # Fedora
 [url "https://src.fedoraproject.org/rpms/"]
 	insteadOf = fedora:
