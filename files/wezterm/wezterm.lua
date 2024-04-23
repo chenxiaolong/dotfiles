@@ -24,7 +24,9 @@ local options = {
     font_size = 9,
     warn_about_missing_glyphs = false,
     front_end = "WebGpu",
-    enable_kitty_keyboard = true,
+    -- https://github.com/wez/wezterm/issues/3621
+    -- https://github.com/helix-editor/helix/issues/9030
+    enable_kitty_keyboard = false,
     enable_scroll_bar = true,
     keys = {
         {
