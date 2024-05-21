@@ -44,16 +44,6 @@ require('lazy').setup({
         config = function() require('plugins.nvim-lspconfig') end,
     },
 
-    -- LSP bridge to external tools
-    {
-        'nvimtools/none-ls.nvim',
-        dependencies = {
-            'nvim-lua/plenary.nvim',
-            'lewis6991/gitsigns.nvim',
-        },
-        config = function() require('plugins.none-ls') end,
-    },
-
     -- Show available keybindings
     {
         'folke/which-key.nvim',
