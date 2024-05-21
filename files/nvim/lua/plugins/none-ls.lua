@@ -10,15 +10,6 @@ if vim.fn.executable('cmake-format') == 1 then
     table.insert(sources, null_ls.builtins.formatting.cmake_format)
 end
 
-if vim.fn.executable('jq') == 1 then
-    table.insert(sources, null_ls.builtins.formatting.jq)
-end
-
-if vim.fn.executable('shellcheck') == 1 then
-    table.insert(sources, null_ls.builtins.diagnostics.shellcheck)
-    table.insert(sources, null_ls.builtins.code_actions.shellcheck)
-end
-
 if vim.fn.executable('yamllint') == 1 then
     table.insert(sources, null_ls.builtins.diagnostics.yamllint)
 end
