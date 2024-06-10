@@ -7,3 +7,6 @@ Font=DejaVu Sans Mono,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 DimWhenInactive=true
 Name=main
 Parent=FALLBACK/
+
+[Scrolling]
+HistorySize=50000
