@@ -24,6 +24,10 @@ set_up_android_sdk() {
                                -mindepth 1 -maxdepth 1 -print0 \
                                | sort -zV | tail -zn1 | tr -d '\0')"
         fi
+
+        if [[ -d "${sdk_path}/cmdline-tools" ]]; then
+            path_push_front "${sdk_path}/cmdline-tools/latest/bin"
+        fi
     fi
 }
 
