@@ -22,3 +22,6 @@
 [submodule "files/yt-dlp/plugins/yt-dlp-youtube-oauth2"]
 	path = files/yt-dlp/plugins/yt-dlp-youtube-oauth2
 	url = https://github.com/coletdjnz/yt-dlp-youtube-oauth2
+[submodule "submodules/ble.sh"]
+	path = submodules/ble.sh
+	url = https://github.com/akinomyoga/ble.sh.git
