@@ -15,7 +15,9 @@ if [[ -n "${ANDROID_HOME}" ]]; then
     fi
 
     if [[ -d "${ANDROID_HOME}/cmdline-tools" ]]; then
-        path_push_front "${ANDROID_HOME}/cmdline-tools/latest/bin"
+        path_push_front "$(find "${ANDROID_HOME}/cmdline-tools" \
+                           -mindepth 1 -maxdepth 1 -print0 \
+                           | sort -zV | tail -zn1 | tr -d '\0')/bin"
     fi
 
     if [[ -z "${ANDROID_NDK_ROOT}" ]]; then
