@@ -5,8 +5,6 @@ require 'nvim-treesitter.configs'.setup {
     },
     indent = {
         enable = true,
-        -- https://github.com/nvim-treesitter/nvim-treesitter/issues/1377
-        disable = {'yaml'},
     },
     playground = {
         enable = true,
