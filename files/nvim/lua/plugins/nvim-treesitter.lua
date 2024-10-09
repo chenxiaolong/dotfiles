@@ -1,4 +1,4 @@
-require 'nvim-treesitter.configs'.setup {
+require('nvim-treesitter.configs').setup({
     ensure_installed = 'all',
     highlight = {
         enable = true,
@@ -10,7 +10,7 @@ require 'nvim-treesitter.configs'.setup {
     playground = {
         enable = true,
     },
-}
+})
 
 vim.wo.foldmethod = 'expr'
 vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'

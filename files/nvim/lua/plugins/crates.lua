@@ -1,7 +1,7 @@
 local crates = require('crates')
 
 -- Default configuration from the README for setups without patched fonts
-crates.setup {
+crates.setup({
     text = {
         loading = "  Loading...",
         version = "  %s",
@@ -44,7 +44,7 @@ crates.setup {
             yanked = " yanked ",
         },
     },
-}
+})
 
 local opts = { silent = true }
 

@@ -129,7 +129,7 @@ end
 
 local base16_palette = require('utils.base16_palette')
 
-require('feline').setup {
+require('feline').setup({
     components = components,
     theme = {
         bg = base16_palette.base00,
@@ -161,4 +161,4 @@ require('feline').setup {
         TERM = 'green',
         NONE = 'white',
     },
-}
+})
