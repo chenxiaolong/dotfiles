@@ -16,9 +16,6 @@
 [submodule "submodules/base16-konsole"]
 	path = submodules/base16-konsole
 	url = https://github.com/cskeeters/base16-konsole.git
-[submodule "submodules/tree-sitter-smali"]
-	path = submodules/tree-sitter-smali
-	url = https://git.sr.ht/~yotam/tree-sitter-smali
 [submodule "files/yt-dlp/plugins/yt-dlp-youtube-oauth2"]
 	path = files/yt-dlp/plugins/yt-dlp-youtube-oauth2
 	url = https://github.com/coletdjnz/yt-dlp-youtube-oauth2

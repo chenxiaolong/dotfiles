@@ -99,9 +99,6 @@ def main():
 
         link(gpg_dir / 'gpg-agent.conf', files / 'gnupg' / 'gpg-agent.conf')
 
-    if shutil.which('hx'):
-        link(home / '.config' / 'helix', files / 'helix')
-
     if shutil.which('konsole'):
         kcs = 'base16-tomorrow-night.colorscheme'
 
