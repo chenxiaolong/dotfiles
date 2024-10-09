@@ -57,13 +57,6 @@ require('lazy').setup({
         config = function() require('plugins.gitsigns') end,
     },
 
-    -- Clang
-    {
-        'p00f/clangd_extensions.nvim',
-        dependencies = {'neovim/nvim-lspconfig'},
-        config = function() require('plugins.clangd_extensions') end,
-    },
-
     -- Rust
     {
         'vxpm/ferris.nvim',

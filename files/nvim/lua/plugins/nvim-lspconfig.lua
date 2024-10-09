@@ -1,9 +1,8 @@
 local lspconfig = require('lspconfig')
 
--- C++ is handled by clangd_extensions
-
 local lsps = {
     'bashls',
+    'clangd',
     'gopls',
     'pylsp',
     'rust_analyzer',
