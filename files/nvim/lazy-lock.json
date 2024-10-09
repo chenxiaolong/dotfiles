@@ -2,6 +2,7 @@
   "clangd_extensions.nvim": { "branch": "main", "commit": "8f7b72100883e0e34400d9518d40a03f21e4d0a6" },
   "crates.nvim": { "branch": "main", "commit": "8bf8358ee326d5d8c11dcd7ac0bcc9ff97dbc785" },
   "feline.nvim": { "branch": "main", "commit": "c97c17dc56ca3cf2b9b9192c3447fc59347e8c0d" },
+  "ferris.nvim": { "branch": "main", "commit": "b9cd307a4bb3de6d87fc5da26f0f2775f4e2873a" },
   "gitsigns.nvim": { "branch": "main", "commit": "863903631e676b33e8be2acb17512fdc1b80b4fb" },
   "guess-indent.nvim": { "branch": "main", "commit": "6cd61f7a600bb756e558627cd2e740302c58e32d" },
   "lazy.nvim": { "branch": "main", "commit": "1159bdccd8910a0fd0914b24d6c3d186689023d9" },
@@ -10,7 +11,6 @@
   "nvim-treesitter": { "branch": "master", "commit": "45e0d66246f31306d890b91301993fa1623e79f1" },
   "playground": { "branch": "master", "commit": "ba48c6a62a280eefb7c85725b0915e021a1a0749" },
   "plenary.nvim": { "branch": "master", "commit": "2d9b06177a975543726ce5c73fca176cedbffe9d" },
-  "rust-tools.nvim": { "branch": "master", "commit": "676187908a1ce35ffcd727c654ed68d851299d3e" },
   "vim-tmux": { "branch": "master", "commit": "cfe76281efc29890548cf9eedd42ad51c7a1faf0" },
   "which-key.nvim": { "branch": "main", "commit": "8badb359f7ab8711e2575ef75dfe6fbbd87e4821" }
 }

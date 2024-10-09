@@ -66,9 +66,7 @@ require('lazy').setup({
 
     -- Rust
     {
-        'simrat39/rust-tools.nvim',
-        dependencies = {'neovim/nvim-lspconfig'},
-        config = function() require('plugins.rust-tools') end,
+        'vxpm/ferris.nvim',
     },
 
     -- Rust crates
