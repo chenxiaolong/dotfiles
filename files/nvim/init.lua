@@ -27,7 +27,7 @@ vim.opt.timeoutlen = 1000
 vim.opt.ttimeoutlen = 0
 
 -- 80 character column indicator
-vim.opt.colorcolumn = '81'
+vim.opt.colorcolumn = '81,101'
 
 -- Show at least 4 lines of context when scrolling
 vim.opt.scrolloff = 4
