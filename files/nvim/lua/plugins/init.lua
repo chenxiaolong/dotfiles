@@ -68,9 +68,4 @@ require('lazy').setup({
         dependencies = {'nvim-lua/plenary.nvim'},
         config = function() require('plugins.crates') end,
     },
-
-    -- tmux.conf highlighting
-    {
-        'tmux-plugins/vim-tmux',
-    },
 })
