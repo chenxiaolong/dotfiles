@@ -15,15 +15,5 @@ require('nvim-treesitter.configs').setup({
 vim.wo.foldmethod = 'expr'
 vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 
-local bindings = {
-    th = 'TSHighlightCapturesUnderCursor',
-    tp = 'TSPlaygroundToggle',
-}
-
-for k, v in pairs(bindings) do
-    vim.keymap.set(
-        'n',
-        '<leader>' .. k,
-        '<cmd>' .. v .. '<cr>'
-    )
-end
+vim.keymap.set('n', '<leader>th', '<cmd>TSHighlightCapturesUnderCursor<cr>', { desc = "Highlight current captures" })
+vim.keymap.set('n', '<leader>tp', '<cmd>TSPlaygroundToggle<cr>', { desc = "Toggle playground" })
