@@ -49,6 +49,7 @@ vim.opt.cmdheight = 0
 -- Sane splitting behavior
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+vim.opt.splitkeep = 'screen'
 
 -- Don't fold by default
 vim.opt.foldlevelstart = 99
