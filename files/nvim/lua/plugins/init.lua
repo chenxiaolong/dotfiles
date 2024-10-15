@@ -27,7 +27,10 @@ require('lazy').setup({
     -- AST-based highlighting
     {
         'nvim-treesitter/nvim-treesitter',
-        dependencies = {'nvim-treesitter/playground'},
+        dependencies = {
+            'nvim-treesitter/playground',
+            'echasnovski/mini.nvim',
+        },
         build = ':TSUpdate',
         config = function() require('plugins.nvim-treesitter') end,
     },
