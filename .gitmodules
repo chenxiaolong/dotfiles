@@ -19,3 +19,39 @@
 [submodule "files/yt-dlp/plugins/yt-dlp-youtube-oauth2"]
 	path = files/yt-dlp/plugins/yt-dlp-youtube-oauth2
 	url = https://github.com/coletdjnz/yt-dlp-youtube-oauth2
+[submodule "files/nvim/pack/plugins/start/feline.nvim"]
+	path = files/nvim/pack/plugins/start/feline.nvim
+	url = https://github.com/freddiehaddad/feline.nvim.git
+	branch = main
+[submodule "files/nvim/pack/plugins/start/guess-indent.nvim"]
+	path = files/nvim/pack/plugins/start/guess-indent.nvim
+	url = https://github.com/nmac427/guess-indent.nvim.git
+	branch = main
+[submodule "files/nvim/pack/plugins/start/nvim-treesitter"]
+	path = files/nvim/pack/plugins/start/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter.git
+	branch = master
+[submodule "files/nvim/pack/plugins/start/mini.nvim"]
+	path = files/nvim/pack/plugins/start/mini.nvim
+	url = https://github.com/echasnovski/mini.nvim.git
+	branch = main
+[submodule "files/nvim/pack/plugins/start/nvim-lspconfig"]
+	path = files/nvim/pack/plugins/start/nvim-lspconfig
+	url = https://github.com/neovim/nvim-lspconfig.git
+	branch = master
+[submodule "files/nvim/pack/plugins/start/which-key.nvim"]
+	path = files/nvim/pack/plugins/start/which-key.nvim
+	url = https://github.com/folke/which-key.nvim.git
+	branch = main
+[submodule "files/nvim/pack/plugins/start/gitsigns.nvim"]
+	path = files/nvim/pack/plugins/start/gitsigns.nvim
+	url = https://github.com/lewis6991/gitsigns.nvim.git
+	branch = main
+[submodule "files/nvim/pack/plugins/start/ferris.nvim"]
+	path = files/nvim/pack/plugins/start/ferris.nvim
+	url = https://github.com/vxpm/ferris.nvim.git
+	branch = main
+[submodule "files/nvim/pack/plugins/start/crates.nvim"]
+	path = files/nvim/pack/plugins/start/crates.nvim
+	url = https://github.com/Saecki/crates.nvim.git
+	branch = main

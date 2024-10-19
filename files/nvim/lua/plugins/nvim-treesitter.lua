@@ -30,13 +30,10 @@ require('nvim-treesitter.configs').setup({
     indent = {
         enable = true,
     },
-    playground = {
-        enable = true,
-    },
 })
 
 vim.wo.foldmethod = 'expr'
 vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 
-vim.keymap.set('n', '<leader>th', '<cmd>TSHighlightCapturesUnderCursor<cr>', { desc = "Highlight current captures" })
-vim.keymap.set('n', '<leader>tp', '<cmd>TSPlaygroundToggle<cr>', { desc = "Toggle playground" })
+vim.keymap.set('n', '<leader>ti', '<cmd>Inspect<cr>', { desc = 'Inspect item' })
+vim.keymap.set('n', '<leader>tt', '<cmd>InspectTree<cr>', { desc = 'Inspect tree' })
