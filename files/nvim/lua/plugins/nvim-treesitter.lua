@@ -23,6 +23,11 @@ end
 
 require('nvim-treesitter.configs').setup({
     ensure_installed = 'all',
+    -- Kernel 6.1 on the Pixel 9 Pro XL has a bug where it kernel panics from a
+    -- corrupted canary value when the device runs out of memory. Avoid using
+    -- too much memory by making the installation synchronous. There is no
+    -- option to limit concurrency.
+    sync_install = not not os.getenv('ANDROID_ROOT'),
     highlight = {
         enable = true,
         additional_vim_regex_highlighting = false,
