@@ -7,7 +7,7 @@ require('mini.base16').setup({
 -- Get rid of background behind line numbers
 local color_utils = require('utils.color')
 
-function should_clear(name)
+local function should_clear(name)
     return name == 'SignColumn'
         or vim.startswith(name, 'LineNr')
         or vim.startswith(name, 'GitSigns')

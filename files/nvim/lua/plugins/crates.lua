@@ -47,7 +47,7 @@ crates.setup({
 })
 
 local opts = { silent = true }
-function with_desc(desc)
+local function with_desc(desc)
     return vim.tbl_extend("force", opts, { desc = desc })
 end
 
