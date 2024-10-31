@@ -1,24 +1,31 @@
 [submodule "files/tmux/plugins/tmux-sensible"]
 	path = files/tmux/plugins/tmux-sensible
 	url = https://github.com/tmux-plugins/tmux-sensible.git
+	branch = master
 [submodule "submodules/base16-shell"]
 	path = submodules/base16-shell
 	url = https://github.com/chriskempson/base16-shell.git
+	branch = master
 [submodule "files/tmux/plugins/tmux-thumbs"]
 	path = files/tmux/plugins/tmux-thumbs
 	url = https://github.com/fcsonline/tmux-thumbs.git
+	branch = master
 [submodule "submodules/zsh-completions"]
 	path = submodules/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions.git
+	branch = master
 [submodule "files/tmux/tmux-fuzzback"]
 	path = files/tmux/plugins/tmux-fuzzback
 	url = https://github.com/roosta/tmux-fuzzback.git
+	branch = main
 [submodule "submodules/base16-konsole"]
 	path = submodules/base16-konsole
 	url = https://github.com/cskeeters/base16-konsole.git
+	branch = master
 [submodule "files/yt-dlp/plugins/yt-dlp-youtube-oauth2"]
 	path = files/yt-dlp/plugins/yt-dlp-youtube-oauth2
 	url = https://github.com/coletdjnz/yt-dlp-youtube-oauth2
+	branch = master
 [submodule "files/nvim/pack/plugins/start/feline.nvim"]
 	path = files/nvim/pack/plugins/start/feline.nvim
 	url = https://github.com/freddiehaddad/feline.nvim.git
