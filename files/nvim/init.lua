@@ -43,9 +43,6 @@ vim.opt.showmode = false
 -- Use a global status line
 vim.opt.laststatus = 3
 
--- Don't show command line
-vim.opt.cmdheight = 0
-
 -- Sane splitting behavior
 vim.opt.splitbelow = true
 vim.opt.splitright = true
