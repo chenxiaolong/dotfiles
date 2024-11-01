@@ -22,10 +22,6 @@
 	path = submodules/base16-konsole
 	url = https://github.com/cskeeters/base16-konsole.git
 	branch = master
-[submodule "files/yt-dlp/plugins/yt-dlp-youtube-oauth2"]
-	path = files/yt-dlp/plugins/yt-dlp-youtube-oauth2
-	url = https://github.com/coletdjnz/yt-dlp-youtube-oauth2
-	branch = master
 [submodule "files/nvim/pack/plugins/start/feline.nvim"]
 	path = files/nvim/pack/plugins/start/feline.nvim
 	url = https://github.com/freddiehaddad/feline.nvim.git

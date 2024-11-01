@@ -158,7 +158,6 @@ def main():
             yt_dlp_dir = home / '.config' / 'yt-dlp'
 
         link(yt_dlp_dir / 'config', files / 'yt-dlp' / 'config')
-        link(yt_dlp_dir / 'plugins', files / 'yt-dlp' / 'plugins')
 
     if Path('/etc/arch-release').exists():
         link(home / '.config' / 'pinentry', files / 'pinentry')
