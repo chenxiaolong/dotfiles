@@ -58,3 +58,7 @@
 	path = files/nvim/pack/plugins/start/crates.nvim
 	url = https://github.com/Saecki/crates.nvim.git
 	branch = main
+[submodule "files/nvim/pack/plugins/start/fzf-lua"]
+	path = files/nvim/pack/plugins/start/fzf-lua
+	url = https://github.com/ibhagwan/fzf-lua.git
+	branch = main
