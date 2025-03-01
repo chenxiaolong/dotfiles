@@ -22,10 +22,6 @@
 	path = submodules/base16-konsole
 	url = https://github.com/cskeeters/base16-konsole.git
 	branch = master
-[submodule "files/nvim/pack/plugins/start/feline.nvim"]
-	path = files/nvim/pack/plugins/start/feline.nvim
-	url = https://github.com/freddiehaddad/feline.nvim.git
-	branch = main
 [submodule "files/nvim/pack/plugins/start/guess-indent.nvim"]
 	path = files/nvim/pack/plugins/start/guess-indent.nvim
 	url = https://github.com/nmac427/guess-indent.nvim.git

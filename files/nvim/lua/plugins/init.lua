@@ -1,6 +1,6 @@
 local deps = require('mini.deps')
 
-deps.now(function() require('plugins.feline') end)
+deps.now(function() require('plugins.statusline') end)
 deps.now(function() require('plugins.mini') end)
 deps.now(function() require('plugins.nvim-treesitter') end)
 deps.now(function() require('plugins.guess-indent') end)
