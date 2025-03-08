@@ -34,9 +34,9 @@ function M._get_highlight(options)
             string.format(
                 'highlight %s guifg=%s guibg=%s gui=%s',
                 name,
-                fg or 'NONE',
-                bg or 'NONE',
-                style or 'NONE'
+                fg,
+                bg,
+                style
             )
         )
 
