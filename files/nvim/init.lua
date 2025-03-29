@@ -54,6 +54,9 @@ vim.opt.foldlevelstart = 99
 -- Don't select a completion item by default
 vim.opt.completeopt = 'menuone,noselect'
 
+-- Show border around floating windows
+vim.opt.winborder = 'single'
+
 -- Treat Jenkinsfiles as groovy code
 vim.filetype.add({
     filename = {
