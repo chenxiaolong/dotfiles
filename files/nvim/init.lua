@@ -69,3 +69,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     pattern = '*',
     callback = function() vim.highlight.on_yank() end,
 })
+
+-- Show LSP errors on separate lines
+vim.diagnostic.config({
+    virtual_lines = true
+})
