@@ -76,7 +76,6 @@ clue.setup({
     },
 })
 
-require('mini.comment').setup()
 require('mini.completion').setup()
 
 local indentscope = require('mini.indentscope')
