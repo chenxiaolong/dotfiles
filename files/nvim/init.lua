@@ -51,9 +51,18 @@ vim.opt.splitkeep = 'screen'
 -- Don't fold by default
 vim.opt.foldlevelstart = 99
 
--- Fold using treesitter
+-- Fold using treesitter unless the LSP supports it
 vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.api.nvim_create_autocmd('LspAttach', {
+    callback = function(args)
+        local client = vim.lsp.get_client_by_id(args.data.client_id)
+        if client:supports_method('textDocument/foldingRange') then
+            local win = vim.api.nvim_get_current_win()
+            vim.wo[win][0].foldexpr = 'v:lua.vim.lsp.foldexpr()'
+        end
+    end,
+})
 
 -- Don't select a completion item by default
 vim.opt.completeopt = 'menuone,noselect'
