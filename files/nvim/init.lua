@@ -85,5 +85,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- Show LSP errors on separate lines
 vim.diagnostic.config({
-    virtual_lines = true
+    virtual_lines = {
+        current_line = true,
+    },
 })
