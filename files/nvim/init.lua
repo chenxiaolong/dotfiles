@@ -51,6 +51,10 @@ vim.opt.splitkeep = 'screen'
 -- Don't fold by default
 vim.opt.foldlevelstart = 99
 
+-- Fold using treesitter
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+
 -- Don't select a completion item by default
 vim.opt.completeopt = 'menuone,noselect'
 
