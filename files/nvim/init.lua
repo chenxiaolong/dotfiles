@@ -87,5 +87,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.diagnostic.config({
     virtual_lines = {
         current_line = true,
+        severity = {
+            min = vim.diagnostic.severity.ERROR,
+        },
+    },
+    virtual_text = {
+        severity = {
+            max = vim.diagnostic.severity.WARN,
+        },
     },
 })
