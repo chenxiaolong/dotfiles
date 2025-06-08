@@ -33,6 +33,6 @@ if is_shell zsh; then
     setopt HIST_EXPIRE_DUPS_FIRST
 
     # Save more history
-    HISTSIZE=50000
-    SAVEHIST=50000
+    HISTSIZE=1000000
+    SAVEHIST=1000000
 fi
