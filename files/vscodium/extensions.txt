@@ -1,5 +1,6 @@
 barbosshack.crates-io
 charliermarsh.ruff
+detachhead.basedpyright
 llvm-vs-code-extensions.vscode-clangd
 ms-python.python
 ms-vscode.cmake-tools
