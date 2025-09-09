@@ -29,10 +29,10 @@
 [submodule "files/nvim/pack/plugins/start/nvim-treesitter"]
 	path = files/nvim/pack/plugins/start/nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter.git
-	branch = master
+	branch = main
 [submodule "files/nvim/pack/plugins/start/mini.nvim"]
 	path = files/nvim/pack/plugins/start/mini.nvim
-	url = https://github.com/echasnovski/mini.nvim.git
+	url = https://github.com/nvim-mini/mini.nvim.git
 	branch = main
 [submodule "files/nvim/pack/plugins/start/nvim-lspconfig"]
 	path = files/nvim/pack/plugins/start/nvim-lspconfig
