@@ -6,7 +6,16 @@ if not not os.getenv('ANDROID_ROOT') then
     max_jobs = 2
 end
 
-require('nvim-treesitter').install({ 'all' }, { max_jobs = max_jobs })
+local have_node = vim.fn.executable('node') == 1
+local parsers = {}
+
+for name, options in pairs(require('nvim-treesitter.parsers')) do
+    if not vim.tbl_get(options, 'install_info', 'generate') or have_node then
+        table.insert(parsers, name)
+    end
+end
+
+require('nvim-treesitter').install(parsers, { max_jobs = max_jobs })
 
 vim.api.nvim_create_autocmd('FileType', {
   callback = function()
