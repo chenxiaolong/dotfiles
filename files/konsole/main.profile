@@ -9,5 +9,5 @@ Name=main
 Parent=FALLBACK/
 
 [Scrolling]
-HistorySize=50000
+HistorySize=500000
 ScrollBarPosition=2
