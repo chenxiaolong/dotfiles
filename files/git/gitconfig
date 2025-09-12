@@ -19,6 +19,7 @@
 [core]
 	autocrlf = false
 [alias]
+	default-branch = "!sh -c 'git symbolic-ref --short \"refs/remotes/${1:-origin}/HEAD\" | cut -d/ -f2-' --"
 	set-fetch-all = "!sh -c 'set -u; git config \"remote.${1}.fetch\" \"+refs/*:refs/remotes/${1}/*\"' --"
 [include]
 	path = .gitconfig.platform
