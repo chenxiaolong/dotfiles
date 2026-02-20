@@ -1,5 +1,3 @@
-local lspconfig = require('lspconfig')
-
 local lsps = {
     'bashls',
     'clangd',
@@ -9,7 +7,8 @@ local lsps = {
 }
 
 for _, lsp in ipairs(lsps) do
-    local cmd = lspconfig[lsp].config_def.default_config.cmd[1]
+    local lspconfig = require('lspconfig.configs.' .. lsp)
+    local cmd = lspconfig.default_config.cmd[1]
 
     if vim.fn.executable(cmd) == 1 then
         vim.lsp.config(lsp, {
