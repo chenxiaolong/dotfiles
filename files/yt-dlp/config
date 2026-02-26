@@ -7,11 +7,6 @@
 --sub-langs all
 --write-subs
 
-# - Avoid default preference of VP9 (codec:vp9.2) over higher bitrate alternatives
-# - Prefer opus audio on Youtube by prioritizing audio sample rate
-# - Give higher priority to source_preference than the video codec to prefer Youtube Premium videos (VP9-encoded)
---format-sort lang,quality,res,fps,hdr:12,source,vcodec,channels,acodec,size,br,asr,proto,ext,hasaud,id
-
 # Keep most metadata in separate files aside from the chapters since video
 # players can't read those from the info json
 --embed-chapters
