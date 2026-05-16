@@ -43,6 +43,9 @@ vim.opt.showmode = false
 -- Use a global status line
 vim.opt.laststatus = 3
 
+-- Don't show command line
+vim.opt.cmdheight = 0
+
 -- Sane splitting behavior
 vim.opt.splitbelow = true
 vim.opt.splitright = true
@@ -99,6 +102,4 @@ vim.diagnostic.config({
 })
 
 -- Enable the new experimental UI
-if vim.fn.has('nvim-0.12') == 1 then
-    require('vim._core.ui2').enable({})
-end
+require('vim._core.ui2').enable({})
