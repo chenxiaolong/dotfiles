@@ -153,9 +153,6 @@ def main():
 
         link(yt_dlp_dir / 'config', files / 'yt-dlp' / 'config')
 
-    if Path('/etc/arch-release').exists():
-        link(home / '.config' / 'pinentry', files / 'pinentry')
-
 
 if __name__ == '__main__':
     main()

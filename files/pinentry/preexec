@@ -1,3 +1,0 @@
-if [ -n "${KDE_FULL_SESSION}" ]; then
-    exec /usr/bin/pinentry-qt "$@"
-fi
