@@ -4,7 +4,9 @@ DimmValue=27
 Font=DejaVu Sans Mono,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [General]
+AlternatingBars=1
 DimWhenInactive=true
+ErrorBars=1
 Name=main
 Parent=FALLBACK/
 
