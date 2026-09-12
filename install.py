@@ -142,9 +142,6 @@ def main():
         for f in ('tmux.conf', 'tmux'):
             link(home / f'.{f}', files / f)
 
-    if shutil.which('wezterm'):
-        link(home / '.config' / 'wezterm', files / 'wezterm')
-
     if shutil.which('yt-dlp'):
         if os.name == 'nt':
             yt_dlp_dir = Path(os.environ['APPDATA']) / 'yt-dlp'
