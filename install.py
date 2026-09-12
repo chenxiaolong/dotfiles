@@ -74,9 +74,6 @@ def main():
 
         link(codium_dir / 'product.json', files / 'vscodium' / 'product.json')
 
-    if shutil.which('foot'):
-        link(home / '.config' / 'foot', files / 'foot')
-
     if shutil.which('git'):
         for f in ('gitconfig', 'gitconfig.urls'):
             link(home / f'.{f}', files / 'git' / f)
