@@ -14,7 +14,7 @@
 	commit-decoration-style = bold yellow box
 
 [merge]
-	conflictstyle = diff3
+	conflictStyle = diff3
 
 [diff]
 	colorMoved = default
