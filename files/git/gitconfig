@@ -5,8 +5,6 @@
 	format = ssh
 [gpg "ssh"]
 	allowedSignersFile = ~/.ssh/allowed_signers
-[color]
-	ui = true
 [push]
 	default = simple
 [filter "lfs"]
@@ -14,8 +12,6 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
-[protocol]
-	version = 2
 [core]
 	autocrlf = false
 [alias]
