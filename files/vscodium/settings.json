@@ -35,8 +35,14 @@
 
     // Rulers
     "editor.rulers": [
-        80,
-        100
+        {
+            "column": 80,
+            "color": "#333333",
+        },
+        {
+            "column": 100,
+            "color": "#333333",
+        },
     ],
 
     // Increase terminal scrollback
