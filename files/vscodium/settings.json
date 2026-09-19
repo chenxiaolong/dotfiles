@@ -56,4 +56,7 @@
 
     // Don't use super:: imports in Rust
     "rust-analyzer.imports.prefix": "crate",
+
+    // Use system rust-analyzer binary
+    "rust-analyzer.server.path": "rust-analyzer",
 }
